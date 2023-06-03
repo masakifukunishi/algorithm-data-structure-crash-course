@@ -242,7 +242,7 @@ def q10(n):
 
 ```
 
-## ptional: Try to Implement
+## Optional: Try to Implement
 
 ### function which time complexity is O(n!)
 
