@@ -8,7 +8,7 @@
 
 - Time complexity usually considering worst-case execution time.
 
-```javascript
+```typescript
 const list: number[] = [1, 7, 2, 6, 5];
 const target: number = 1;
 
@@ -27,7 +27,7 @@ const getOne = (list: number[], target: number): boolean => {
 
 - Remove constant
 
-```javascript
+```typescript
 const test = (boxes: string[]) => {
   boxes.forEach((box: string[]) => console.log(box));
 
@@ -39,7 +39,7 @@ const test = (boxes: string[]) => {
 
 - Drop non-dominant terms
 
-```javascript
+```typescript
 const test = (n: number) => {
   for (let i = 0; i < n; i++) {
     console.log(i);
@@ -246,7 +246,7 @@ def q10(n):
 
 ### function which time complexity is O(n!)
 
-```javascript
+```typescript
 // O(n!)
 // it means that we're adding a nested loop for every input
 
