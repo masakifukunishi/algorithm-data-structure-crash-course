@@ -242,6 +242,10 @@ def q10(n):
 
 ```
 
+## ptional: Try to Implement
+
+### function which time complexity is O(n!)
+
 ```javascript
 // O(n!)
 // it means that we're adding a nested loop for every input
@@ -251,7 +255,11 @@ const factorial = (n: number) => {
 
   return n * factorial(n - 1);
 };
+```
 
+### function which time complexity is O(log n)
+
+```javascript
 // O(log n)
 const searchInsert = (nums: number[], target: number): number => {
   let left = 0;
