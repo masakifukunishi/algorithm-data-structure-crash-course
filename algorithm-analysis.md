@@ -259,7 +259,7 @@ const factorial = (n: number) => {
 
 ### function which time complexity is O(log n)
 
-```javascript
+```typescript
 // O(log n)
 const searchInsert = (nums: number[], target: number): number => {
   let left = 0;
