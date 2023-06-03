@@ -69,8 +69,6 @@ const test = (n: number) => {
 
 - The actual algorithm execution time depends on the CPU, but the Big O can be used to determine efficiency without having to execute the algorithm exactly.
 
-**O(1)** is expressed as constant time, **O(n)** as linear time, **O(n^2)** as quadratic time, etc...
-
 ![BigO](/images/algorithm-analysis/big_o.jpeg)
 
 ## What is space complexity?
