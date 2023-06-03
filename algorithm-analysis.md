@@ -21,8 +21,37 @@ const getOne = (list: number[], target: number): boolean => {
   return false;
 };
 
-// The loop is executed once. But not O(1) because it depends on the input size.
-// O(n) is correct.
+// O(n)
+// The loop is executed once. But the worst case is 1 is the last element. O(n) expresses the worst case (5 loops).
+```
+
+- Remove constant
+
+```javascript
+const test = (boxes: string[]) => {
+  boxes.forEach((box: string[]) => console.log(box));
+
+  boxes.forEach((box: string[]) => console.log(box));
+};
+
+// O(2n) => O(n)
+```
+
+- Drop non-dominant terms
+
+```javascript
+const test = (n: number) => {
+  for (let i = 0; i < n; i++) {
+    console.log(i);
+  }
+  for (let i = 0; i < n; i++) {
+    for (let j = 0; j < n; j++) {
+      console.log(i, j);
+    }
+  }
+};
+
+// O(n + n^2) => O(n^2)
 ```
 
 ### Why use Big O notation?
@@ -40,35 +69,13 @@ const getOne = (list: number[], target: number): boolean => {
 
 - The actual algorithm execution time depends on the CPU, but the Big O can be used to determine efficiency without having to execute the algorithm exactly.
 
-**O(1)** is expressed as constant time, **O(n)** as linear time, **O(n^2)** as quadratic time, etc.
+**O(1)** is expressed as constant time, **O(n)** as linear time, **O(n^2)** as quadratic time, etc...
 
 ![BigO](/images/algorithm-analysis/big_o.jpeg)
 
 ## What is space complexity?
 
 - Space complexity is a measure how much amount of memory and storage required to execute relative to its input size. In other words, it considers the size of additional memory or data structures required when an algorithm is executed.
-
-- Space complexity is expressed using Big O notation.
-
-- Space complexity usually considering worst-case memory usage.
-
-```javascript
-const target: number = 1;
-const list: number[] = [];
-
-const pushUntilTarget = (arralisty: number[], target: number): boolean => {
-  for (let i = 1; i <= target; i++) {
-    list.push(i);
-    if (list[i] === target) {
-      break;
-    }
-  }
-  return false;
-};
-
-// The array has one value. But not O(1) because it depends on the input size.
-// O(n) is correct.
-```
 
 ## Why and when do we use time (space) complexity?
 
@@ -82,7 +89,7 @@ const pushUntilTarget = (arralisty: number[], target: number): boolean => {
 
 - Resource management
 
-  - Time and space complexity are crucial in resource-constrained environments where efficient resource utilization is essential. By understanding the complexity, you can design algorithms or select solutions that fit within the available resources, avoiding performance issues and ensuring optimal usage.
+  - By understanding the complexity, you can design algorithms or select solutions that fit within the available resources, avoiding performance issues and ensuring optimal usage.
 
 - Predictive power
   - Complexity analysis enables you to predict and estimate the performance characteristics of an algorithm before running it on actual data. This helps in understanding how the algorithm will scale with larger input sizes, allowing you to anticipate and plan for potential performance challenges.
@@ -93,7 +100,7 @@ const pushUntilTarget = (arralisty: number[], target: number): boolean => {
 
 ## Is number of calculations == time complexity??
 
-No, The number of calculations is not necessarily equal to time complexity.
+No The number of calculations is not necessarily equal to time complexity.
 The number of calculations refers to the actual count of computations or operations performed during the execution of an algorithm or program.
 
 ```js
@@ -136,7 +143,7 @@ def q3(n):
     while i < n:
         print(i)
         i *= 2
-# O(log n) -----------
+# O(log n) --
 
 def q4(n):
     i = 0
@@ -159,7 +166,7 @@ def q5(n):
                 k += 1
             j += 1
         i += 1
-# O(n^3)
+# O(n^3) => O(n^2)
 
 def q6(n):
     i = 0
@@ -170,7 +177,7 @@ def q6(n):
             j += 1
         i += 1
 
-# O(n^2) ---------
+# O(n^2) --
 
 def q7(n):
     i = 0
@@ -239,10 +246,9 @@ def q10(n):
 // O(n!)
 // it means that we're adding a nested loop for every input
 
-const factorial = (n) => {
-  if (n === 0) {
-    return 1;
-  }
+const factorial = (n: number) => {
+  if (n === 0) return 1;
+
   return n * factorial(n - 1);
 };
 
@@ -262,7 +268,6 @@ const searchInsert = (nums: number[], target: number): number => {
       right = mid - 1;
     }
   }
-
   return left;
 };
 ```
