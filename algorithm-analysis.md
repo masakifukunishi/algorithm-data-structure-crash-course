@@ -248,12 +248,19 @@ def q10(n):
 // O(n!)
 // it means that we're adding a nested loop for every input
 
-const factorial = (n: number) => {
-  if (n === 0) return 1;
-
-  return n * factorial(n - 1);
+const test = (n) => {
+  if (n === 0) {
+    console.log("**************");
+  }
+  for (let i = 0; i < n; i++) {
+    test(n - 1);
+  }
 };
 ```
+
+![O of N factorial](/images/algorithm-analysis/o_of_n_factorial.png)
+
+> https://www.youtube.com/watch?v=vbh8t-ok_4E
 
 ### function which time complexity is O(log n)
 
