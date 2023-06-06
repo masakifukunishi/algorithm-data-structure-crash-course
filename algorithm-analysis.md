@@ -141,7 +141,7 @@ def q3(n):
     while i < n:
         print(i)
         i *= 2
-# O(log n) --
+# O(log n)
 
 def q4(n):
     i = 0
