@@ -2,11 +2,26 @@
 
 ## Concept
 
-- what is array?
-- how do we allecate memery when constructing the array?
-- what is fixed size vs dynamic size array?
-- what is pros and cons about array?
-  - when do we use array?
+### what is array?
+
+Array is the simplest and most widely used data structure, allowing multiple elements to be stored in order.
+Each element is uniquely accessible by index.
+
+```typescript
+// array
+const os = ["Mac", "Windows", "Linux"];
+
+// access by index
+console.log(os[0]); // Mac
+```
+
+### how do we allocate memory when constructing the array?
+
+### what is fixed size vs dynamic size array?
+
+### what is pros and cons about array?
+
+#### when do we use array?
 
 ## What is the time & space complexity of following instruction. Why do think that?
 
