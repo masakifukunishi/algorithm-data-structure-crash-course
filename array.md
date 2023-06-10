@@ -1,8 +1,6 @@
 # Array
 
-## Concept
-
-### what is array?
+## What is array?
 
 Array is the simplest and most widely used data structure, allowing multiple elements to be stored in order.
 Each element is uniquely accessible by index.
@@ -15,13 +13,59 @@ const os = ["Mac", "Windows", "Linux"];
 console.log(os[0]); // Mac
 ```
 
-### how do we allocate memory when constructing the array?
+## How do we allocate memory when constructing the array?
 
-### what is fixed size vs dynamic size array?
+It depends on the language.
 
-### what is pros and cons about array?
+### In JavaScript
 
-#### when do we use array?
+JavaScript arrays are dynamically allocated memory.
+
+When you add an element to an array, the JavaScript runtime environment automatically allocates memory internally to store the element. Memory management is handled by the JavaScript runtime engine, and the programmer does not need to write explicit memory allocation code.
+
+### In C
+
+#### Fixed size array
+
+For a fixed-size array in C, you specify the number of elements when declaring the array.
+
+```C
+int array[10]; // Declaration of a fixed-size array with 10 elements
+```
+
+#### Dynamic size array
+
+For a dynamic-size array in C, you allocate memory at runtime using the malloc function from the standard library. The malloc function allows you to request a specific amount of memory dynamically. The size of the array can be determined during runtime, and you can change the size as needed.
+
+```C
+int* array = malloc(10 * sizeof(int));
+```
+
+After you finish using the dynamic array, you should free the allocated memory using the free function to prevent memory leaks:
+
+```C
+free(array);
+```
+
+## What is fixed size vs dynamic size array?
+
+### Fixed size array
+
+- Uses a fixed-size memory area to store elements. The size is specified at declaration and cannot be changed thereafter
+- Elements are stored in contiguous memory areas.
+- Access to the elements of a fixed size array is fast and can be accessed directly using indexes.
+- The size of the fixed size array is determined at compile time and cannot be changed at run time.
+
+### Dynamic size array
+
+- Uses a dynamically allocated memory area to store elements. The size can be changed at runtime.
+- Elements are stored in contiguous memory areas, but memory may be reallocated as needed.
+- Access to the elements of a fixed size array is also fast and can be accessed directly using indexes.
+- The size of the dynamic size array is determined at runtime and can be changed at runtime.
+
+## What is pros and cons about array?
+
+## When do we use array?
 
 ## What is the time & space complexity of following instruction. Why do think that?
 
@@ -32,9 +76,9 @@ console.log(os[0]); // Mac
 - pop (delete last)
 - pop left (delte first, shift)
 
-## Excursive
+## Exercise (Optional)
 
-### Excursive 1 (Optional):
+## Exercise 1:
 
 Let's try to implement an dynamic size array with using only fixed size array.
 Since there is no fixed size array in Ts, sudo code is ok
@@ -70,9 +114,9 @@ class DynamicArray {
 }
 ```
 
-### Excursive 02(Optional): Remove Master
+## Exercise 02: Remove Master
 
-### Q1
+## Q1
 
 Congratulation! You'are hired by that Big tech company😎
 Your first job is to implement
@@ -93,11 +137,11 @@ func removeAll(arr: Array<number>, value: number) {
 
 ```
 
-### Q2
+## Q2
 
 Easy Peasy? What is your codes **time complexity and space complexity.**
 
-### Q3: optional
+## Q3: optional
 
 Since your company is big and needs to handle a large amount of data,
 you are asked to make it as efficient as possible.
