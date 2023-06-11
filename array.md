@@ -158,36 +158,52 @@ free(array);
 ## Exercise 1:
 
 Let's try to implement an dynamic size array with using only fixed size array.
-Since there is no fixed size array in Ts, sudo code is ok
+Since there is no fixed size array in Ts, pseudo code is ok
 
 ```ts
 class DynamicArray {
-    this.array: FixedArray<number> // Suppose this is ts Array with Fixed size. You can use every ts Array features but the fixed size.
+  private array: FixedArray<number>; // Suppose this is a TS Array with fixed size. You can use all the features of a TS Array, but with a fixed size.
+  private length: number;
 
-    public constructor(size: number) {
-        this.array = new FixedArray(size)
-        // Feel free to add any class properties if needed
-    };
+  public constructor(size: number) {
+    this.array = new FixedArray(size);
+    // Feel free to add any class properties if needed
+    this.length = 0;
+  }
 
-    func isEmpty(): bool {
+  public isEmpty(): boolean {
+    return this.length === 0;
+  }
 
+  public getLength(): number {
+    return this.length;
+  }
+
+  public push(value: number): void {
+    // Add an element to the dynamic array. Check if the dynamic array is already full, and if so, create a new FixedArray instance with a larger size and copy the elements from the old array to the new one.
+    // When creating a new fixed size array, it is doubled in size.
+
+    if (this.length === this.array.length()) {
+      const newArray = new FixedArray(this.array.length * 2);
+      for (let i = 0; i < this.array.length; i++) {
+        newArray.push(this.array);
+      }
+      this.array = newArray;
     }
+    this.array.push(value);
+    this.length++;
+  }
 
-    func getLength(): number {
-
+  public removeAt(index: number): void {
+    // remove an element at that index and shift all subsequent elements to fill the gap
+    //
+    for (let i = index; i < this.length - 1; i++) {
+      this.array[i] = this.array[i + 1];
     }
-
-    func push(value: number) {
-
-    }
-
-    func push(array: FixedArray<number>) {
-
-    }
-
-    func removeAt(index: number) {
-
-    }
+    // After shifting, unnecessary values remain at the end, delete by pop
+    this.array.pop();
+    this.length--;
+  }
 }
 ```
 
