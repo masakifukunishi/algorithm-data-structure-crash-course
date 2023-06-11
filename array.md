@@ -65,6 +65,35 @@ free(array);
 
 ## What is pros and cons about array?
 
+### Pros
+
+- Random Access
+
+  - Arrays provide constant-time access to individual elements based on their index. This means you can access any element directly using its index without iterating through the entire array.
+
+- Efficient use of memory
+
+  - Arrays store elements in contiguous memory locations, which allows for efficient memory management.
+
+- Easy Iteration
+  - Arrays provide a straightforward way to iterate over their elements using loops or iterators. This makes it convenient to perform operations on each element or process the entire array.
+
+### Cons
+
+- Fixed Size **(For fixed size array)**
+
+  - Arrays have a fixed size, meaning they cannot dynamically grow or shrink once they are created. This inflexibility can be problematic if you need to store a varying number of elements or if the required size is not known in advance.
+
+- Wasted Memory
+
+  - If an array is not fully populated with elements, there may be wasted memory space. If the size of the array is much larger than the number of elements it contains, it can result in inefficient memory usage.
+
+- Insertion and Deletion Overhead[^1]
+
+  - Inserting or deleting elements in the middle of an array requires shifting subsequent elements, which can be computationally expensive.
+
+  [^1]: 1 つめの脚注への参照です。
+
 ## When do we use array?
 
 ## What is the time & space complexity of following instruction. Why do think that?
