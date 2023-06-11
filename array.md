@@ -182,7 +182,6 @@ class DynamicArray {
   public push(value: number): void {
     // Add an element to the dynamic array. Check if the dynamic array is already full, and if so, create a new FixedArray instance with a larger size and copy the elements from the old array to the new one.
     // When creating a new fixed size array, it is doubled in size.
-
     if (this.length === this.array.length()) {
       const newArray = new FixedArray(this.array.length * 2);
       for (let i = 0; i < this.array.length; i++) {
@@ -196,7 +195,6 @@ class DynamicArray {
 
   public removeAt(index: number): void {
     // remove an element at that index and shift all subsequent elements to fill the gap
-    //
     for (let i = index; i < this.length - 1; i++) {
       this.array[i] = this.array[i + 1];
     }
@@ -218,21 +216,59 @@ Your first job is to implement
 - `removeAll` function which removes all the elements that matches to the given element.
 
 ```ts
-func removeAt(arr: Array<number>, index: number) {
-    // implement your code
-    // e.g.  removeAll([1,4,5,6], 2) -> [1,4,6]
+function removeAt(arr: Array<number>, index: number): Array<number> {
+  // implement your code
+  // e.g.  removeAll([1,4,5,6], 2) -> [1,4,6]
+  if (index < 0 || index >= arr.length) {
+    throw new Error("Index out of bounds");
+  }
+  for (let i = index; i < arr.length; i++) {
+    arr[i] = arr[i + 1];
+  }
+  arr.pop();
+
+  // or
+  // arr.splice(index, 1);
+
+  return arr;
+}
+console.log(removeAt([1, 4, 5, 6], 5));
+
+function removeAll(arr: Array<number>, value: number): Array<number> {
+  // implement your code
+  // e.g.  removeAll([1,4,5,6,3,4,2,4], 4) -> [1,5,6,3,2]
+
+  const newArray = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === value) continue;
+    newArray.push(arr[i]);
+  }
+  return newArray;
+
+  // or
+  // return arr.filter((element) => element !== value);
 }
 
-func removeAll(arr: Array<number>, value: number) {
-    // implement your code
-    // e.g.  removeAll([1,4,5,6,3,4,2,4], 4) -> [1,5,6,3,2]
-}
-
+console.log(removeAll([1, 4, 5, 6, 3, 4, 2, 4], 4));
 ```
 
 ## Q2
 
 Easy Peasy? What is your codes **time complexity and space complexity.**
+
+- removeAt
+
+  - Time Complexity: O(n)
+    - It iterates through the entire array to shift the elements after the deleted index.
+  - Space Complexity: O(1)
+    - It modifies the input array in place without creating any additional data structures that grow with the size of the input.
+
+- removeAll
+
+  - Time Complexity: O(n)
+    - It iterates through the entire array to find the elements that match the given value.
+  - Space Complexity: O(n)
+    - It creates a new array to store the elements that do not match the given value.
 
 ## Q3: optional
 
