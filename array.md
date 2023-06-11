@@ -80,10 +80,6 @@ free(array);
 
 ### Cons
 
-- Fixed Size **(For fixed size array)**
-
-  - Arrays have a fixed size, meaning they cannot dynamically grow or shrink once they are created. This inflexibility can be problematic if you need to store a varying number of elements or if the required size is not known in advance.
-
 - Wasted Memory
 
   - If an array is not fully populated with elements, there may be wasted memory space. If the size of the array is much larger than the number of elements it contains, it can result in inefficient memory usage.
@@ -92,16 +88,70 @@ free(array);
 
   - Inserting or deleting elements in the middle of an array requires shifting subsequent elements, which can be computationally expensive.
 
+- Fixed Size **(For fixed size array)**
+
+  - Arrays have a fixed size, meaning they cannot dynamically grow or shrink once they are created. This inflexibility can be problematic if you need to store a varying number of elements or if the required size is not known in advance.
+
 ## When do we use array?
+
+1. When the number of elements is known and fixed
+
+   - If you have a collection of elements with a predetermined size that will not change throughout the program's execution, arrays are a suitable choice.
+
+2. When random access is required
+
+   - If you need to access elements in the collection directly by their indices or perform operations on specific elements without iterating through the entire collection, arrays provide constant-time random access, making them efficient for such use cases.
+
+3. When you need to iterate over the elements
+
+   - Arrays provide a straightforward way to iterate over their elements using loops or iterators. This makes it convenient to perform operations on each element or process the entire array.
+
+4. When memory efficiency is a concern
+   - Arrays have a compact memory representation, as elements are stored in contiguous memory locations.
 
 ## What is the time & space complexity of following instruction. Why do think that?
 
-- insert (push)
-- delete by index
-- access by index
-- find a specific value
-- pop (delete last)
-- pop left (delte first, shift)
+### insert (push)
+
+- Time Complexity: O(1)
+- Space Complexity: O(1)
+
+  Inserting an element at the end of an array does not require shifting other elements.
+
+### delete by index
+
+- Time Complexity: O(n)
+- Space Complexity: O(1)
+
+  Deleting an element from an array requires shifting all the elements after the deleted index to fill the gap.
+
+### access by index
+
+- Time Complexity: O(1)
+- Space Complexity: O(1)
+
+  Accessing an element in an array or a list by index can be done in constant time since the position of the element is known and does not require iterating through the entire data structure.
+
+### find a specific value
+
+- Time Complexity: O(n)
+- Space Complexity: O(1)
+
+  Finding a specific value in an array or a list requires iterating through the entire data structure until the value is found.
+
+### pop (delete last)
+
+- Time Complexity: O(1)
+- Space Complexity: O(1)
+
+  Deleting the last element of an array or a list does not require shifting other elements.
+
+### pop left (delte first, shift)
+
+- Time Complexity: O(n)
+- Space Complexity: O(1)
+
+  Deleting the first element of an array or a list requires shifting all the elements after the deleted index to fill the gap.
 
 ## Exercise (Optional)
 
