@@ -92,7 +92,7 @@ free(array);
 
   - Inserting or deleting elements in the middle of an array requires shifting subsequent elements, which can be computationally expensive.
 
-  [^1]: 1 つめの脚注への参照です。
+[^1]: In computing, overhead refers to any additional resources or costs incurred in performing a particular operation or executing a program that are not directly related to the desired task or functionality.
 
 ## When do we use array?
 
