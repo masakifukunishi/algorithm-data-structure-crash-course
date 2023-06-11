@@ -67,7 +67,7 @@ free(array);
 
 ### Pros
 
-- Random Access
+- Random Access[^1]
 
   - Arrays provide constant-time access to individual elements based on their index. This means you can access any element directly using its index without iterating through the entire array.
 
@@ -88,11 +88,9 @@ free(array);
 
   - If an array is not fully populated with elements, there may be wasted memory space. If the size of the array is much larger than the number of elements it contains, it can result in inefficient memory usage.
 
-- Insertion and Deletion Overhead[^1]
+- Insertion and Deletion Overhead[^2]
 
   - Inserting or deleting elements in the middle of an array requires shifting subsequent elements, which can be computationally expensive.
-
-[^1]: In computing, overhead refers to any additional resources or costs incurred in performing a particular operation or executing a program that are not directly related to the desired task or functionality.
 
 ## When do we use array?
 
@@ -180,3 +178,6 @@ Let's try and get the bonus!
 
 Hint:
 https://leetcode.com/problems/move-zeroes/
+
+[^1]: Random access refers to the ability to access individual elements in a data structure directly, without the need to traverse or iterate through the entire structure.
+[^2]: In computing, overhead refers to any additional resources or costs incurred in performing a particular operation or executing a program that are not directly related to the desired task or functionality.
