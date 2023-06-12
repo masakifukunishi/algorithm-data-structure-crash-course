@@ -5,17 +5,7 @@
 Array is the simplest and most widely used data structure, allowing multiple elements to be stored in order.
 Each element is uniquely accessible by index.
 
-```typescript
-// array
-const os = ["Mac", "Windows", "Linux"];
-
-// access by index
-console.log(os[0]); // Mac
-```
-
 ## How do we allocate memory when constructing the array?
-
-It depends on the language.
 
 ### In JavaScript
 
@@ -23,28 +13,8 @@ JavaScript arrays are dynamically allocated memory.
 
 When you add an element to an array, the JavaScript runtime environment automatically allocates memory internally to store the element. Memory management is handled by the JavaScript runtime engine, and the programmer does not need to write explicit memory allocation code.
 
-### In C
-
-#### Fixed size array
-
-For a fixed-size array in C, you specify the number of elements when declaring the array.
-
-```C
-int array[10]; // Declaration of a fixed-size array with 10 elements
-```
-
-#### Dynamic size array
-
-For a dynamic-size array in C, you allocate memory at runtime using the malloc function from the standard library. The malloc function allows you to request a specific amount of memory dynamically. The size of the array can be determined during runtime, and you can change the size as needed.
-
-```C
-int* array = malloc(10 * sizeof(int));
-```
-
-After you finish using the dynamic array, you should free the allocated memory using the free function to prevent memory leaks:
-
-```C
-free(array);
+```typescript
+const os: string[] = ["Mac", "Windows", "Linux"];
 ```
 
 ## What is fixed size vs dynamic size array?
