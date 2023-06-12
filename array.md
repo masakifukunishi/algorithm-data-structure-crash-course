@@ -228,7 +228,7 @@ function removeAt(arr: Array<number>, index: number): Array<number> {
   arr.pop();
 
   // or
-  // arr.splice(index, 1);
+  // return arr.splice(index, 1);
 
   return arr;
 }
@@ -280,6 +280,22 @@ Let's try and get the bonus!
 
 Hint:
 https://leetcode.com/problems/move-zeroes/
+
+```ts
+function removeAll(arr: Array<number>, value: number): Array<number> {
+  let idx = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] !== value) {
+      arr[idx] = arr[i];
+      idx++;
+    }
+  }
+  arr.length = idx;
+  return arr;
+}
+```
+
+Since the original array is used and no additional array is created, the spatial computational complexity is O(1).
 
 [^1]: Random access refers to the ability to access individual elements in a data structure directly, without the need to traverse or iterate through the entire structure.
 [^2]: In computing, overhead refers to any additional resources or costs incurred in performing a particular operation or executing a program that are not directly related to the desired task or functionality.
