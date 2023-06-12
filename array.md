@@ -28,9 +28,9 @@ const os: string[] = ["Mac", "Windows", "Linux"];
 
 ### Dynamic size array
 
-- Uses a dynamically allocated memory area to store elements. The size can be changed at runtime.
+- Uses a dynamically allocated memory area to store elements.
 - Elements are stored in contiguous memory areas, but memory may be reallocated as needed.
-- Access to the elements of a fixed size array is also fast and can be accessed directly using indexes.
+- Access to the elements of a dynamic size array is also fast and can be accessed directly using indexes.
 - The size of the dynamic size array is determined at runtime and can be changed at runtime.
 
 ## What is pros and cons about array?
