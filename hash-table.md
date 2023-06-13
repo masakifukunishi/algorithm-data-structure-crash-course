@@ -1,13 +1,39 @@
 # Hash Table
 
-## Concept
+## What is hash?
 
-- What is hash?
-- How do you make hash?
-- What is Hash Table?
-- What do you have to care when you create the Hash Table?
-- What is good(bad) about Hash Table compare to array?
-  - when is better to use Hash Table over array
+Hash is a function that takes an input and produces a fixed-size string of characters.
+
+### Characteristics of Hash
+
+- Deterministic
+
+  - Hash function always produces the same output for the same input.
+
+- Non-Reversible
+
+  - Hash functions are designed to be one-way functions, meaning it is impossible to get the original input from the hash output.
+
+- Fixed Output Size
+
+  - Hash function always produces the same size of output regardless of the input size. For example, a common hash function called SHA-256 generates a 256-bit (32-byte) hash value.
+
+- Uniform Distribution
+
+  - A good hash function evenly distributes hash values across its output space, reducing the likelihood of collisions.
+
+- Avalanche Effect
+  - A small change in the input should result in a significant change in the output, making it difficult to predict the original input based on the hash value alone.
+
+## How do you make hash?
+
+## What is Hash Table?
+
+## What do you have to care when you create the Hash Table?
+
+## What is good(bad) about Hash Table compare to array?
+
+### when is better to use Hash Table over array
 
 ## Analysis
 
