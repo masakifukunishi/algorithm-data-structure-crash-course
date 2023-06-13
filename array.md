@@ -152,14 +152,14 @@ class DynamicArray {
   public push(value: number): void {
     // Add an element to the dynamic array. Check if the dynamic array is already full, and if so, create a new FixedArray instance with a larger size and copy the elements from the old array to the new one.
     // When creating a new fixed size array, it is doubled in size.
-    if (this.length === this.array.length()) {
+    if (this.length === this.array.length) {
       const newArray = new FixedArray(this.array.length * 2);
       for (let i = 0; i < this.array.length; i++) {
-        newArray.push(this.array);
+        newArray[i] = this.array[i];
       }
       this.array = newArray;
     }
-    this.array.push(value);
+    this.array[this.length] = value;
     this.length++;
   }
 
@@ -168,8 +168,8 @@ class DynamicArray {
     for (let i = index; i < this.length - 1; i++) {
       this.array[i] = this.array[i + 1];
     }
-    // After shifting, unnecessary values remain at the end, delete by pop
-    this.array.pop();
+    // Clear the last element
+    this.array[this.length - 1] = undefined;
     this.length--;
   }
 }
