@@ -165,7 +165,7 @@ class DynamicArray {
 
   public removeAt(index: number): void {
     // remove an element at that index and shift all subsequent elements to fill the gap
-    for (let i = index; i < this.length - 1; i++) {
+    for (let i = index; i < this.length; i++) {
       this.array[i] = this.array[i + 1];
     }
     // Clear the last element
