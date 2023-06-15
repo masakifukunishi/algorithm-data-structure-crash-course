@@ -134,7 +134,7 @@ Let's try to implement your own hash function. There is a good leedcode question
 
 ### Exercise 2 (Optional)
 
-Let's try to sovle some leetcode qusiton.
+Let's try to sovle some leetcode quesiton.
 These can be optimized by leveraging array and hash table data structure💪
 
 - https://leetcode.com/problems/two-sum/
