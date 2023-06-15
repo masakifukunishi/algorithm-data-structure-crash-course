@@ -94,13 +94,31 @@ The basic idea behind a hash table is to convert a key into a unique numerical v
 
 ## Analysis
 
-What are the time complixity of
+What are the time complexity of
 
-- add(insert)
-- get value by key
-- find value
-- remove key, value
-- update value
+### add(insert)
+
+O(1)
+
+### get value by key
+
+O(1)
+
+### find value
+
+O(n)
+
+finding a value without knowing its corresponding key requires traversing the entire table to search for a match, resulting in a linear time complexity.
+
+### remove key, value
+
+O(1)
+
+### update value
+
+O(1)
+
+In add, get, remove and update, In the case of collisions, the time complexity can increase to O(n) in the worst case
 
 ## Exercise
 
