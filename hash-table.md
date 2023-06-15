@@ -27,6 +27,24 @@ Hash is a function that takes an input and produces a fixed-size string of chara
 
 ## How do you make hash?
 
+Hashes are created using algorithms such as MD5, SHA-1, SHA-256, etc.
+
+SHA-256 currently has no known security issues. Since it is suitable for modern security requirements.
+
+Here is the code to create a hash using SHA-256 in JavaScript
+
+```js
+import crypto from "crypto";
+
+const data = "Hello!";
+const hash = crypto.createHash("sha256");
+hash.update(data);
+// Specify a hexadecimal string
+const hashedData = hash.digest("hex");
+
+console.log(hashedData);
+```
+
 ## What is Hash Table?
 
 ## What do you have to care when you create the Hash Table?
