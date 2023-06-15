@@ -62,7 +62,35 @@ The basic idea behind a hash table is to convert a key into a unique numerical v
 
 ## What is good(bad) about Hash Table compare to array?
 
-### when is better to use Hash Table over array
+### Advantages of Hash Table over array
+
+- Dynamic Size
+
+  - Hash tables can dynamically resize themselves as the number of elements changes.
+
+- Flexibility in Keys
+
+  - Hash tables allow for flexible key types. Unlike arrays, where the keys are typically integers representing indices, hash tables can use a wide range of data types as keys, including strings.
+
+- Efficient Lookup -----
+
+  - Hash tables provide fast lookup and retrieval of elements. The time complexity for accessing an element in a hash table is typically O(1) on average, making it suitable for applications where fast access is required.
+
+- Efficient Insertion and Deletion
+
+  - Adding or removing elements from a hash table is generally fast. The time complexity for insertions and deletions in a hash table is also typically O(1) on average.
+
+### Disadvantages of Hash Table over array
+
+- Unordered Data
+
+  - Hash tables do not guarantee an order of elements. If you need to maintain a specific order, arrays may be more suitable since they store elements contiguously.
+
+- Additional Overhead
+
+  - Hash tables have additional memory overhead due to the need for hash functions, hash buckets, and potential collisions.
+
+### When is better to use Hash Table over array
 
 ## Analysis
 
