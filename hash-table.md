@@ -49,7 +49,7 @@ console.log(hashedData);
 
 Hash table is a data structure that stores key value pairs.
 
-The basic idea behind a hash table is to convert a key into a unique numerical value using hash function that represents the index in an array or a bucket[^1] where the value associated with the key will be stored.
+The basic idea behind a hash table is to use a hash function to transform a key into a distinct numerical value. This value serves as an index in a bucket[^1], where the corresponding value associated with the key is stored.
 
 ## What do you have to care when you create the Hash Table?
 
@@ -72,13 +72,9 @@ The basic idea behind a hash table is to convert a key into a unique numerical v
 
   - Hash tables allow for flexible key types. Unlike arrays, where the keys are typically integers representing indices, hash tables can use a wide range of data types as keys, including strings.
 
-- Efficient Lookup -----
+- Efficient Search, Insertion, and Deletion
 
-  - Hash tables provide fast lookup and retrieval of elements. The time complexity for accessing an element in a hash table is typically O(1) on average, making it suitable for applications where fast access is required.
-
-- Efficient Insertion and Deletion
-
-  - Adding or removing elements from a hash table is generally fast. The time complexity for insertions and deletions in a hash table is also typically O(1) on average.
+  - Searching, Adding, or removing elements from a hash table is generally fast. The time complexity for searches, insertions, and deletions in a hash table is also typically O(1) on average.
 
 ### Disadvantages of Hash Table over array
 
@@ -98,25 +94,25 @@ What are the time complexity of
 
 ### add(insert)
 
-O(1)
+- O(1)
 
 ### get value by key
 
-O(1)
+- O(1)
 
 ### find value
 
-O(n)
+- O(n)
 
-finding a value without knowing its corresponding key requires traversing the entire table to search for a match, resulting in a linear time complexity.
+  finding a value without knowing its corresponding key requires traversing the entire table to search for a match, resulting in a linear time complexity.
 
 ### remove key, value
 
-O(1)
+- O(1)
 
 ### update value
 
-O(1)
+- O(1)
 
 In add, get, remove and update, In the case of collisions, the time complexity can increase to O(n) in the worst case
 
