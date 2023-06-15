@@ -47,7 +47,18 @@ console.log(hashedData);
 
 ## What is Hash Table?
 
+Hash table is a data structure that stores key value pairs.
+
+The basic idea behind a hash table is to convert a key into a unique numerical value using hash function that represents the index in an array or a bucket[^1] where the value associated with the key will be stored.
+
 ## What do you have to care when you create the Hash Table?
+
+- Hash Function Selection
+
+  - Choose a suitable hash function that distributes the keys uniformly across the hash table. A good hash function minimizes collisions.
+
+- Collision Resolution
+  - Determine an appropriate strategy for handling collisions that may occur when two keys map to the same hash value. Common collision resolution techniques are separate chaining (using linked lists or other data structures to store multiple elements at the same hash index) etc.
 
 ## What is good(bad) about Hash Table compare to array?
 
@@ -97,3 +108,5 @@ https://leetcode.com/explore/learn/card/hash-table/
 - What is Set?
 - What is Set vs Hash Table?
   - when is better to use Set over Hash Table
+
+[^1]: Bucket is a container for storing key value pairs.
