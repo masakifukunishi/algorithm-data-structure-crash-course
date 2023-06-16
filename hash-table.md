@@ -247,6 +247,36 @@ console.log(firstUniqChar("aabb")); // -1
 
 https://leetcode.com/explore/learn/card/hash-table/
 
+```ts
+function findRestaurant(list1: string[], list2: string[]): string[] {
+  const hashmap: { [key: string]: number } = {};
+  let minIndexSum = Infinity;
+  const result: string[] = [];
+
+  for (let i = 0; i < list1.length; i++) {
+    hashmap[list1[i]] = i;
+  }
+
+  for (let j = 0; j < list2.length; j++) {
+    if (hashmap[list2[j]] !== undefined) {
+      const indexSum = j + hashmap[list2[j]];
+      if (indexSum < minIndexSum) {
+        result.length = 0;
+        minIndexSum = indexSum;
+      }
+      if (indexSum === minIndexSum) {
+        result.push(list2[j]);
+      }
+    }
+  }
+  return result;
+}
+
+const list1 = ["Shogun", "Tapioca Express", "Burger King", "KFC"];
+const list2 = ["KFC", "Shogun", "Burger King"];
+console.log(findRestaurant(list1, list2)); // ["Shogun"]
+```
+
 ---
 
 # Set
