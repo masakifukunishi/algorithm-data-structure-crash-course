@@ -204,6 +204,20 @@ Let's try to sovle some leetcode quesiton.
 These can be optimized by leveraging array and hash table data structure💪
 
 - https://leetcode.com/problems/two-sum/
+
+```ts
+const twoSum = (nums: number[], target: number): [number, number] | void => {
+  let hashmap: { [key: number]: number } = {};
+  for (let i = 0; i < nums.length; i++) {
+    let complement = target - nums[i];
+    if (hashmap[complement] !== undefined) {
+      return [hashmap[complement], i];
+    }
+    hashmap[nums[i]] = i;
+  }
+};
+```
+
 - https://leetcode.com/problems/first-unique-character-in-a-string/
 - https://leetcode.com/problems/minimum-index-sum-of-two-lists/
 
