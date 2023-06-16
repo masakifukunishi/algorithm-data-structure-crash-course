@@ -216,9 +216,31 @@ const twoSum = (nums: number[], target: number): [number, number] | void => {
     hashmap[nums[i]] = i;
   }
 };
+console.log(twoSum([2, 7, 11, 15], 9)); // [0, 1]
 ```
 
 - https://leetcode.com/problems/first-unique-character-in-a-string/
+
+```ts
+const firstUniqChar = (s: string): number => {
+  const charCount: { [key: string]: number } = {};
+  for (let i = 0; i < s.length; i++) {
+    const char = s[i];
+    charCount[char] = (charCount[char] || 0) + 1;
+  }
+  for (let i = 0; i < s.length; i++) {
+    const char = s[i];
+    if (charCount[char] === 1) {
+      return i;
+    }
+  }
+  return -1;
+};
+
+console.log(firstUniqChar("leetcode")); // 0
+console.log(firstUniqChar("aabb")); // -1
+```
+
 - https://leetcode.com/problems/minimum-index-sum-of-two-lists/
 
 ## References
