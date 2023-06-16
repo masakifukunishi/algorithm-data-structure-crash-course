@@ -128,6 +128,76 @@ Let's try to implement your own hash function. There is a good leedcode question
   - **Do not ever use pre existing hash table API**
   - **If you use an array, try to fixed the size with 1000**
 
+```ts
+class MyHashMap<K, V> {
+  private data: [K, V][][];
+  constructor() {
+    this.data = new Array(1000);
+  }
+
+  private hash(key: K): number {
+    let hash = 0;
+    const keyString = JSON.stringify(key);
+    for (let i = 0; i < keyString.length; i++) {
+      hash += keyString.charCodeAt(i) % this.data.length;
+    }
+    return hash;
+  }
+
+  public put(key: K, value: V): void {
+    const address = this.hash(key);
+    if (this.data[address] === undefined) {
+      this.data[address] = [];
+    }
+
+    const currentBucket = this.data[address];
+    for (let i = 0; i < currentBucket.length; i++) {
+      if (currentBucket[i][0] === key) {
+        currentBucket[i][1] = value;
+        return;
+      }
+    }
+
+    currentBucket.push([key, value]);
+  }
+
+  public get(key: K): V | undefined {
+    const address = this.hash(key);
+    const currentBucket = this.data[address];
+    if (currentBucket) {
+      for (let i = 0; i < currentBucket.length; i++) {
+        if (currentBucket[i][0] === key) {
+          return currentBucket[i][1];
+        }
+      }
+    }
+    return undefined;
+  }
+
+  public remove(key: K): void {
+    const address = this.hash(key);
+    const currentBucket = this.data[address];
+    if (currentBucket) {
+      for (let i = 0; i < currentBucket.length; i++) {
+        if (currentBucket[i][0] === key) {
+          currentBucket.splice(i, 1);
+        }
+      }
+    }
+  }
+}
+
+const person = new MyHashMap<string, string>();
+person.put("name", "John");
+person.put("height", "180cm");
+
+console.log(person.get("name")); // John
+console.log(person.get("height")); // 180cm
+
+person.remove("height");
+console.log(person.get("height")); // undefined
+```
+
 ### Exercise 2 (Optional)
 
 Let's try to sovle some leetcode quesiton.
@@ -135,7 +205,7 @@ These can be optimized by leveraging array and hash table data structure💪
 
 - https://leetcode.com/problems/two-sum/
 - https://leetcode.com/problems/first-unique-character-in-a-string/
-- (optional) https://leetcode.com/problems/minimum-index-sum-of-two-lists/
+- https://leetcode.com/problems/minimum-index-sum-of-two-lists/
 
 ## References
 
@@ -152,3 +222,7 @@ https://leetcode.com/explore/learn/card/hash-table/
   - when is better to use Set over Hash Table
 
 [^1]: Bucket is a container for storing key value pairs.
+
+```
+
+```
