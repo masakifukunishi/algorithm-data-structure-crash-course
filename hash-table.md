@@ -293,6 +293,6 @@ Sets focus on storing unique elements and performing set operations, while hash 
 
 ##### When is better to use Set over Hash Table
 
-In summary, use a set when you need to work with a collection of unique elements and don't require key-value mappings or fast key-based lookups. Sets are well-suited for scenarios where element uniqueness and set operations are the primary concerns.
+Use a set when you need to work with a collection of unique elements and don't require key-value mappings or fast key-based lookups. Sets are well-suited for scenarios where element uniqueness and set operations are the primary concerns.
 
 [^1]: Bucket is a container for storing key value pairs.
