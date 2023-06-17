@@ -49,7 +49,7 @@ console.log(hashedData);
 
 Hash table is a data structure that stores key value pairs.
 
-The basic idea behind a hash table is to use a hash function to transform a key into a distinct numerical value. This value serves as an index in a bucket[^1], where the corresponding value associated with the key is stored.
+The basic idea behind a hash table is to use a hash function to transform a key into a distinct string of character. This value serves as an index in a bucket1, where the corresponding value associated with the key is stored.
 
 ## What do you have to care when you create the Hash Table?
 
@@ -74,7 +74,7 @@ The basic idea behind a hash table is to use a hash function to transform a key 
 
 - Efficient Search, Insertion, and Deletion
 
-  - Searching, Adding, or removing elements from a hash table is generally fast. The time complexity for searches, insertions, and deletions in a hash table is also typically O(1) on average.
+  - Searching, Adding, and removing elements from a hash table is generally fast. The time complexity for searches, insertions, and deletions in a hash table is also typically O(1) on average.
 
 ### Disadvantages of Hash Table over array
 
@@ -164,24 +164,23 @@ class MyHashMap<K, V> {
   public get(key: K): V | undefined {
     const address = this.hash(key);
     const currentBucket = this.data[address];
-    if (currentBucket) {
-      for (let i = 0; i < currentBucket.length; i++) {
-        if (currentBucket[i][0] === key) {
-          return currentBucket[i][1];
-        }
+    if (!currentBucket) return undefined;
+
+    for (let i = 0; i < currentBucket.length; i++) {
+      if (currentBucket[i][0] === key) {
+        return currentBucket[i][1];
       }
     }
-    return undefined;
   }
 
   public remove(key: K): void {
     const address = this.hash(key);
     const currentBucket = this.data[address];
-    if (currentBucket) {
-      for (let i = 0; i < currentBucket.length; i++) {
-        if (currentBucket[i][0] === key) {
-          currentBucket.splice(i, 1);
-        }
+    if (!currentBucket) return;
+
+    for (let i = 0; i < currentBucket.length; i++) {
+      if (currentBucket[i][0] === key) {
+        currentBucket.splice(i, 1);
       }
     }
   }
@@ -243,10 +242,6 @@ console.log(firstUniqChar("aabb")); // -1
 
 - https://leetcode.com/problems/minimum-index-sum-of-two-lists/
 
-## References
-
-https://leetcode.com/explore/learn/card/hash-table/
-
 ```ts
 function findRestaurant(list1: string[], list2: string[]): string[] {
   const hashmap: { [key: string]: number } = {};
@@ -258,15 +253,16 @@ function findRestaurant(list1: string[], list2: string[]): string[] {
   }
 
   for (let j = 0; j < list2.length; j++) {
-    if (hashmap[list2[j]] !== undefined) {
-      const indexSum = j + hashmap[list2[j]];
-      if (indexSum < minIndexSum) {
-        result.length = 0;
-        minIndexSum = indexSum;
-      }
-      if (indexSum === minIndexSum) {
-        result.push(list2[j]);
-      }
+    if (hashmap[list2[j]] === undefined) {
+      continue;
+    }
+    const indexSum = j + hashmap[list2[j]];
+    if (indexSum < minIndexSum) {
+      result.length = 0;
+      minIndexSum = indexSum;
+    }
+    if (indexSum === minIndexSum) {
+      result.push(list2[j]);
     }
   }
   return result;
@@ -276,6 +272,10 @@ const list1 = ["Shogun", "Tapioca Express", "Burger King", "KFC"];
 const list2 = ["KFC", "Shogun", "Burger King"];
 console.log(findRestaurant(list1, list2)); // ["Shogun"]
 ```
+
+## References
+
+https://leetcode.com/explore/learn/card/hash-table/
 
 ---
 
@@ -292,5 +292,7 @@ A set is a collection of unique elements, where each element appears only once. 
 Sets focus on storing unique elements and performing set operations, while hash tables store key-value pairs and provide efficient key-based lookup and manipulation operations.
 
 ##### When is better to use Set over Hash Table
+
+In summary, use a set when you need to work with a collection of unique elements and don't require key-value mappings or fast key-based lookups. Sets are well-suited for scenarios where element uniqueness and set operations are the primary concerns.
 
 [^1]: Bucket is a container for storing key value pairs.
