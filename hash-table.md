@@ -279,16 +279,18 @@ console.log(findRestaurant(list1, list2)); // ["Shogun"]
 
 ---
 
-# Set
+## Set
 
-## Q: Concept
+### Q: Concept
 
-- What is Set?
-- What is Set vs Hash Table?
-  - when is better to use Set over Hash Table
+#### What is Set?
+
+A set is a collection of unique elements, where each element appears only once. It does not maintain any particular order for its elements.
+
+#### What is Set vs Hash Table?
+
+Sets focus on storing unique elements and performing set operations, while hash tables store key-value pairs and provide efficient key-based lookup and manipulation operations.
+
+##### When is better to use Set over Hash Table
 
 [^1]: Bucket is a container for storing key value pairs.
-
-```
-
-```
