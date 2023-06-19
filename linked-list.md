@@ -2,7 +2,7 @@
 
 ## What is linked list?
 
-Linked list is a data structure that consists of a sequence of nodes, where each node contains a data element and a reference to the next node in the sequence.
+Linked list is a data structure that consists of a sequence of nodes[^1], where each node contains a data element and a reference to the next node in the sequence.
 
 ## What is liked list good at?
 
@@ -88,4 +88,4 @@ https://leetcode.com/explore/learn/card/linked-list/
 - What is pros and cons compare to Singly Linked List?
 - Can you come up with good example when to use Double Liked List?😁
 
-[^1]: node is a fundamental building block of a linked list or a tree. It is a data structure that holds a piece of data and one or more references (links) to other nodes.
+[^1]: Node is a fundamental building block of a linked list or a tree. It is a data structure that holds a piece of data and one or more references to other nodes.
