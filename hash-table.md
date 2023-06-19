@@ -49,7 +49,7 @@ console.log(hashedData);
 
 Hash table is a data structure that stores key value pairs.
 
-The basic idea behind a hash table is to use a hash function to transform a key into a distinct string of character. This value serves as an index in a bucket1, where the corresponding value associated with the key is stored.
+The basic idea behind a hash table is to use a hash function to transform a key into a distinct string of character. This value serves as an index in a bucket[^1], where the corresponding value associated with the key is stored.
 
 ## What do you have to care when you create the Hash Table?
 
