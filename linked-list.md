@@ -6,6 +6,25 @@ Linked list is a data structure that consists of a sequence of nodes[^1], where 
 
 ## What is liked list good at?
 
+- Sorted data
+
+  - Linked lists can have sorted data unlike hash table, Because nodes points the next node.
+
+- Dynamic Size
+
+  - Linked list can dynamically grow or shrink in size during program execution. Unlike arrays, which have a fixed size, linked lists can accommodate new elements or remove existing elements without requiring a reallocation of memory.
+
+- Insertion and Deletion
+
+  - Linked list excel at efficient insertion and deletion operations, especially at the beginning or middle of the list. Unlike arrays, which may require shifting elements to accommodate changes, linked lists only need to update a few pointers.
+
+- Efficient Iteration
+
+  - Singly-linked lists are efficient for forward iteration, allowing easy traversal from the beginning to the end. Doubly-linked lists can traverse in both directions, enabling forward and backward traversal.
+
+- Merging and Splitting
+  - Linked lists can be merged or split easily by manipulating the pointers.
+
 ## When is good to use liked list?
 
 ## What is head and tail in linked list?
