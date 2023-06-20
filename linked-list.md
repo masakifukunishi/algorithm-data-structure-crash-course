@@ -139,6 +139,10 @@ while (currentNode !== null) {
 - Hint: We can use a ListNode class used in Excersie 01
 - Since 02 could be heavy task, you can try either 02 or 03
 
+```ts
+
+```
+
 ### Exercise 03
 
 - Let's try to solve some leet code questions. (You dont' havet to solve all, Just one is enough for now)
@@ -157,3 +161,7 @@ https://leetcode.com/explore/learn/card/linked-list/
 - Can you come up with good example when to use Double Liked List?😁
 
 [^1]: Node is a fundamental building block of a linked list or a tree. It is a data structure that holds a piece of data and one or more references to other nodes.
+
+```
+
+```
