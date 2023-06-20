@@ -122,6 +122,13 @@ three.next = four;
 // 2
 // 3
 // 4
+
+let currentNode: ListNode | null = zero;
+
+while (currentNode !== null) {
+  console.log(currentNode.val);
+  currentNode = currentNode.next;
+}
 ```
 
 ### Exercise 02
