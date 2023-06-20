@@ -48,6 +48,14 @@ Linked list is a data structure that consists of a sequence of nodes[^1], where 
 
 ## What is head and tail in linked list?
 
+- Head
+
+  - Head is the first node in the list. It is the entry point from which you can access the entire linked list structure
+
+- Tail
+
+  - Tail is the last node in the list. It is the node that has a reference to null or points to nothing, indicating the end of the list.
+
 ## Analysis
 
 What is the time complexity of folloing operations
