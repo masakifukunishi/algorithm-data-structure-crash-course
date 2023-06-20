@@ -32,16 +32,21 @@ class MyLinkedList {
   }
 
   addAtIndex(index: number, val: number): void {
-    const learned = this.traverseToIndex(index - 1);
+    const newNode = new ListNode(val);
+    const leader = this.traverseToIndex(index - 1);
+    const holdingPointer = leader.next;
+    leader.next = newNode;
+    newNode.next = holdingPointer;
+    return;
   }
 
   deleteAtIndex(index: number): void {}
 
-  private traverseToIndex(index: number): ListNode | null {
-    let currentNode: ListNode | null = this.head;
+  private traverseToIndex(index: number): ListNode {
+    let currentNode: ListNode = this.head;
     let counter = 0;
     while (currentNode !== null && counter !== index) {
-      currentNode = currentNode.next;
+      currentNode = currentNode.next!;
       counter++;
     }
     return currentNode;
@@ -53,6 +58,8 @@ console.log(linkedList);
 linkedList.addAtHead(1);
 console.log(linkedList);
 linkedList.addAtTail(3);
+console.log(linkedList);
+linkedList.addAtIndex(2, 4);
 console.log(linkedList);
 /**
  * Your MyLinkedList object will be instantiated and called as such:
