@@ -27,6 +27,25 @@ Linked list is a data structure that consists of a sequence of nodes[^1], where 
 
 ## When is good to use liked list?
 
+- When you need to maintain sorted data
+
+  - If you need to maintain data in a sorted order, linked lists can be a suitable option. As the nodes in a linked list contain pointers to the next node.
+
+- When you need dynamic size
+
+  - If the size of your data is not known in advance or if it frequently changes, a linked list can accommodate these changes efficiently.
+
+- When you need efficient insertion and deletion
+
+  - If your application requires frequent insertion or deletion operations, especially at the beginning or middle of the data structure, linked lists provide efficient performance.
+
+- When you need efficient iteration
+
+  - If your application primarily involves sequential access to the data, linked lists provide an efficient way to iterate through the elements.
+
+- When merging or splitting data structures
+  - Linked lists a good choice when you need to combine multiple lists into one or divide a list into smaller segments.
+
 ## What is head and tail in linked list?
 
 ## Analysis
