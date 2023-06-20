@@ -62,15 +62,30 @@ What is the time complexity of folloing operations
 
 ### access by index
 
+- O(n)
+  Accessing an element by index requires traversing the list from the head to the desired index, which takes linear time.
+
 ### insert at index
+
+- O(n)
+  Inserting an element at a specific index requires traversing the list from the head to the desired index, which takes linear time.
 
 ### delete at index
 
+- O(n)
+  Deleting an element at a specific index requires traversing the list from the head to the desired index, which takes linear time.
+
 ### joint two listed list
+
+- O(1)
+  Joining two linked lists requires updating the tail of the first list to point to the head of the second list, which takes constant time.
 
 ### add(delete) head
 
-### add(delete) tail
+- O(1)
+  Adding or deleting an element at the head of the linked list involves updating a few pointers, which can be done in constant time.
+
+### add(delete) tail ---
 
 ## Exercise
 
