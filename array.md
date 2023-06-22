@@ -117,7 +117,7 @@ const os: string[] = ["Mac", "Windows", "Linux"];
 
   Deleting the first element of an array or a list requires shifting all the elements after the deleted index to fill the gap.
 
-## Exercise (Optional)
+## Exercise
 
 ## Exercise 1:
 
@@ -237,7 +237,7 @@ Easy Peasy? What is your codes **time complexity and space complexity.**
   - Space Complexity: O(n)
     - It creates a new array to store the elements that do not match the given value.
 
-## Q3: optional
+## Q3
 
 Since your company is big and needs to handle a large amount of data,
 you are asked to make it as efficient as possible.
