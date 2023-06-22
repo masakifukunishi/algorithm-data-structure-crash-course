@@ -79,12 +79,11 @@ const os: string[] = ["Mac", "Windows", "Linux"];
 4. When memory efficiency is a concern
    - Arrays have a compact memory representation, as elements are stored in contiguous memory locations.
 
-## What is the time & space complexity of following instruction. Why do think that?
+## What is the time complexity of following instruction. Why do think that?
 
 ### insert (push)
 
 - Time Complexity: O(1)
-- Space Complexity: O(1)
 
   Inserting an element at the end of an array does not require shifting other elements.
 
@@ -98,28 +97,24 @@ const os: string[] = ["Mac", "Windows", "Linux"];
 ### access by index
 
 - Time Complexity: O(1)
-- Space Complexity: O(1)
 
   Accessing an element in an array or a list by index can be done in constant time since the position of the element is known and does not require iterating through the entire data structure.
 
 ### find a specific value
 
 - Time Complexity: O(n)
-- Space Complexity: O(1)
 
   Finding a specific value in an array or a list requires iterating through the entire data structure until the value is found.
 
 ### pop (delete last)
 
 - Time Complexity: O(1)
-- Space Complexity: O(1)
 
   Deleting the last element of an array or a list does not require shifting other elements.
 
 ### pop left (delte first, shift)
 
 - Time Complexity: O(n)
-- Space Complexity: O(1)
 
   Deleting the first element of an array or a list requires shifting all the elements after the deleted index to fill the gap.
 
@@ -164,6 +159,9 @@ class DynamicArray {
   }
 
   public removeAt(index: number): void {
+    if (index < 0 || index >= this.length) {
+      return;
+    }
     // remove an element at that index and shift all subsequent elements to fill the gap
     for (let i = index; i < this.length; i++) {
       this.array[i] = this.array[i + 1];
