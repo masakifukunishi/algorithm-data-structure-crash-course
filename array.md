@@ -90,7 +90,6 @@ const os: string[] = ["Mac", "Windows", "Linux"];
 ### delete by index
 
 - Time Complexity: O(n)
-- Space Complexity: O(1)
 
   Deleting an element from an array requires shifting all the elements after the deleted index to fill the gap.
 
