@@ -124,7 +124,7 @@ What are the time complexity of
 
 - O(1)
 
-In add, get, remove and update, In the case of collisions, the time complexity can increase to O(n) in the worst case
+In add, get, remove and update, In the case of collisions, the time complexity can increase to O(n) in the worst case.
 
 ## Exercise
 
