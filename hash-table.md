@@ -149,13 +149,17 @@ class MyHashMap<K, V> {
     let hash = 0;
     const keyString = JSON.stringify(key);
     for (let i = 0; i < keyString.length; i++) {
-      hash += keyString.charCodeAt(i) % this.data.length;
+      hash += keyString.charCodeAt(i);
     }
     return hash;
   }
 
+  private address(key: K): number {
+    return this.hash(key) % this.data.length;
+  }
+
   public put(key: K, value: V): void {
-    const address = this.hash(key);
+    const address = this.address(key);
     if (this.data[address] === undefined) {
       this.data[address] = [];
     }
@@ -171,20 +175,22 @@ class MyHashMap<K, V> {
     currentBucket.push([key, value]);
   }
 
-  public get(key: K): V | undefined {
-    const address = this.hash(key);
+  public get(key: K): V | number {
+    const address = this.address(key);
     const currentBucket = this.data[address];
-    if (!currentBucket) return undefined;
 
-    for (let i = 0; i < currentBucket.length; i++) {
-      if (currentBucket[i][0] === key) {
-        return currentBucket[i][1];
+    if (currentBucket) {
+      for (let i = 0; i < currentBucket.length; i++) {
+        if (currentBucket[i][0] === key) {
+          return currentBucket[i][1];
+        }
       }
     }
+    return -1;
   }
 
   public remove(key: K): void {
-    const address = this.hash(key);
+    const address = this.address(key);
     const currentBucket = this.data[address];
     if (!currentBucket) return;
 
