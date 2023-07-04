@@ -210,7 +210,7 @@ console.log(person.get("name")); // John
 console.log(person.get("height")); // 180cm
 
 person.remove("height");
-console.log(person.get("height")); // undefined
+console.log(person.get("height")); // -1
 ```
 
 ### Exercise 2 (Optional)
