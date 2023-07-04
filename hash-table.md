@@ -92,8 +92,6 @@ The basic idea behind a hash table is to use a hash function to transform a key 
 
 - When you need to associate values with flexible keys
 
-- When the size of the collection can change dynamically
-
 - When the order of elements doesn't matter
 
 - When the additional memory overhead is acceptable
