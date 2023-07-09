@@ -63,17 +63,16 @@ What is the time complexity of following operations
 ### access by index
 
 - O(n)
-  Accessing an element by index requires traversing the list from the head to the desired index, which takes linear time.
 
 ### insert at index
 
 - O(n)
-  Inserting an element at a specific index requires traversing the list from the head to the desired index, which takes linear time.
 
 ### delete at index
 
 - O(n)
-  Deleting an element at a specific index requires traversing the list from the head to the desired index, which takes linear time.
+
+Accessing, inserting, and deleting an element by index requires traversing the list from the head to the desired index, which takes linear time.
 
 ### joint two listed list
 
