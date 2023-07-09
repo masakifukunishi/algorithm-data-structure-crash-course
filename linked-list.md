@@ -72,7 +72,7 @@ What is the time complexity of following operations
 
 - O(n)
 
-Accessing, inserting, and deleting an element by index requires traversing the list from the head to the desired index, which takes linear time.
+Accessing, inserting, or deleting an element by index requires traversing the list from the head to the desired index, which takes linear time.
 
 ### joint two listed list
 
@@ -82,9 +82,15 @@ Accessing, inserting, and deleting an element by index requires traversing the l
 ### add(delete) head
 
 - O(1)
-  Adding or deleting an element at the head of the linked list involves updating a few pointers, which can be done in constant time.
+  Addind or deliting elements at the top of the linked list, just update few nodes, which takes constant time.
 
-### add(delete) tail ---
+### add(delete) tail
+
+- Adding O(1)
+  Addind elements at the end of the linked list, just update few nodes using tail, which takes constant time.
+
+- Deleting O(n)
+  Deleting elements at the end of the linked list, requires traversing the list from the head to the tail, which takes linear time.
 
 ## Exercise
 
@@ -271,12 +277,26 @@ https://leetcode.com/explore/learn/card/linked-list/
 
 # Advanced(optional): Double Liked List
 
-- What is Doubly Linked List?
-- What is pros and cons compare to Singly Linked List?
-- Can you come up with good example when to use Double Liked List?😁
+## What is Doubly Linked List?
+
+Doubly linked list is similar to a singly linked list, except that each node has a reference to both the next and previous nodes in the sequence.
+
+## What is pros and cons compare to Singly Linked List?
+
+### pros
+
+- Bidirectional traversal
+
+  Doubly linked lists allow for traversal in both forward and backward directions. Each node contains pointers to both the next and previous nodes, enabling efficient backward traversal.
+
+### cons
+
+- Extra memory
+
+  - Doubly linked lists require extra memory space to store the previous node reference.
+
+### Can you come up with good example when to use Double Liked List?😁
+
+Music Player Playlist: When adding a new song, a new element is inserted into the list. Also, when a user navigates to the previous or next song, the previous or next element in the list can be accessed.
 
 [^1]: Node is a fundamental building block of a linked list or a tree. It is a data structure that holds a piece of data and one or more references to other nodes.
-
-```
-
-```
