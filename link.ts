@@ -19,7 +19,13 @@ class MyLinkedList {
     this.length = 1;
   }
 
-  get(index: number): number {}
+  get(index: number): number | null {
+    if (index < 0 || index >= this.length) {
+      return null;
+    }
+    const leader = this.traverseToIndex(index);
+    return leader.val;
+  }
 
   addAtHead(val: number): void {
     const node = new ListNode(val);
