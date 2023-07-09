@@ -297,6 +297,7 @@ Doubly linked list is similar to a singly linked list, except that each node has
 
 ### Can you come up with good example when to use Double Liked List?😁
 
-Music Player Playlist: When adding a new song, a new element is inserted into the list. Also, when a user navigates to the previous or next song, the previous or next element in the list can be accessed.
+- Music Player Playlist
+  When adding a new song, a new element is inserted into the list. Also, when a user navigates to the previous or next song, the previous or next element in the list can be accessed.
 
 [^1]: Node is a fundamental building block of a linked list or a tree. It is a data structure that holds a piece of data and one or more references to other nodes.
