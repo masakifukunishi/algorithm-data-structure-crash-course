@@ -58,7 +58,7 @@ Linked list is a data structure that consists of a sequence of nodes[^1], where 
 
 ## Analysis
 
-What is the time complexity of folloing operations
+What is the time complexity of following operations
 
 ### access by index
 
