@@ -55,7 +55,16 @@ class MyLinkedList {
     return;
   }
 
-  deleteAtIndex(index: number): void {}
+  deleteAtIndex(index: number): void {
+    if (index < 0 || index >= this.length) {
+      return;
+    }
+
+    const leader = this.traverseToIndex(index - 1);
+    const unwantedNode = leader.next;
+    leader.next = unwantedNode!.next;
+    this.length--;
+  }
 
   private traverseToIndex(index: number): ListNode {
     let currentNode: ListNode = this.head;
@@ -75,6 +84,8 @@ console.log(linkedList);
 linkedList.addAtTail(3);
 console.log(linkedList);
 linkedList.addAtIndex(2, 4);
+console.log(linkedList);
+linkedList.deleteAtIndex(1);
 console.log(linkedList);
 /**
  * Your MyLinkedList object will be instantiated and called as such:
