@@ -94,21 +94,21 @@ What is the time complexity of following operations
 Let's try to print all values in linked list.
 
 ```ts
-class ListNode {
+class LinkedListNode {
   val: number | null;
-  next: ListNode | null;
+  next: LinkedListNode | null;
 
-  constructor(val: number | null = null, next: ListNode | null = null) {
+  constructor(val: number | null = null, next: LinkedListNode | null = null) {
     this.val = val;
     this.next = next;
   }
 }
 
-const zero = new ListNode(0);
-const one = new ListNode(1);
-const two = new ListNode(2);
-const three = new ListNode(3);
-const four = new ListNode(4);
+const zero = new LinkedListNode(0);
+const one = new LinkedListNode(1);
+const two = new LinkedListNode(2);
+const three = new LinkedListNode(3);
+const four = new LinkedListNode(4);
 zero.next = one;
 one.next = two;
 two.next = three;
@@ -123,7 +123,7 @@ three.next = four;
 // 3
 // 4
 
-let currentNode: ListNode | null = zero;
+let currentNode: LinkedListNode | null = zero;
 
 while (currentNode !== null) {
   console.log(currentNode.val);

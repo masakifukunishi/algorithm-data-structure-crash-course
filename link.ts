@@ -1,59 +1,52 @@
-class ListNode {
+class LinkedListNode {
   val: number | null;
-  next: ListNode | null;
+  next: LinkedListNode | null;
 
-  constructor(val: number | null = null, next: ListNode | null = null) {
+  constructor(val: number | null = null, next: LinkedListNode | null = null) {
     this.val = val;
     this.next = next;
   }
 }
 
 class MyLinkedList {
-  private head: ListNode;
-  private tail: ListNode;
+  private head: LinkedListNode;
+  private tail: LinkedListNode;
   private length: number;
 
   constructor(val: number) {
-    this.head = new ListNode(val);
+    this.head = new LinkedListNode(val);
     this.tail = this.head;
     this.length = 1;
   }
 
-  get(index: number): number | null {
+  get(index: number): number {
     if (index < 0 || index >= this.length) {
-      return null;
+      return -1;
     }
     const leader = this.traverseToIndex(index);
-    return leader.val;
+    return leader.val!;
   }
 
   addAtHead(val: number): void {
-    const node = new ListNode(val);
+    const node = new LinkedListNode(val);
     node.next = this.head;
     this.head = node;
     this.length++;
   }
 
   addAtTail(val: number): void {
-    const node = new ListNode(val);
+    const node = new LinkedListNode(val);
     this.tail.next = node;
     this.tail = node;
     this.length++;
   }
 
   addAtIndex(index: number, val: number): void {
-    // If index is greater than the length, the node will be appended to the end of list.
-    if (index >= this.length) {
-      this.addAtTail(val);
-      return;
-    }
-    // If index is negative, the node will be inserted at the first of the list.
-    if (index <= 0) {
-      this.addAtHead(val);
+    if (index < 0 || index >= this.length) {
       return;
     }
 
-    const newNode = new ListNode(val);
+    const newNode = new LinkedListNode(val);
     const leader = this.traverseToIndex(index - 1);
     const holdingPointer = leader.next;
     leader.next = newNode;
@@ -72,8 +65,8 @@ class MyLinkedList {
     this.length--;
   }
 
-  private traverseToIndex(index: number): ListNode {
-    let currentNode: ListNode = this.head;
+  private traverseToIndex(index: number): LinkedListNode {
+    let currentNode: LinkedListNode = this.head;
     let counter = 0;
     while (currentNode !== null && counter !== index) {
       currentNode = currentNode.next!;
