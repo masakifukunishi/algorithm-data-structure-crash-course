@@ -307,10 +307,11 @@ A set is a collection of unique elements, where each element appears only once. 
 
 - Elements
 
-  - Sets only store distinct elements, whereas hash tables store key-value pairs.
+  Sets only store distinct elements, whereas hash tables store key-value pairs.
 
 - Operations
-  - Sets provide operations specific to sets, such as set union, intersection, and difference. Hash tables, on the other hand, focus on key-value operations like insertion, deletion, and retrieval of values based on keys.
+
+  Sets provide operations specific to sets, such as set union, intersection, and difference. Hash tables, on the other hand, focus on key-value operations like insertion, deletion, and retrieval of values based on keys.
 
 #### When is better to use Set over Hash Table
 
