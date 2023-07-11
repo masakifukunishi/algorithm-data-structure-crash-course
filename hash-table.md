@@ -23,6 +23,7 @@ Hash is a function that takes an input and produces a fixed-size string of chara
   A good hash function evenly distributes hash values across its output space, reducing the likelihood of collisions.
 
 - Avalanche Effect
+
   A small change in the input should result in a significant change in the output, making it difficult to predict the original input based on the hash value alone.
 
 ## How do you make hash?
