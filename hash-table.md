@@ -305,7 +305,7 @@ A set is a collection of unique elements, where each element appears only once. 
 
 Sets focus on storing unique elements and performing set operations, while hash tables store key-value pairs and provide efficient key-based lookup and manipulation operations.
 
-##### When is better to use Set over Hash Table
+#### When is better to use Set over Hash Table
 
 Use a set when you need to work with a collection of unique elements and don't require key-value mappings or fast key-based lookups. Sets are well-suited for scenarios where element uniqueness and set operations are the primary concerns.
 
