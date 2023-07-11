@@ -172,11 +172,7 @@ class MyLinkedList {
     }
     const leader = this.traverseToIndex(index);
 
-    if (leader === null) {
-      return -1;
-    }
-
-    return leader.val!;
+    return leader!.val!;
   }
 
   addAtHead(val: number): void {
@@ -220,8 +216,6 @@ class MyLinkedList {
 
     const newNode = new LinkedListNode(val);
     const leader = this.traverseToIndex(index - 1);
-
-    if (leader === null) return;
 
     const holdingPointer = leader.next;
     leader.next = newNode;
