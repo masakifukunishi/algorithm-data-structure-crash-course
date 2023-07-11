@@ -30,7 +30,7 @@ Linked list is a data structure that consists of a sequence of nodes[^1], where 
 
 - When you need to maintain sorted data
 
-  - If you need to maintain data in a sorted order, linked lists can be a suitable option. As the nodes in a linked list contain pointers to the next node.
+  If you need to maintain data in a sorted order, linked lists can be a suitable option. As the nodes in a linked list contain pointers to the next node.
 
 - When you need dynamic size
 
