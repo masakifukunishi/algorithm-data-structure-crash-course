@@ -8,22 +8,22 @@ Hash is a function that takes an input and produces a fixed-size string of chara
 
 - Deterministic
 
-  - Hash function always produces the same output for the same input.
+  Hash function always produces the same output for the same input.
 
 - Non-Reversible
 
-  - Hash functions are designed to be one-way functions, meaning it is impossible to get the original input from the hash output.
+  Hash functions are designed to be one-way functions, meaning it is impossible to get the original input from the hash output.
 
 - Fixed Output Size
 
-  - Hash function always produces the same size of output regardless of the input size. For example, a common hash function called SHA-256 generates a 256-bit (32-byte) hash value.
+  Hash function always produces the same size of output regardless of the input size. For example, a common hash function called SHA-256 generates a 256-bit (32-byte) hash value.
 
 - Uniform Distribution
 
-  - A good hash function evenly distributes hash values across its output space, reducing the likelihood of collisions.
+  A good hash function evenly distributes hash values across its output space, reducing the likelihood of collisions.
 
 - Avalanche Effect
-  - A small change in the input should result in a significant change in the output, making it difficult to predict the original input based on the hash value alone.
+  A small change in the input should result in a significant change in the output, making it difficult to predict the original input based on the hash value alone.
 
 ## How do you make hash?
 
@@ -303,7 +303,12 @@ A set is a collection of unique elements, where each element appears only once. 
 
 #### What is Set vs Hash Table?
 
-Sets focus on storing unique elements and performing set operations, while hash tables store key-value pairs and provide efficient key-based lookup and manipulation operations.
+- Elements
+
+  - Sets only store distinct elements, whereas hash tables store key-value pairs.
+
+- Operations
+  - Sets provide operations specific to sets, such as set union, intersection, and difference. Hash tables, on the other hand, focus on key-value operations like insertion, deletion, and retrieval of values based on keys.
 
 #### When is better to use Set over Hash Table
 
