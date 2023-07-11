@@ -267,6 +267,41 @@ class MyLinkedList {
 - https://leetcode.com/problems/linked-list-cycle/description/
 - https://leetcode.com/problems/remove-nth-node-from-end-of-list/
 - https://leetcode.com/problems/reverse-linked-list/
+- https://leetcode.com/problems/swapping-nodes-in-a-linked-list/
+
+```ts
+const swapNodes = (head: ListNode | null, k: number): ListNode | null => {
+  let length = 0;
+  let countLength = head;
+  while (countLength) {
+    countLength = countLength.next;
+    length++;
+  }
+
+  const indexFromStart = k - 1;
+  const indexFromEnd = length - k;
+
+  let count = 0;
+  let nodeFromStart: ListNode | null = null;
+  let nodeFromEnd: ListNode | null = null;
+  let current = head;
+
+  while (current) {
+    if (count === indexFromStart) {
+      nodeFromStart = current;
+    }
+    if (count === indexFromEnd) {
+      nodeFromEnd = current;
+    }
+    current = current.next;
+    count++;
+  }
+
+  [nodeFromStart!.val, nodeFromEnd!.val] = [nodeFromEnd!.val, nodeFromStart!.val];
+
+  return head;
+};
+```
 
 ## References
 
