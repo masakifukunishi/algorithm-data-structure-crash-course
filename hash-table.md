@@ -56,10 +56,11 @@ The basic idea behind a hash table is to use a hash function to transform a key 
 
 - Hash Function Selection
 
-  - Choose a suitable hash function that distributes the keys uniformly across the hash table. A good hash function minimizes collisions.
+  Choose a suitable hash function that distributes the keys uniformly across the hash table. A good hash function minimizes collisions.
 
 - Collision Resolution
-  - Determine an appropriate strategy for handling collisions that may occur when two keys map to the same hash value. Common collision resolution techniques are separate chaining (using linked lists or other data structures to store multiple elements at the same hash index) etc.
+
+  Determine an appropriate strategy for handling collisions that may occur when two keys map to the same hash value. Common collision resolution techniques are separate chaining (using linked lists or other data structures to store multiple elements at the same hash index) etc.
 
 ## What is good(bad) about Hash Table compare to array?
 
@@ -67,25 +68,25 @@ The basic idea behind a hash table is to use a hash function to transform a key 
 
 - Dynamic Size
 
-  - Hash tables can dynamically resize themselves as the number of elements changes.
+  Hash tables can dynamically resize themselves as the number of elements changes.
 
 - Flexibility in Keys
 
-  - Hash tables allow for flexible key types. Unlike arrays, where the keys are typically integers representing indices, hash tables can use a wide range of data types as keys, including strings.
+  Hash tables allow for flexible key types. Unlike arrays, where the keys are typically integers representing indices, hash tables can use a wide range of data types as keys, including strings.
 
 - Efficient Search, Insertion, and Deletion
 
-  - Searching, Adding, and removing elements from a hash table is generally fast. The time complexity for searches, insertions, and deletions in a hash table is also typically O(1) on average.
+  Searching, Adding, and removing elements from a hash table is generally fast. The time complexity for searches, insertions, and deletions in a hash table is also typically O(1) on average.
 
 ### Disadvantages of Hash Table over array
 
 - Unordered Data
 
-  - Hash tables do not guarantee an order of elements. If you need to maintain a specific order, arrays may be more suitable since they store elements contiguously.
+  Hash tables do not guarantee an order of elements. If you need to maintain a specific order, arrays may be more suitable since they store elements contiguously.
 
 - Additional Overhead
 
-  - Hash tables have additional memory overhead due to the need for hash functions, hash buckets, and potential collisions.
+  Hash tables have additional memory overhead due to the need for hash functions, hash buckets, and potential collisions.
 
 ### When is better to use Hash Table over array
 
