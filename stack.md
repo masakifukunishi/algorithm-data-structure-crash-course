@@ -1,16 +1,46 @@
 # Stack
 
-## Concept
+## What is Stack (data structure)?
 
-- What is Stack (data structure)?
-- What is difference between Stack and Queue?
-- Come you can come when to use Stack?
-  - Real world example is ok!
+A stack is a data structure that follows the Last-In-First-Out (LIFO) principle. It has two main operations:
+
+- Push
+
+  This operation adds an element to the top of the stack.
+
+- Pop
+
+  This operation removes the top element from the stack.
+
+## What is the difference between Stack and Queue?
+
+- Stack
+
+  - Follows the Last-In-First-Out (LIFO) principle, where the last element inserted is the first one to be removed
+
+- Queue
+
+  - Follows the First-In-First-Out (FIFO) principle, where the first element inserted is the first one to be removed.
+
+## Can you come up with when to use Stack? (Real world example is ok!)
+
+- Function call stack
+
+  Used in programming languages to manage function calls. When a function is called, its variables and context are pushed onto the stack. When the function finishes, it is popped off the stack, returning control to the previous function.
+
+- Browser History
+
+  Web browsers use a stack-like structure to store the history of visited web pages. When the user clicks the back button, the most recently visited page is popped from the history stack, enabling navigation to the previous page.
+
+- Stacking of dishes
+
+  When stacking dishes, the last dish placed on the stack is the first one to be removed.
 
 ## Analysis
 
 What is the time complexity of following operations for Stack? Why?
-Since they are multiple types of queue, consider a type using **linked list**.
+
+Since they are multiple types of stack, consider a type using **linked list**.
 
 ### Basics
 
