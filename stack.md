@@ -79,6 +79,18 @@ Since they are multiple types of stack, consider a type using **linked list**.
 What if we try to implement Stack with Array instead of Linked List?
 What would be the difference?
 
+- Dynamic resizing
+
+  Since an array has a fixed size, if you exceed the capacity of the array, you need to resize it to accommodate more elements. On the other hand, Linked lists can grow dynamically without requiring resizing operations.
+
+- Memory efficiency
+
+  - Linked lists require extra memory for storing pointers to the next element. This overhead is not present in arrays.
+
+- Implementation simplicity
+
+  Implementing a stack using an array is often simpler than using a linked list since it doesn't involve managing pointers or dealing with dynamic memory allocation.
+
 ## Exercise
 
 ### Exercise 01
