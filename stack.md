@@ -44,11 +44,35 @@ Since they are multiple types of stack, consider a type using **linked list**.
 
 ### Basics
 
-- push (add an element to the Stack)
-- pop (remove and return an element from the Stack)
-- peek (return the element from the Stack)
-- size (get the size of the Stack)
-- merge two Stack
+#### push (add an element to the Stack)
+
+- O(1)
+
+  Adding an element to the top of the stack requires updating the top pointer, which takes constant time.
+
+#### pop (remove and return an element from the Stack)
+
+- O(1)
+
+  Removing an element from the top of the stack requires updating the top pointer, which takes constant time.
+
+#### peek (return the element from the Stack)
+
+- O(1)
+
+  Returning the element from the top of the stack requires accessing the top pointer, which takes constant time.
+
+#### size (get the size of the Stack)
+
+- O(1)
+
+  Getting the size of the stack requires just accessing the size property, which takes constant time.
+
+#### merge two Stack
+
+- O(1)
+
+  Merging two stacks requires updatting the first stack's bottom pointer to point to the second stack's top pointer, which takes constant time.
 
 ### Comparison
 
