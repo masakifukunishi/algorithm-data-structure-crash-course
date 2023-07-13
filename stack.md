@@ -166,5 +166,28 @@ console.log(myStack.size());
 
 - Let's try to solve some leet code questions
 - https://leetcode.com/problems/valid-parentheses/
+
+```ts
+const isValid = (s: string): boolean => {
+  let stack = [];
+  let parentheses = {
+    "(": ")",
+    "{": "}",
+    "[": "]",
+  };
+  for (let i = 0; i < s.length; i++) {
+    let char = s[i];
+    if (char in parentheses) {
+      stack.push(parentheses[char]);
+    } else if (stack[stack.length - 1] === char) {
+      stack.pop();
+    } else {
+      return false;
+    }
+  }
+  return stack.length === 0;
+};
+```
+
 - https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/
 - https://leetcode.com/problems/crawler-log-folder/
