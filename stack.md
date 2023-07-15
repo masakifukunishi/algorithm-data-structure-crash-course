@@ -206,3 +206,23 @@ const removeDuplicates = (s: string): string => {
 ```
 
 - https://leetcode.com/problems/crawler-log-folder/
+
+```ts
+const minOperations = (logs: string[]): number => {
+  const stack: string[] = [];
+
+  for (let i = 0; i < logs.length; i++) {
+    const log = logs[i];
+
+    if (log === "../") {
+      if (stack.length > 0) {
+        stack.pop();
+      }
+    } else if (log !== "./") {
+      stack.push(log);
+    }
+  }
+
+  return stack.length;
+};
+```
