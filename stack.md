@@ -2,7 +2,7 @@
 
 ## What is Stack (data structure)?
 
-A stack is a data structure that follows the Last-In-First-Out (LIFO) principle. It has two main operations:
+A stack is a data structure that follows the Last-In-First-Out (LIFO) principle. It has two main operations.
 
 - Push
 
