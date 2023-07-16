@@ -85,7 +85,7 @@ What would be the difference?
 
 - Memory efficiency
 
-  - Linked lists require extra memory for storing pointers to the next element. This overhead is not present in arrays.
+  Linked lists require extra memory for storing pointers to the next element. This overhead is not present in arrays.
 
 - Implementation simplicity
 
