@@ -164,7 +164,8 @@ console.log(myStack.size());
 
 ### Exercise 02
 
-- Let's try to solve some leet code questions
+Let's try to solve some leet code questions
+
 - https://leetcode.com/problems/valid-parentheses/
 
 ```ts
