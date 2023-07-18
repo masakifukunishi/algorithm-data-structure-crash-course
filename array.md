@@ -82,6 +82,7 @@ const os: string[] = ["Mac", "Windows", "Linux"];
     Arrays provide a straightforward way to iterate over their elements using loops or iterators. This makes it convenient to perform operations on each element or process the entire array.
 
 1. When memory efficiency is a concern
+
     Arrays have a compact memory representation, as elements are stored in contiguous memory locations.
 
 ## What is the time complexity of following instruction. Why do think that?
