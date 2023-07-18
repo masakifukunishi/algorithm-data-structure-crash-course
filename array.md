@@ -232,9 +232,12 @@ Easy Peasy? What is your codes **time complexity and space complexity.**
 - removeAt
 
     - Time Complexity: O(n)
-      - It iterates through the entire array to shift the elements after the deleted index.
+
+        - It iterates through the entire array to shift the elements after the deleted index.
+    
     - Space Complexity: O(1)
-      - It modifies the input array in place without creating any additional data structures that grow with the size of the input.
+
+        - It modifies the input array in place without creating any additional data structures that grow with the size of the input.
 
 - removeAll
 
