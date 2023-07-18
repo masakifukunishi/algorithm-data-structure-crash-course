@@ -230,17 +230,17 @@ Easy Peasy? What is your codes **time complexity and space complexity.**
 
 - removeAt
 
-  - Time Complexity: O(n)
-    - It iterates through the entire array to shift the elements after the deleted index.
-  - Space Complexity: O(1)
-    - It modifies the input array in place without creating any additional data structures that grow with the size of the input.
+    - Time Complexity: O(n)
+      - It iterates through the entire array to shift the elements after the deleted index.
+    - Space Complexity: O(1)
+      - It modifies the input array in place without creating any additional data structures that grow with the size of the input.
 
 - removeAll
 
-  - Time Complexity: O(n)
-    - It iterates through the entire array to find the elements that match the given value.
-  - Space Complexity: O(n)
-    - It creates a new array to store the elements that do not match the given value.
+    - Time Complexity: O(n)
+      - It iterates through the entire array to find the elements that match the given value.
+    - Space Complexity: O(n)
+      - It creates a new array to store the elements that do not match the given value.
 
 ## Q3
 
