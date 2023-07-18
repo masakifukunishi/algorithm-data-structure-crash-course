@@ -8,23 +8,23 @@ Hash is a function that takes an input and produces a fixed-size string of chara
 
 - Deterministic
 
-  Hash function always produces the same output for the same input.
+    Hash function always produces the same output for the same input.
 
 - Non-Reversible
 
-  Hash functions are designed to be one-way functions, meaning it is impossible to get the original input from the hash output.
+    Hash functions are designed to be one-way functions, meaning it is impossible to get the original input from the hash output.
 
 - Fixed Output Size
 
-  Hash function always produces the same size of output regardless of the input size. For example, a common hash function called SHA-256 generates a 256-bit (32-byte) hash value.
+    Hash function always produces the same size of output regardless of the input size. For example, a common hash function called SHA-256 generates a 256-bit (32-byte) hash value.
 
 - Uniform Distribution
 
-  A good hash function evenly distributes hash values across its output space, reducing the likelihood of collisions.
+    A good hash function evenly distributes hash values across its output space, reducing the likelihood of collisions.
 
 - Avalanche Effect
 
-  A small change in the input should result in a significant change in the output, making it difficult to predict the original input based on the hash value alone.
+    A small change in the input should result in a significant change in the output, making it difficult to predict the original input based on the hash value alone.
 
 ## How do you make hash?
 
@@ -56,11 +56,11 @@ The basic idea behind a hash table is to use a hash function to transform a key 
 
 - Hash Function Selection
 
-  Choose a suitable hash function that distributes the keys uniformly across the hash table. A good hash function minimizes collisions.
+    Choose a suitable hash function that distributes the keys uniformly across the hash table. A good hash function minimizes collisions.
 
 - Collision Resolution
 
-  Determine an appropriate strategy for handling collisions that may occur when two keys map to the same hash value. Common collision resolution techniques are separate chaining (using linked lists or other data structures to store multiple elements at the same hash index) etc.
+    Determine an appropriate strategy for handling collisions that may occur when two keys map to the same hash value. Common collision resolution techniques are separate chaining (using linked lists or other data structures to store multiple elements at the same hash index) etc.
 
 ## What is good(bad) about Hash Table compare to array?
 
@@ -68,25 +68,25 @@ The basic idea behind a hash table is to use a hash function to transform a key 
 
 - Dynamic Size
 
-  Hash tables can dynamically resize themselves as the number of elements changes.
+    Hash tables can dynamically resize themselves as the number of elements changes.
 
 - Flexibility in Keys
 
-  Hash tables allow for flexible key types. Unlike arrays, where the keys are typically integers representing indices, hash tables can use a wide range of data types as keys, including strings.
+    Hash tables allow for flexible key types. Unlike arrays, where the keys are typically integers representing indices, hash tables can use a wide range of data types as keys, including strings.
 
 - Efficient Search, Insertion, and Deletion
 
-  Searching, Adding, and removing elements from a hash table is generally fast. The time complexity for searches, insertions, and deletions in a hash table is also typically O(1) on average.
+    Searching, Adding, and removing elements from a hash table is generally fast. The time complexity for searches, insertions, and deletions in a hash table is also typically O(1) on average.
 
 ### Disadvantages of Hash Table over array
 
 - Unordered Data
 
-  Hash tables do not guarantee an order of elements. If you need to maintain a specific order, arrays may be more suitable since they store elements contiguously.
+    Hash tables do not guarantee an order of elements. If you need to maintain a specific order, arrays may be more suitable since they store elements contiguously.
 
 - Additional Overhead
 
-  Hash tables have additional memory overhead due to the need for hash functions, hash buckets, and potential collisions.
+    Hash tables have additional memory overhead due to the need for hash functions, hash buckets, and potential collisions.
 
 ### When is better to use Hash Table over array
 
@@ -114,7 +114,7 @@ What are the time complexity of
 
 - O(n)
 
-  finding a value without knowing its corresponding key requires traversing the entire table to search for a match, resulting in a linear time complexity.
+    finding a value without knowing its corresponding key requires traversing the entire table to search for a match, resulting in a linear time complexity.
 
 ### remove key, value
 
@@ -307,11 +307,11 @@ A set is a collection of unique elements, where each element appears only once. 
 
 - Elements
 
-  Sets only store distinct elements, whereas hash tables store key-value pairs.
+    Sets only store distinct elements, whereas hash tables store key-value pairs.
 
 - Operations
 
-  Sets provide operations specific to sets, such as set union, intersection, and difference. Hash tables, on the other hand, focus on key-value operations like insertion, deletion, and retrieval of values based on keys.
+    Sets provide operations specific to sets, such as set union, intersection, and difference. Hash tables, on the other hand, focus on key-value operations like insertion, deletion, and retrieval of values based on keys.
 
 #### When is better to use Set over Hash Table
 

@@ -79,22 +79,22 @@ const test = (n: number) => {
 
 - Algorithm comparison
 
-  - Time and space complexity help in comparing different algorithms for the same problem. By analyzing their complexity, you can determine which algorithm is more efficient in terms of runtime or memory usage, enabling you to select the most suitable solution.
+    Time and space complexity help in comparing different algorithms for the same problem. By analyzing their complexity, you can determine which algorithm is more efficient in terms of runtime or memory usage, enabling you to select the most suitable solution.
 
 - Optimization
 
-  - Complexity analysis identifies areas for optimization within algorithms or programs. It allows developers to focus on improving the performance of specific parts of the code that contribute significantly to the overall time or space usage.
+    Complexity analysis identifies areas for optimization within algorithms or programs. It allows developers to focus on improving the performance of specific parts of the code that contribute significantly to the overall time or space usage.
 
 - Resource management
 
-  - By understanding the complexity, you can design algorithms or select solutions that fit within the available resources, avoiding performance issues and ensuring optimal usage.
+    By understanding the complexity, you can design algorithms or select solutions that fit within the available resources, avoiding performance issues and ensuring optimal usage.
 
 - Predictive power
-  - Complexity analysis enables you to predict and estimate the performance characteristics of an algorithm before running it on actual data. This helps in understanding how the algorithm will scale with larger input sizes, allowing you to anticipate and plan for potential performance challenges.
+    Complexity analysis enables you to predict and estimate the performance characteristics of an algorithm before running it on actual data. This helps in understanding how the algorithm will scale with larger input sizes, allowing you to anticipate and plan for potential performance challenges.
 
 ## Is running time == time complexity?
 
-- No Running time refers to the actual time it takes for an algorithm or program to execute on a specific input. It is typically measured in seconds or millisecond but on the other hand, time complexity is a measure of how much time an algorithm takes to execute relative to its input size. It is typically expressed using Big O notation.
+No Running time refers to the actual time it takes for an algorithm or program to execute on a specific input. It is typically measured in seconds or millisecond but on the other hand, time complexity is a measure of how much time an algorithm takes to execute relative to its input size. It is typically expressed using Big O notation.
 
 ## Is number of calculations == time complexity??
 

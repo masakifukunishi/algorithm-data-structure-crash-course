@@ -8,54 +8,55 @@ Linked list is a data structure that consists of a sequence of nodes[^1], where 
 
 - Sorted data
 
-  Linked lists can have sorted data unlike hash table, Because nodes points the next node.
+    Linked lists can have sorted data unlike hash table, Because nodes points the next node.
 
 - Dynamic Size
 
-  Linked list can dynamically grow or shrink in size during program execution. Unlike arrays, which have a fixed size, linked lists can accommodate new elements or remove existing elements without requiring a reallocation of memory.
+    Linked list can dynamically grow or shrink in size during program execution. Unlike arrays, which have a fixed size, linked lists can accommodate new elements or remove existing elements without requiring a reallocation of memory.
 
 - Insertion and Deletion
 
-  Linked list excel at efficient insertion and deletion operations, especially at the beginning or middle of the list. Unlike arrays, which may require shifting elements to accommodate changes, linked lists only need to update a few pointers.
+    Linked list excel at efficient insertion and deletion operations, especially at the beginning or middle of the list. Unlike arrays, which may require shifting elements to accommodate changes, linked lists only need to update a few pointers.
 
 - Efficient Iteration
 
-  Singly-linked lists are efficient for forward iteration, allowing easy traversal from the beginning to the end. Doubly-linked lists can traverse in both directions, enabling forward and backward traversal.
+    Singly-linked lists are efficient for forward iteration, allowing easy traversal from the beginning to the end. Doubly-linked lists can traverse in both directions, enabling forward and backward traversal.
 
 - Merging and Splitting
 
-  Linked lists can be merged or split easily by manipulating the pointers.
+    Linked lists can be merged or split easily by manipulating the pointers.
 
 ## When is good to use liked list?
 
 - When you need to maintain sorted data
 
-  If you need to maintain data in a sorted order, linked lists can be a suitable option. As the nodes in a linked list contain pointers to the next node.
+    If you need to maintain data in a sorted order, linked lists can be a suitable option. As the nodes in a linked list contain pointers to the next node.
 
 - When you need dynamic size
 
-  If the size of your data is not known in advance or if it frequently changes, a linked list can accommodate these changes efficiently.
+    If the size of your data is not known in advance or if it frequently changes, a linked list can accommodate these changes efficiently.
 
 - When you need efficient insertion and deletion
 
-  If your application requires frequent insertion or deletion operations, especially at the beginning or middle of the data structure, linked lists provide efficient performance.
+    If your application requires frequent insertion or deletion operations, especially at the beginning or middle of the data structure, linked lists provide efficient performance.
 
 - When you need efficient iteration
 
-  If your application primarily involves sequential access to the data, linked lists provide an efficient way to iterate through the elements.
+    If your application primarily involves sequential access to the data, linked lists provide an efficient way to iterate through the elements.
 
 - When merging or splitting data structures
-  Linked lists a good choice when you need to combine multiple lists into one or divide a list into smaller segments.
+
+    Linked lists a good choice when you need to combine multiple lists into one or divide a list into smaller segments.
 
 ## What is head and tail in linked list?
 
 - Head
 
-  Head is the first node in the list. It is the entry point from which you can access the entire linked list structure
+    Head is the first node in the list. It is the entry point from which you can access the entire linked list structure
 
 - Tail
 
-  Tail is the last node in the list. It is the node that has a reference to null or points to nothing, indicating the end of the list.
+    Tail is the last node in the list. It is the node that has a reference to null or points to nothing, indicating the end of the list.
 
 ## Analysis
 
@@ -79,23 +80,23 @@ Accessing, inserting, or deleting an element by index requires traversing the li
 
 - O(1)
 
-  Joining two linked lists requires updating the tail of the first list to point to the head of the second list, which takes constant time.
+    Joining two linked lists requires updating the tail of the first list to point to the head of the second list, which takes constant time.
 
 ### add(delete) head
 
 - O(1)
 
-  Addind or deliting elements at the top of the linked list, just update few nodes, which takes constant time.
+    Addind or deliting elements at the top of the linked list, just update few nodes, which takes constant time.
 
 ### add(delete) tail
 
 - Adding O(1)
 
-  Addind elements at the end of the linked list, just update few nodes using tail, which takes constant time.
+    Addind elements at the end of the linked list, just update few nodes using tail, which takes constant time.
 
 - Deleting O(n)
 
-  Deleting elements at the end of the linked list, requires traversing the list from the head to the tail, which takes linear time.
+    Deleting elements at the end of the linked list, requires traversing the list from the head to the tail, which takes linear time.
 
 ## Exercise
 
@@ -265,10 +266,7 @@ class MyLinkedList {
 
 ### Exercise 03
 
-- Let's try to solve some leet code questions. (You dont' havet to solve all, Just one is enough for now)
-- https://leetcode.com/problems/linked-list-cycle/description/
-- https://leetcode.com/problems/remove-nth-node-from-end-of-list/
-- https://leetcode.com/problems/reverse-linked-list/
+- Let's try to solve some leet code questions. 
 - https://leetcode.com/problems/swapping-nodes-in-a-linked-list/
 
 ```ts
@@ -309,7 +307,7 @@ const swapNodes = (head: ListNode | null, k: number): ListNode | null => {
 
 https://leetcode.com/explore/learn/card/linked-list/
 
-# Advanced(optional): Double Liked List
+# Advanced: Double Liked List
 
 ## What is Doubly Linked List?
 
@@ -321,18 +319,18 @@ Doubly linked list is similar to a singly linked list, except that each node has
 
 - Bidirectional traversal
 
-  Doubly linked lists allow for traversal in both forward and backward directions. Each node contains pointers to both the next and previous nodes, enabling efficient backward traversal.
+    Doubly linked lists allow for traversal in both forward and backward directions. Each node contains pointers to both the next and previous nodes, enabling efficient backward traversal.
 
 ### cons
 
 - Extra memory
 
-  Doubly linked lists require extra memory space to store the previous node reference.
+    Doubly linked lists require extra memory space to store the previous node reference.
 
 ### Can you come up with good example when to use Double Liked List?😁
 
 - Music Player Playlist
 
-  When adding a new song, a new element is inserted into the list. Also, when a user navigates to the previous or next song, the previous or next element in the list can be accessed.
+    When adding a new song, a new element is inserted into the list. Also, when a user navigates to the previous or next song, the previous or next element in the list can be accessed.
 
 [^1]: Node is a fundamental building block of a linked list or a tree. It is a data structure that holds a piece of data and one or more references to other nodes.

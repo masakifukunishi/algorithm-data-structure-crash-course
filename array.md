@@ -22,15 +22,20 @@ const os: string[] = ["Mac", "Windows", "Linux"];
 ### Fixed size array
 
 - Uses a fixed-size memory area to store elements. The size is specified at declaration and cannot be changed thereafter
+
 - Elements are stored in contiguous memory areas.
+
 - Access to the elements of a fixed size array is fast and can be accessed directly using indexes.
 - The size of the fixed size array is determined at compile time and cannot be changed at run time.
 
 ### Dynamic size array
 
 - Uses a dynamically allocated memory area to store elements.
+
 - Elements are stored in contiguous memory areas, but memory may be reallocated as needed.
+
 - Access to the elements of a dynamic size array is also fast and can be accessed directly using indexes.
+
 - The size of the dynamic size array is determined at runtime and can be changed at runtime.
 
 ## What is pros and cons about array?
@@ -39,45 +44,45 @@ const os: string[] = ["Mac", "Windows", "Linux"];
 
 - Random Access[^1]
 
-  - Arrays provide constant-time access to individual elements based on their index. This means you can access any element directly using its index without iterating through the entire array.
+    Arrays provide constant-time access to individual elements based on their index. This means you can access any element directly using its index without iterating through the entire array.
 
 - Efficient use of memory
 
-  - Arrays store elements in contiguous memory locations, which allows for efficient memory management.
+    Arrays store elements in contiguous memory locations, which allows for efficient memory management.
 
 - Easy Iteration
-  - Arrays provide a straightforward way to iterate over their elements using loops or iterators. This makes it convenient to perform operations on each element or process the entire array.
+    Arrays provide a straightforward way to iterate over their elements using loops or iterators. This makes it convenient to perform operations on each element or process the entire array.
 
 ### Cons
 
 - Wasted Memory
 
-  - If an array is not fully populated with elements, there may be wasted memory space. If the size of the array is much larger than the number of elements it contains, it can result in inefficient memory usage.
+    If an array is not fully populated with elements, there may be wasted memory space. If the size of the array is much larger than the number of elements it contains, it can result in inefficient memory usage.
 
 - Insertion and Deletion Overhead[^2]
 
-  - Inserting or deleting elements in the middle of an array requires shifting subsequent elements, which can be computationally expensive.
+    Inserting or deleting elements in the middle of an array requires shifting subsequent elements, which can be computationally expensive.
 
 - Fixed Size **(For fixed size array)**
 
-  - Arrays have a fixed size, meaning they cannot dynamically grow or shrink once they are created. This inflexibility can be problematic if you need to store a varying number of elements or if the required size is not known in advance.
+    Arrays have a fixed size, meaning they cannot dynamically grow or shrink once they are created. This inflexibility can be problematic if you need to store a varying number of elements or if the required size is not known in advance.
 
 ## When do we use array?
 
 1. When the number of elements is known and fixed
 
-   - If you have a collection of elements with a predetermined size that will not change throughout the program's execution, arrays are a suitable choice.
+    If you have a collection of elements with a predetermined size that will not change throughout the program's execution, arrays are a suitable choice.
 
-2. When random access is required
+1. When random access is required
 
-   - If you need to access elements in the collection directly by their indices or perform operations on specific elements without iterating through the entire collection, arrays provide constant-time random access, making them efficient for such use cases.
+    If you need to access elements in the collection directly by their indices or perform operations on specific elements without iterating through the entire collection, arrays provide constant-time random access, making them efficient for such use cases.
 
-3. When you need to iterate over the elements
+1. When you need to iterate over the elements
 
-   - Arrays provide a straightforward way to iterate over their elements using loops or iterators. This makes it convenient to perform operations on each element or process the entire array.
+    Arrays provide a straightforward way to iterate over their elements using loops or iterators. This makes it convenient to perform operations on each element or process the entire array.
 
-4. When memory efficiency is a concern
-   - Arrays have a compact memory representation, as elements are stored in contiguous memory locations.
+1. When memory efficiency is a concern
+    Arrays have a compact memory representation, as elements are stored in contiguous memory locations.
 
 ## What is the time complexity of following instruction. Why do think that?
 
@@ -85,37 +90,37 @@ const os: string[] = ["Mac", "Windows", "Linux"];
 
 - Time Complexity: O(1)
 
-  Inserting an element at the end of an array does not require shifting other elements.
+    Inserting an element at the end of an array does not require shifting other elements.
 
 ### delete by index
 
 - Time Complexity: O(n)
 
-  Deleting an element from an array requires shifting all the elements after the deleted index to fill the gap.
+    Deleting an element from an array requires shifting all the elements after the deleted index to fill the gap.
 
 ### access by index
 
 - Time Complexity: O(1)
 
-  Accessing an element in an array or a list by index can be done in constant time since the position of the element is known and does not require iterating through the entire data structure.
+    Accessing an element in an array or a list by index can be done in constant time since the  position of the element is known and does not require iterating through the entire data structure.
 
 ### find a specific value
 
 - Time Complexity: O(n)
 
-  Finding a specific value in an array or a list requires iterating through the entire data structure until the value is found.
+    Finding a specific value in an array or a list requires iterating through the entire data structure until the value is found.
 
 ### pop (delete last)
 
 - Time Complexity: O(1)
 
-  Deleting the last element of an array or a list does not require shifting other elements.
+    Deleting the last element of an array or a list does not require shifting other elements.
 
 ### pop left (delte first, shift)
 
 - Time Complexity: O(n)
 
-  Deleting the first element of an array or a list requires shifting all the elements after the deleted index to fill the gap.
+    Deleting the first element of an array or a list requires shifting all the elements after the deleted index to fill the gap.
 
 ## Exercise
 

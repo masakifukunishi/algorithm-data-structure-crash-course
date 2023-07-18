@@ -6,35 +6,35 @@ A stack is a data structure that follows the Last-In-First-Out (LIFO) principle.
 
 - Push
 
-  This operation adds an element to the top of the stack.
+    This operation adds an element to the top of the stack.
 
 - Pop
 
-  This operation removes the top element from the stack.
+    This operation removes the top element from the stack.
 
 ## What is the difference between Stack and Queue?
 
 - Stack
 
-  - Follows the Last-In-First-Out (LIFO) principle, where the last element inserted is the first one to be removed
+    Follows the Last-In-First-Out (LIFO) principle, where the last element inserted is the first one to be removed
 
 - Queue
 
-  - Follows the First-In-First-Out (FIFO) principle, where the first element inserted is the first one to be removed.
+    Follows the First-In-First-Out (FIFO) principle, where the first element inserted is the first one to be removed.
 
 ## Can you come up with when to use Stack? (Real world example is ok!)
 
 - Function call stack
 
-  Used in programming languages to manage function calls. When a function is called, its variables and context are pushed onto the stack. When the function finishes, it is popped off the stack, returning control to the previous function.
+    Used in programming languages to manage function calls. When a function is called, its variables and context are pushed onto the stack. When the function finishes, it is popped off the stack, returning control to the previous function.
 
 - Browser History
 
-  Web browsers use a stack-like structure to store the history of visited web pages. When the user clicks the back button, the most recently visited page is popped from the history stack, enabling navigation to the previous page.
+    Web browsers use a stack-like structure to store the history of visited web pages. When the user clicks the back button, the most recently visited page is popped from the history stack, enabling navigation to the previous page.
 
 - Stacking of dishes
 
-  When stacking dishes, the last dish placed on the stack is the first one to be removed.
+    When stacking dishes, the last dish placed on the stack is the first one to be removed.
 
 ## Analysis
 
@@ -48,31 +48,31 @@ Since they are multiple types of stack, consider a type using **linked list**.
 
 - O(1)
 
-  Adding an element to the top of the stack requires updating the top pointer, which takes constant time.
+    Adding an element to the top of the stack requires updating the top pointer, which takes constant time.
 
 #### pop (remove and return an element from the Stack)
 
 - O(1)
 
-  Removing an element from the top of the stack requires updating the top pointer, which takes constant time.
+    Removing an element from the top of the stack requires updating the top pointer, which takes constant time.
 
 #### peek (return the element from the Stack)
 
 - O(1)
 
-  Returning the element from the top of the stack requires accessing the top pointer, which takes constant time.
+    Returning the element from the top of the stack requires accessing the top pointer, which takes constant time.
 
 #### size (get the size of the Stack)
 
 - O(1)
 
-  Getting the size of the stack requires just accessing the size property, which takes constant time.
+    Getting the size of the stack requires just accessing the size property, which takes constant time.
 
 #### merge two Stack
 
 - O(1)
 
-  Merging two stacks requires updatting the first stack's bottom pointer to point to the second stack's top pointer, which takes constant time.
+    Merging two stacks requires updatting the first stack's bottom pointer to point to the second stack's top pointer, which takes constant time.
 
 ### Comparison
 
@@ -81,15 +81,15 @@ What would be the difference?
 
 - Dynamic resizing
 
-  Since an array has a fixed size, if you exceed the capacity of the array, you need to resize it to accommodate more elements. On the other hand, Linked lists can grow dynamically without requiring resizing operations.
+    Since an array has a fixed size, if you exceed the capacity of the array, you need to resize it to accommodate more elements. On the other hand, Linked lists can grow dynamically without requiring resizing operations.
 
 - Memory efficiency
 
-  Linked lists require extra memory for storing pointers to the next element. This overhead is not present in arrays.
+    Linked lists require extra memory for storing pointers to the next element. This overhead is not present in arrays.
 
 - Implementation simplicity
 
-  Implementing a stack using an array is often simpler than using a linked list since it doesn't involve managing pointers or dealing with dynamic memory allocation.
+    Implementing a stack using an array is often simpler than using a linked list since it doesn't involve managing pointers or dealing with dynamic memory allocation.
 
 ## Exercise
 
