@@ -307,21 +307,21 @@ const swapNodes = (head: ListNode | null, k: number): ListNode | null => {
 
 https://leetcode.com/explore/learn/card/linked-list/
 
-# Advanced: Double Liked List
+## Double Liked List
 
-## What is Doubly Linked List?
+### What is Doubly Linked List?
 
 Doubly linked list is similar to a singly linked list, except that each node has a reference to both the next and previous nodes in the sequence.
 
-## What is pros and cons compare to Singly Linked List?
+### What is pros and cons compare to Singly Linked List?
 
-### pros
+#### pros
 
 - Bidirectional traversal
 
     Doubly linked lists allow for traversal in both forward and backward directions. Each node contains pointers to both the next and previous nodes, enabling efficient backward traversal.
 
-### cons
+#### cons
 
 - Extra memory
 
