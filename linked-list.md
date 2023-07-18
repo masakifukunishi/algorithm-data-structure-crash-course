@@ -144,11 +144,7 @@ while (currentNode !== null) {
 
 ### Exercise 02
 
-- Let's try to implement your own list
-  https://leetcode.com/problems/design-linked-list/
-
-- Hint: We can use a ListNode class used in Excersie 01
-- Since 02 could be heavy task, you can try either 02 or 03
+- https://leetcode.com/problems/design-linked-list/
 
 ```ts
 class LinkedListNode {
@@ -266,7 +262,6 @@ class MyLinkedList {
 
 ### Exercise 03
 
-- Let's try to solve some leet code questions. 
 - https://leetcode.com/problems/swapping-nodes-in-a-linked-list/
 
 ```ts
