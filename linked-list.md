@@ -78,11 +78,13 @@ Accessing, inserting, or deleting an element by index requires traversing the li
 ### joint two listed list
 
 - O(1)
+
   Joining two linked lists requires updating the tail of the first list to point to the head of the second list, which takes constant time.
 
 ### add(delete) head
 
 - O(1)
+
   Addind or deliting elements at the top of the linked list, just update few nodes, which takes constant time.
 
 ### add(delete) tail
