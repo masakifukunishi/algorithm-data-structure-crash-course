@@ -242,9 +242,12 @@ Easy Peasy? What is your codes **time complexity and space complexity.**
 - removeAll
 
     - Time Complexity: O(n)
-      - It iterates through the entire array to find the elements that match the given value.
+
+        - It iterates through the entire array to find the elements that match the given value.
+    
     - Space Complexity: O(n)
-      - It creates a new array to store the elements that do not match the given value.
+
+        - It creates a new array to store the elements that do not match the given value.
 
 ## Q3
 
