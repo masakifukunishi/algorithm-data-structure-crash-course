@@ -1,6 +1,6 @@
 # Stack
 
-## What is Stack (data structure)?
+## What is Stack?
 
 A stack is a data structure that follows the Last-In-First-Out (LIFO) principle. It has two main operations.
 
@@ -22,7 +22,7 @@ A stack is a data structure that follows the Last-In-First-Out (LIFO) principle.
 
     Follows the First-In-First-Out (FIFO) principle, where the first element inserted is the first one to be removed.
 
-## Can you come up with when to use Stack? (Real world example is ok!)
+## Can you come up with when to use Stack?
 
 - Function call stack
 
