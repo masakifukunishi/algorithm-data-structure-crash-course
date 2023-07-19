@@ -53,11 +53,17 @@ Since they are multiple types of queue, consider a type using **linked list**.
 
 ### Basics
 
-- enqueue (add an element to the Queue)
-- dequeue (remove and return an element from the Queue)
-- peek (return an element from the Queue)
-- size (get the size of the Queue)
-- merge two Queue
+#### enqueue (add an element to the Queue)
+
+- O(1)
+
+#### dequeue (remove and return an element from the Queue)
+
+#### peek (return an element from the Queue)
+
+#### size (get the size of the Queue)
+
+#### merge two Queue
 
 ### Comparison
 
@@ -71,20 +77,6 @@ What would be the difference?
 Let's try to implement your own Queue with using Linked-List!
 
 ```ts
-class MyQueue {
-  constructor() {}
-
-  enqueue(value: number) {}
-
-  dequeue(value: number): number {}
-
-  peek(): number {}
-
-  size(): number {}
-}
-```
-
-```ts
 class ListNode {
   val: number | null;
   next: ListNode | null;
@@ -94,6 +86,59 @@ class ListNode {
     this.next = next;
   }
 }
+
+class MyQueue {
+  private first: ListNode | null;
+  private last: ListNode | null;
+  private length: number;
+
+  constructor() {
+    this.first = null;
+    this.last = null;
+    this.length = 0;
+  }
+
+  enqueue(value: number) {
+    const newNode = new ListNode(value);
+    if (this.length === 0) {
+      this.first = newNode;
+      this.last = newNode;
+    } else {
+      this.last!.next = newNode;
+      this.last = newNode;
+    }
+    this.length++;
+  }
+
+  dequeue(): number | null {
+    if (!this.first) return null;
+    if (this.first === this.last) {
+      this.last = null;
+    }
+    const holdingPointer = this.first;
+    this.first = this.first.next;
+    this.length--;
+    return holdingPointer.val;
+  }
+
+  peek(): number | null {
+    if (!this.first) return null;
+    return this.first.val;
+  }
+
+  size(): number {
+    return this.length;
+  }
+}
+
+const myQueue = new MyQueue();
+myQueue.enqueue(1);
+myQueue.enqueue(2);
+myQueue.enqueue(3);
+console.log(myQueue.dequeue()); // 1
+console.log(myQueue.peek()); // 2
+console.log(myQueue.size()); // 2
+console.log(myQueue);
 ```
 
 ### Exercise 02
