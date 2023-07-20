@@ -57,13 +57,31 @@ Since they are multiple types of queue, consider a type using **linked list**.
 
 - O(1)
 
+  Adding an element to the last of the queue requires updating only the last pointer, which takes constant time.
+
 #### dequeue (remove and return an element from the Queue)
+
+- O(1)
+
+  Removing an element from the first of the queue requires updating only the first pointer, which takes constant time.
 
 #### peek (return an element from the Queue)
 
+- O(1)
+
+  Returning an element from the first of the queue is just accessing the first pointer, which takes constant time.
+
 #### size (get the size of the Queue)
 
+- O(1)
+
+  Getting the size of the queue is just accessing the size property, which takes constant time.
+
 #### merge two Queue
+
+- O(1)
+
+  Merging two queues is just updating the last pointer of the first queue to the first pointer of the second queue, which takes constant time.
 
 ### Comparison
 
