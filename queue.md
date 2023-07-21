@@ -175,5 +175,23 @@ console.log(myQueue);
 
 ### Exercise 02
 
-- Let's try to solve some leet code questions
+Let's try to solve some leet code questions
+
 - https://leetcode.com/problems/number-of-recent-calls/
+
+```ts
+class RecentCounter {
+  private requests: number[];
+  constructor() {
+    this.requests = [];
+  }
+
+  ping(t: number): number {
+    this.requests.push(t);
+    while (this.requests[0] < t - 3000) {
+      this.requests.shift();
+    }
+    return this.requests.length;
+  }
+}
+```
