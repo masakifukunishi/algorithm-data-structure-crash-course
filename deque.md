@@ -8,7 +8,7 @@ Deque is a double-ended queue, which is a generalization of a stack and a queue 
 
 ### Task Management
 
-Task management apps or queuing systems use Deque to handle tasks based on their priority. Tasks with higher priority are inserted from the front (FIFO), while lower-priority tasks may be inserted from the back (FILO).
+Task management apps use Deque to handle tasks based on their priority. Tasks with higher priority are inserted from the front (FIFO), while lower-priority tasks may be inserted from the back (FILO).
 
 ### Palindrome Checking
 
@@ -78,6 +78,8 @@ Adding or removing elements involves updating the pointers of the first or last 
 
 #### Space complexity
 
+- O(n)
+
 The space complexity of a doubly linked list-based Deque depends on the number of elements stored in it.
 
 ### When using Dynamic Array
@@ -104,5 +106,7 @@ Manipulating the first element takes O(n) because all elements must be shifted.
 On the other hand, manipulating the last element takes O(1) since it only resizes the array.
 
 #### Spase complexity
+
+- O(n)
 
 The space complexity of a dynamic array-based Deque depends on the number of elements stored in it.
