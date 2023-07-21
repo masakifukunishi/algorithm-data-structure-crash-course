@@ -9,6 +9,7 @@ A queue is a data structure that follows the First-In-First-Out (FIFO) principle
   This operation adds an element to the end of the queue.
 
 - Dequeue
+
   This operation removes the first element from the queue.
 
 ## What is difference between Queue and Array. Pros and Cons
@@ -19,6 +20,7 @@ A queue is a data structure that follows the First-In-First-Out (FIFO) principle
 
 - Dynamic size
 - Efficient insertions
+
   Unlike Array, Queue does not have to shift all the elements when deleting an element at the beginning of the queue.
 
 #### Cons
@@ -37,15 +39,18 @@ A queue is a data structure that follows the First-In-First-Out (FIFO) principle
 - Inefficient insertions
   Unlike Queue, Array has to shift all the elements when deliting an element at the beginning of the array.
 
-## Come you can come when to use Queue? (Real world example is ok!)
+## Can you come up with when to use Queue?
 
 - Printer
+
   In a printing system, a queue is used to manage multiple print jobs, ensuring they are printed in the order they were requested.
 
 - Asynchronous processing
+
   In applications where tasks can take varying amounts of time to complete, using a queue can decouple task submission from task execution.
 
 - Stackable Pencil
+
   In a Stackable Pencil, the first piece inserted into the pencil is the first one to be removed.
 
 ## Analysis
