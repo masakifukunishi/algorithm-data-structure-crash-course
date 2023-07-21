@@ -76,7 +76,13 @@ In an array, elements are stored in contiguous memory locations. This allows for
 
 Adding or removing elements involves updating the pointers of the first or last node, and this process takes constant time regardless of the number of elements.
 
+#### Space complexity
+
+The space complexity of a doubly linked list-based Deque depends on the number of elements stored in it.
+
 ### When using Dynamic Array
+
+#### Time complexity
 
 ##### push_back: Add element at the end
 
@@ -96,3 +102,7 @@ Adding or removing elements involves updating the pointers of the first or last 
 
 Manipulating the first element takes O(n) because all elements must be shifted.
 On the other hand, manipulating the last element takes O(1) since it only resizes the array.
+
+#### Spase complexity
+
+The space complexity of a dynamic array-based Deque depends on the number of elements stored in it.
