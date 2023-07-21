@@ -18,6 +18,8 @@ A queue is a data structure that follows the First-In-First-Out (FIFO) principle
 #### Pros
 
 - Dynamic size
+- Efficient insertions
+  Unlike Array, Queue does not have to shift all the elements when deleting an element at the beginning of the queue.
 
 #### Cons
 
@@ -33,7 +35,7 @@ A queue is a data structure that follows the First-In-First-Out (FIFO) principle
 
 - Fixed size
 - Inefficient insertions
-  Unlike Queue, Array has to shift all the elements when inserting an element at the beginning of the array.
+  Unlike Queue, Array has to shift all the elements when deliting an element at the beginning of the array.
 
 ## Come you can come when to use Queue? (Real world example is ok!)
 
@@ -87,6 +89,18 @@ Since they are multiple types of queue, consider a type using **linked list**.
 
 What if we try to implement Queue with Array instead of Linked List?
 What would be the difference?
+
+#### Memory Usage
+
+Linked lists require additional memory to store pointers for linking elements, while arrays can store elements in a contiguous block of memory.
+
+#### Dynamic vs. Static Size
+
+Linked lists can grow dynamically without requiring resizing operations, while arrays have a fixed size and require resizing operations when the capacity is exceeded.
+
+#### Dequeue
+
+Linked lists are more efficient than arrays when deleting an element at the beginning of the queue, since they do not have to shift all the elements.
 
 ## Exercise
 
@@ -163,4 +177,3 @@ console.log(myQueue);
 
 - Let's try to solve some leet code questions
 - https://leetcode.com/problems/number-of-recent-calls/
-<!-- - https://leetcode.com/problems/reveal-cards-in-increasing-order/ ?? -->
