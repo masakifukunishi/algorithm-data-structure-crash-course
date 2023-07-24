@@ -37,6 +37,7 @@ A queue is a data structure that follows the First-In-First-Out (FIFO) principle
 
 - Fixed size
 - Inefficient insertions
+
   Unlike Queue, Array has to shift all the elements when inserting an element at the beginning of the array.
 
 ## Can you come up with when to use Queue?
