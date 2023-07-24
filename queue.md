@@ -19,9 +19,9 @@ A queue is a data structure that follows the First-In-First-Out (FIFO) principle
 #### Pros
 
 - Dynamic size
-- Efficient insertions
+- Efficient deletion
 
-  Unlike Array, Queue does not have to shift all the elements when inserting an element at the beginning of the queue.
+  Unlike Array, Queue does not have to shift all the elements when deliting an element at the beginning of the queue.
 
 #### Cons
 
@@ -36,9 +36,9 @@ A queue is a data structure that follows the First-In-First-Out (FIFO) principle
 #### Cons
 
 - Fixed size
-- Inefficient insertions
+- Inefficient deletion
 
-  Unlike Queue, Array has to shift all the elements when inserting an element at the beginning of the array.
+  Unlike Queue, Array has to shift all the elements when deliting an element at the beginning of the array.
 
 ## Can you come up with when to use Queue?
 
