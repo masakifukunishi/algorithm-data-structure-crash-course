@@ -25,3 +25,11 @@ https://github.com/cookie777/altgorithm-data-structure-crash-course
 ## Stack
 
 [Stack](/stack.md)
+
+## Queue
+
+[Queue](/queue.md)
+
+## Deque
+
+[Deque](/deque.md)
