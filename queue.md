@@ -126,42 +126,42 @@ class ListNode {
 }
 
 class MyQueue {
-  private first: ListNode | null;
-  private last: ListNode | null;
+  private head: ListNode | null;
+  private tail: ListNode | null;
   private length: number;
 
   constructor() {
-    this.first = null;
-    this.last = null;
+    this.head = null;
+    this.tail = null;
     this.length = 0;
   }
 
   enqueue(value: number) {
     const newNode = new ListNode(value);
     if (this.length === 0) {
-      this.first = newNode;
-      this.last = newNode;
+      this.head = newNode;
+      this.tail = newNode;
     } else {
-      this.last!.next = newNode;
-      this.last = newNode;
+      this.tail!.next = newNode;
+      this.tail = newNode;
     }
     this.length++;
   }
 
   dequeue(): number | null {
-    if (!this.first) return null;
-    if (this.first === this.last) {
-      this.last = null;
+    if (!this.head) return null;
+    if (this.head === this.tail) {
+      this.tail = null;
     }
-    const holdingPointer = this.first;
-    this.first = this.first.next;
+    const holdingPointer = this.head;
+    this.head = this.head.next;
     this.length--;
     return holdingPointer.val;
   }
 
   peek(): number | null {
-    if (!this.first) return null;
-    return this.first.val;
+    if (!this.head) return null;
+    return this.head.val;
   }
 
   size(): number {
