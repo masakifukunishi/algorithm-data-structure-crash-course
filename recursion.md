@@ -45,3 +45,15 @@ const isPalindrome = (x: number): boolean => {
 ```
 
 - https://leetcode.com/problems/reverse-linked-list/
+
+```ts
+const reverseList = (head: ListNode | null): ListNode | null => {
+  const reverseListHelper = (current: ListNode | null, prev: ListNode | null): ListNode | null => {
+    if (current === null) return prev;
+    let next = current.next;
+    current.next = prev;
+    return reverseListHelper(next, current);
+  };
+  return reverseListHelper(head, null);
+};
+```
