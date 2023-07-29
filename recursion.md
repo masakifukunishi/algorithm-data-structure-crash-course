@@ -50,7 +50,7 @@ const isPalindrome = (x: number): boolean => {
 const reverseList = (head: ListNode | null): ListNode | null => {
   const reverseListHelper = (current: ListNode | null, prev: ListNode | null): ListNode | null => {
     if (current === null) return prev;
-    let next = current.next;
+    const next = current.next;
     current.next = prev;
     return reverseListHelper(next, current);
   };
