@@ -53,12 +53,16 @@ The number of edges from the node to the deepest leaf.
 
 A tree is composed of nodes, and each node has pointers to its child nodes. Each node can have multiple children, and the tree structure is defined by the connections between nodes.
 
-### Using Arrays
+### Using an Array
 A tree can also be represented by an array. The root node is the first element in the array. The next two elements of the array represent the children of the root node. The next four elements of the array represent the four children of the two nodes directly above them. This pattern continues throughout the array.
 
 ## Traversal Algorithm
-- Depth-First Search (DFS) Algorithm
-- Breadth-First Search (BFS) Algorithm
+
+### Breadth-First Search (BFS) Algorithm
+ BFS is a  traversal algorithm that visits all the nodes at the current depth level before moving to nodes at the next depth level.
+
+### Depth-First Search (DFS) Algorithm
+DFS is a graph traversal algorithm that explores as far as possible along each branch before backtracking.
 
 <!-- 
 ## Tree Traversal
