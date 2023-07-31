@@ -48,8 +48,13 @@ The number of edges from the node to the deepest leaf.
 
 
 ## How do we represent trees?
-- 
-- 
+
+### Using Nodes
+
+A tree is composed of nodes, and each node has pointers to its child nodes. Each node can have multiple children, and the tree structure is defined by the connections between nodes.
+
+### Using Arrays
+A tree can also be represented by an array. The root node is the first element in the array. The next two elements of the array represent the children of the root node. The next four elements of the array represent the four children of the two nodes directly above them. This pattern continues throughout the array.
 
 ## Traversal Algorithm
 - Depth-First Search (DFS) Algorithm
