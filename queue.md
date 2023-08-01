@@ -6,11 +6,11 @@ A queue is a data structure that follows the First-In-First-Out (FIFO) principle
 
 - Enqueue
 
-  This operation adds an element to the end of the queue.
+    This operation adds an element to the end of the queue.
 
 - Dequeue
 
-  This operation removes the first element from the queue.
+    This operation removes the first element from the queue.
 
 ## What is difference between Queue and Array. Pros and Cons
 
@@ -19,9 +19,10 @@ A queue is a data structure that follows the First-In-First-Out (FIFO) principle
 #### Pros
 
 - Dynamic size
+
 - Efficient deletion
 
-  Unlike Array, Queue does not have to shift all the elements when deliting an element at the beginning of the queue.
+    Unlike Array, Queue does not have to shift all the elements when deliting an element at the beginning of the queue.
 
 #### Cons
 
@@ -36,23 +37,24 @@ A queue is a data structure that follows the First-In-First-Out (FIFO) principle
 #### Cons
 
 - Fixed size
+  
 - Inefficient deletion
 
-  Unlike Queue, Array has to shift all the elements when deliting an element at the beginning of the array.
+    Unlike Queue, Array has to shift all the elements when deliting an element at the beginning of the array.
 
 ## Can you come up with when to use Queue?
 
 - Printer
 
-  In a printing system, a queue is used to manage multiple print jobs, ensuring they are printed in the order they were requested.
+    In a printing system, a queue is used to manage multiple print jobs, ensuring they are printed in the order they were requested.
 
 - Asynchronous processing
 
-  In applications where tasks can take varying amounts of time to complete, using a queue can decouple task submission from task execution.
+    In applications where tasks can take varying amounts of time to complete, using a queue can decouple task submission from task execution.
 
 - Stackable Pencil
 
-  In a Stackable Pencil, the first piece inserted into the pencil is the first one to be removed.
+    In a Stackable Pencil, the first piece inserted into the pencil is the first one to be removed.
 
 ## Analysis
 
@@ -65,31 +67,31 @@ Since they are multiple types of queue, consider a type using **linked list**.
 
 - O(1)
 
-  Adding an element to the last of the queue requires updating only the last pointer, which takes constant time.
+    Adding an element to the last of the queue requires updating only the last pointer, which takes constant time.
 
 #### dequeue (remove and return an element from the Queue)
 
 - O(1)
 
-  Removing an element from the first of the queue requires updating only the first pointer, which takes constant time.
+    Removing an element from the first of the queue requires updating only the first pointer, which takes constant time.
 
 #### peek (return an element from the Queue)
 
 - O(1)
 
-  Returning an element from the first of the queue is just accessing the first pointer, which takes constant time.
+    Returning an element from the first of the queue is just accessing the first pointer, which takes constant time.
 
 #### size (get the size of the Queue)
 
 - O(1)
 
-  Getting the size of the queue is just accessing the size property, which takes constant time.
+    Getting the size of the queue is just accessing the size property, which takes constant time.
 
 #### merge two Queue
 
 - O(1)
 
-  Merging two queues is just updating the last pointer of the first queue to the first pointer of the second queue, which takes constant time.
+    Merging two queues is just updating the last pointer of the first queue to the first pointer of the second queue, which takes constant time.
 
 ### Comparison
 
@@ -142,7 +144,8 @@ class MyQueue {
       this.head = newNode;
       this.tail = newNode;
     } else {
-      this.tail!.next = newNode;
+      if (!this.tail) throw new Error("Unexpected: The tail is null.");
+      this.tail.next = newNode;
       this.tail = newNode;
     }
     this.length++;
@@ -213,7 +216,8 @@ class MyQueue {
       this.head = newNode;
       this.tail = newNode;
     } else {
-      this.tail!.next = newNode;
+      if (!this.tail) throw new Error("Unexpected: The tail is null.");
+      this.tail.next = newNode;
       this.tail = newNode;
     }
     this.length++;
@@ -249,7 +253,11 @@ class RecentCounter {
 
   ping(t: number): number {
     this.requests.enqueue(t);
-    while (this.requests.peek()! < t - 3000) {
+    while (this.requests.peek()) {
+      const head = this.requests.peek()
+      if (!head || head >= t - 3000) {
+        break
+      }
       this.requests.dequeue();
     }
     return this.requests.size();

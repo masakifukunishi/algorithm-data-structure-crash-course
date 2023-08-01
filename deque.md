@@ -80,7 +80,7 @@ Adding or removing elements involves updating the pointers of the first or last 
 
 - O(n)
 
-The space complexity of a doubly linked list-based Deque depends on the number of elements stored in it.
+    The space complexity of a doubly linked list-based Deque depends on the number of elements stored in it.
 
 ### When using Dynamic Array
 
@@ -109,4 +109,4 @@ On the other hand, manipulating the last element takes O(1) since it only resize
 
 - O(n)
 
-The space complexity of a dynamic array-based Deque depends on the number of elements stored in it.
+    The space complexity of a dynamic array-based Deque depends on the number of elements stored in it.
