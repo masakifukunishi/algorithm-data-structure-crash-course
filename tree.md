@@ -2,13 +2,17 @@
 # Tree
 ## What
 A tree is **Graph with no cycles**
+
     - Nodes : V
+
     - edges : V - 1
 
 ## Why
-Tree usages
+### Tree usages
     - Hierarchical relationships
+  
     - Manage sorted data
+
     - Enable fast searching operations
 
 ## Terms
@@ -22,10 +26,10 @@ A node that is connected directly above another node in the hierarchy.
 A node that is connected directly below another node in the hierarchy.
 
 ### Ancestor
-A node that is connected above another node in the hierarchy not inclluding the parents.
+A node that is connected above another node in the hierarchy.
 
 ### Descendent
-A node that is connected below another node in the hierarchy not inclluding the children.
+A node that is connected below another node in the hierarchy.
 
 ### Siblings
 A node that has the same parent as another node.
