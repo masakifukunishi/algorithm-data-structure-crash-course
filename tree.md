@@ -62,13 +62,12 @@ A tree can also be represented by an array. The root node is the first element i
 
 ## Traversal Algorithm
 
-### Breadth-First Search (BFS) Algorithm
- BFS is a  traversal algorithm that visits all the nodes at the current depth level before moving to nodes at the next depth level.
-
 ### Depth-First Search (DFS) Algorithm
 DFS is a graph traversal algorithm that explores as far as possible along each branch before backtracking.
 
-<!-- 
+### Breadth-First Search (BFS) Algorithm
+ BFS is a  traversal algorithm that visits all the nodes at the current depth level before moving to nodes at the next depth level.
+
 ## Tree Traversal
 ### Achieved by DFS
 - Pre-Order
@@ -83,17 +82,39 @@ DFS is a graph traversal algorithm that explores as far as possible along each b
 
 https://www.youtube.com/watch?v=WLvU5EQVZqY
 
-### Achieved by BSF
+### Achieved by BFS
 - Level-Order
 
 [4 Types of Tree Traversal Algorithms](https://towardsdatascience.com/4-types-of-tree-traversal-algorithms-d56328450846) 
 
 # Exercise
-- https://leetcode.com/problems/binary-tree-inorder-traversal/
-- https://leetcode.com/problems/same-tree/
-- https://leetcode.com/problems/binary-tree-level-order-traversal/
-- https://leetcode.com/problems/maximum-depth-of-binary-tree/
+
+### dfs
 - https://leetcode.com/problems/path-sum/
-- https://leetcode.com/problems/path-sum-ii/
-- https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/
--->
+```ts
+const hasPathSumHelper = (root: TreeNode | null, targetSum: number, currentSum: number): boolean => {
+  if (root === null) return false;
+  if (root.left === null && root.right === null) {
+    return currentSum + root.val === targetSum;
+  }
+
+  const hasLeftPath = hasPathSumHelper(root.left, targetSum, currentSum + root.val);
+  if (hasLeftPath) return true;
+
+  const hasRightPath = hasPathSumHelper(root.right, targetSum, currentSum + root.val);
+  if (hasRightPath) return true;
+
+  return false;
+};
+
+const hasPathSum = (root: TreeNode | null, targetSum: number): boolean => {
+  return hasPathSumHelper(root, targetSum, 0);
+};
+```
+- https://leetcode.com/problems/binary-tree-inorder-traversal/
+- https://leetcode.com/problems/maximum-depth-of-binary-tree/
+
+### bfs
+- https://leetcode.com/problems/minimum-depth-of-binary-tree/  
+- https://leetcode.com/problems/maximum-depth-of-binary-tree/
+- https://leetcode.com/problems/average-of-levels-in-binary-tree/
