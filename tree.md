@@ -73,9 +73,11 @@ DFS is a graph traversal algorithm that explores as far as possible along each b
 - Pre-Order
     - 1st time you visit
     - "Root", Left, Right
+
 - In-Order
     - 2nd time you visit
     - Left, "Root",  Right
+
 - Post-Order
     - 3rd time you visit
     - Left,  Right,  "Root"
