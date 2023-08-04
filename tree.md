@@ -92,26 +92,40 @@ https://www.youtube.com/watch?v=WLvU5EQVZqY
 ### dfs
 - https://leetcode.com/problems/path-sum/
 ```ts
-const hasPathSumHelper = (root: TreeNode | null, targetSum: number, currentSum: number): boolean => {
-  if (root === null) return false;
-  if (root.left === null && root.right === null) {
-    return currentSum + root.val === targetSum;
-  }
-
-  const hasLeftPath = hasPathSumHelper(root.left, targetSum, currentSum + root.val);
-  if (hasLeftPath) return true;
-
-  const hasRightPath = hasPathSumHelper(root.right, targetSum, currentSum + root.val);
-  if (hasRightPath) return true;
-
-  return false;
-};
-
 const hasPathSum = (root: TreeNode | null, targetSum: number): boolean => {
+  const hasPathSumHelper = (root: TreeNode | null, targetSum: number, currentSum: number): boolean => {
+    if (root === null) return false;
+    if (root.left === null && root.right === null) {
+      return currentSum + root.val === targetSum;
+    }
+
+    const hasLeftPath = hasPathSumHelper(root.left, targetSum, currentSum + root.val);
+    if (hasLeftPath) return true;
+
+    const hasRightPath = hasPathSumHelper(root.right, targetSum, currentSum + root.val);
+    if (hasRightPath) return true;
+
+    return false;
+  };
   return hasPathSumHelper(root, targetSum, 0);
 };
 ```
+
 - https://leetcode.com/problems/binary-tree-inorder-traversal/
+```ts
+const inorderTraversal = (root: TreeNode | null): number[] =>{
+  const result: number[] = [];
+  const traverse = (node: TreeNode | null) => {
+    if (node === null) return;
+    traverse(node.left);
+    result.push(node.val);
+    traverse(node.right);
+  }
+  traverse(root)
+  return result
+};
+```
+
 - https://leetcode.com/problems/maximum-depth-of-binary-tree/
 
 ### bfs
