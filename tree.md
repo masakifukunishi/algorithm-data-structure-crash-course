@@ -160,4 +160,27 @@ const minDepth = (root: TreeNode | null): number => {
 ```
 
 - https://leetcode.com/problems/maximum-depth-of-binary-tree/
+```ts
+const maxDepth = (root: TreeNode | null): number => {
+  if (!root) return 0;
+  let queue = [root];
+  let depth = 0;
+
+  while (queue.length > 0) {
+    depth++;
+    const levelSize = queue.length;
+    for (let i = 0; i < levelSize; i++) {
+      const currentNode = queue.shift();
+      if (currentNode.left) {
+        queue.push(currentNode.left);
+      }
+      if (currentNode.right) {
+        queue.push(currentNode.right);
+      }
+    }
+  }
+  return depth;
+};
+```
+
 - https://leetcode.com/problems/average-of-levels-in-binary-tree/
