@@ -184,3 +184,29 @@ const maxDepth = (root: TreeNode | null): number => {
 ```
 
 - https://leetcode.com/problems/average-of-levels-in-binary-tree/
+```ts
+const averageOfLevels = (root: TreeNode | null): number[] => {
+  if (!root) return [];
+  let queue = [root];
+  let results = [];
+
+  while (queue.length > 0) {
+    const levelList = []
+    const levelSize = queue.length;
+    for (let i = 0; i < levelSize; i++) {
+      const currentNode = queue.shift();
+      levelList.push(currentNode.val)
+      if (currentNode.left) {
+        queue.push(currentNode.left);
+      }
+      if (currentNode.right) {
+        queue.push(currentNode.right);
+      }
+    }
+    const levelSum = levelList.reduce((acc, val) => acc + val, 0);
+    const average = levelSum / levelList.length;
+    results.push(average)
+  }
+  return results;
+};
+```
