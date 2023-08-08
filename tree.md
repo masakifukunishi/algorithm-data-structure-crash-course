@@ -124,27 +124,89 @@ const inorderTraversal = (root: TreeNode | null): number[] =>{
 - https://leetcode.com/problems/maximum-depth-of-binary-tree/
 
 ### bfs
+
+#### Queue for BFS
+```ts
+class LinkedListNode {
+  val: TreeNode | null;
+  next: LinkedListNode | null;
+
+  constructor(val: TreeNode | null = null, next: LinkedListNode | null = null) {
+    this.val = val;
+    this.next = next;
+  }
+}
+
+class MyQueue {
+  private head: LinkedListNode | null;
+  private tail: LinkedListNode | null;
+  private length: number;
+
+  constructor() {
+    this.head = null;
+    this.tail = null;
+    this.length = 0;
+  }
+
+  enqueue(value: TreeNode) {
+    const newNode = new LinkedListNode(value);
+    if (this.length === 0) {
+      this.head = newNode;
+      this.tail = newNode;
+    } else {
+      if (!this.tail) throw new Error("Unexpected: The tail is null.");
+      this.tail.next = newNode;
+      this.tail = newNode;
+    }
+    this.length++;
+  }
+
+  dequeue(): TreeNode | null {
+    if (!this.head) return null;
+    if (this.head === this.tail) {
+      this.tail = null;
+    }
+    const holdingPointer = this.head;
+    this.head = this.head.next;
+    this.length--;
+    return holdingPointer.val;
+  }
+
+  peek(): TreeNode | null {
+    if (!this.head) return null;
+    return this.head.val;
+  }
+
+  size(): number {
+    return this.length;
+  }
+}
+```
+
 - https://leetcode.com/problems/minimum-depth-of-binary-tree/
 ```ts
 const minDepth = (root: TreeNode | null): number => {
   if (!root) return 0;
-  let queue = [root];
+  let queue = new MyQueue();
+  queue.enqueue(root);
   let depth = 0;
 
-  while (queue.length > 0) {
+  while (queue.size() > 0) {
     depth++;
-    const levelSize = queue.length;
+    const levelSize = queue.size();
     for (let i = 0; i < levelSize; i++) {
-      const currentNode = queue.shift();
+      const currentNode = queue.dequeue();
+
+      if (!currentNode) throw new Error("Unexpected: The node is null.");
 
       if (currentNode.left === null && currentNode.right === null) {
         return depth;
       }
       if (currentNode.left) {
-        queue.push(currentNode.left);
+        queue.enqueue(currentNode.left);
       }
       if (currentNode.right) {
-        queue.push(currentNode.right);
+        queue.enqueue(currentNode.right);
       }
     }
   }
@@ -156,19 +218,20 @@ const minDepth = (root: TreeNode | null): number => {
 ```ts
 const maxDepth = (root: TreeNode | null): number => {
   if (!root) return 0;
-  let queue = [root];
+  let queue = new MyQueue();
+  queue.enqueue(root);
   let depth = 0;
 
-  while (queue.length > 0) {
+  while (queue.size() > 0) {
     depth++;
-    const levelSize = queue.length;
+    const levelSize = queue.size();
     for (let i = 0; i < levelSize; i++) {
-      const currentNode = queue.shift();
+      const currentNode = queue.dequeue();
       if (currentNode.left) {
-        queue.push(currentNode.left);
+        queue.enqueue(currentNode.left);
       }
       if (currentNode.right) {
-        queue.push(currentNode.right);
+        queue.enqueue(currentNode.right);
       }
     }
   }
@@ -180,20 +243,21 @@ const maxDepth = (root: TreeNode | null): number => {
 ```ts
 const averageOfLevels = (root: TreeNode | null): number[] => {
   if (!root) return [];
-  let queue = [root];
+  let queue = new MyQueue();
+  queue.enqueue(root);
   let results = [];
 
-  while (queue.length > 0) {
+  while (queue.size() > 0) {
     const levelList = []
-    const levelSize = queue.length;
+    const levelSize = queue.size();
     for (let i = 0; i < levelSize; i++) {
-      const currentNode = queue.shift();
+      const currentNode = queue.dequeue();
       levelList.push(currentNode.val)
       if (currentNode.left) {
-        queue.push(currentNode.left);
+        queue.enqueue(currentNode.left);
       }
       if (currentNode.right) {
-        queue.push(currentNode.right);
+        queue.enqueue(currentNode.right);
       }
     }
     const levelSum = levelList.reduce((acc, val) => acc + val, 0);
