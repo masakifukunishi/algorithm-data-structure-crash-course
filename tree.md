@@ -66,7 +66,7 @@ A tree can also be represented by an array. The root node is the first element i
 DFS is a graph traversal algorithm that explores as far as possible along each branch before backtracking.
 
 ### Breadth-First Search (BFS) Algorithm
- BFS is a  traversal algorithm that visits all the nodes at the current depth level before moving to nodes at the next depth level.
+BFS is a  traversal algorithm that visits all the nodes at the current depth level before moving to nodes at the next depth level.
 
 ## Tree Traversal
 ### Achieved by DFS
@@ -95,21 +95,14 @@ https://www.youtube.com/watch?v=WLvU5EQVZqY
 - https://leetcode.com/problems/path-sum/
 ```ts
 const hasPathSum = (root: TreeNode | null, targetSum: number): boolean => {
-  const hasPathSumHelper = (root: TreeNode | null, targetSum: number, currentSum: number): boolean => {
+  const dfs = (root: TreeNode | null, currentSum: number): boolean => {
     if (root === null) return false;
     if (root.left === null && root.right === null) {
       return currentSum + root.val === targetSum;
     }
-
-    const hasLeftPath = hasPathSumHelper(root.left, targetSum, currentSum + root.val);
-    if (hasLeftPath) return true;
-
-    const hasRightPath = hasPathSumHelper(root.right, targetSum, currentSum + root.val);
-    if (hasRightPath) return true;
-
-    return false;
+    return dfs(root.left, currentSum + root.val) || dfs(root.right, currentSum + root.val)
   };
-  return hasPathSumHelper(root, targetSum, 0);
+  return dfs(root, 0);
 };
 ```
 
