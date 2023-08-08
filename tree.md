@@ -122,6 +122,21 @@ const inorderTraversal = (root: TreeNode | null): number[] =>{
 ```
 
 - https://leetcode.com/problems/maximum-depth-of-binary-tree/
+```ts
+const maxDepth = (root: TreeNode | null): number => {
+  let max = 0;
+  const dfs = (root: TreeNode | null, currentDepth: number): void => {
+    if (!root) {
+      max = Math.max(max, currentDepth);
+      return;
+    }
+    dfs(root.left, currentDepth + 1);
+    dfs(root.right, currentDepth + 1);
+  };
+  dfs(root, 0);
+  return max;
+};
+```
 
 ### bfs
 
