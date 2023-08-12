@@ -110,7 +110,7 @@ You can use `h` as a height of the tree for DFS too.
 
 [4 Types of Tree Traversal Algorithms](https://towardsdatascience.com/4-types-of-tree-traversal-algorithms-d56328450846) 
 
-# Exercise
+## Exercise1
 
 ### dfs
 - https://leetcode.com/problems/path-sum/
@@ -303,3 +303,14 @@ const averageOfLevels = (root: TreeNode | null): number[] => {
   return results;
 };
 ```
+
+## Exercise2
+
+- https://leetcode.com/problems/same-tree/
+- https://leetcode.com/problems/balanced-binary-tree/
+- https://leetcode.com/problems/invert-binary-tree/
+- https://leetcode.com/problems/search-in-a-binary-search-tree/
+    - Try to solve it with `O(h)`: `h` is the hight of the tree
+
+## Advanced🔥
+- https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/
