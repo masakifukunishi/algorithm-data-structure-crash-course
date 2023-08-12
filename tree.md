@@ -102,8 +102,12 @@ You can use `h` as a height of the tree for DFS too.
     - In the worst case, the DFS call stack can grow to the height of the tree as you traverse from the root to a leaf.
 
 ### BFS
-- Time
-- Space
+- Time O(n)
+    - Since all nodes are visited only once
+
+- Space (N/2) -> O(n)
+    - In the worst case, the queue can grow to store all the nodes in one level of the tree.
+    - For a balanced tree, the last node in the hierarchy is the total number of nodes in the previous hierarchy + 1
 
 [4 Types of Tree Traversal Algorithms](https://towardsdatascience.com/4-types-of-tree-traversal-algorithms-d56328450846) 
 
