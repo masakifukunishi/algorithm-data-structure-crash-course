@@ -310,7 +310,7 @@ const averageOfLevels = (root: TreeNode | null): number[] => {
 - https://leetcode.com/problems/balanced-binary-tree/
 - https://leetcode.com/problems/invert-binary-tree/
 - https://leetcode.com/problems/search-in-a-binary-search-tree/
-    - Try to solve it with `O(h)`: `h` is the hight of the tree
+    - Try to solve it with `O(h)`: `h` is the height of the tree
 
 ## Advanced🔥
 - https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/
