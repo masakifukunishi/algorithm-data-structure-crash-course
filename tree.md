@@ -97,7 +97,6 @@ You can use `h` as a height of the tree for DFS too.
 - Time O(n)
     - Since all nodes are visited only once
 
-
 - Space (h)
     - In the worst case, the DFS call stack can grow to the height of the tree as you traverse from the root to a leaf.
 
