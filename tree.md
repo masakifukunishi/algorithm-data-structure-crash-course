@@ -87,17 +87,21 @@ https://www.youtube.com/watch?v=WLvU5EQVZqY
 ### Achieved by BFS
 - Level-Order
 
-# Analytics
+## Analytics
 Say if we have a simple request to traverse all Nodes of the tree. The order doesn't matter. What would be the complexity in terms of time and space?
 
 Let's assume the number of all nodes are `n` first.
-You can use `h` as a hight of the tree for DFS too.
+You can use `h` as a height of the tree for DFS too.
 
-## DFS
-- Time
-- Space
+### DFS
+- Time O(n)
+    - Since all nodes are visited only once
 
-## BFS
+
+- Space (h)
+    - In the worst case, the DFS call stack can grow to the height of the tree as you traverse from the root to a leaf.
+
+### BFS
 - Time
 - Space
 
