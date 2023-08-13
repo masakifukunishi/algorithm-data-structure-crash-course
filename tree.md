@@ -307,6 +307,55 @@ const averageOfLevels = (root: TreeNode | null): number[] => {
 ## Exercise2
 
 - https://leetcode.com/problems/same-tree/
+
+### BFS
+```ts
+const isSameTree = (p: TreeNode | null, q: TreeNode | null): boolean => {
+
+  const bfs = (node: TreeNode): TreeNode[] => {
+    let queue = new MyQueue();
+    queue.enqueue(node);
+    const res = []
+    while(queue.size()) {
+      const currentNode = queue.dequeue()
+      res.push(currentNode)
+      if (currentNode.left) {
+        queue.enqueue(currentNode.left)
+      }
+      if (currentNode.right) {
+        queue.enqueue(currentNode.right)
+      }
+    }
+    return res
+  }
+  
+  const traversedP = bfs(p)
+  const traversedQ = bfs(q)
+  
+  return JSON.stringify(traversedP) === JSON.stringify(traversedQ)
+};
+```
+
+### DFS
+```ts
+const isSameTree = (p: TreeNode | null, q: TreeNode | null): boolean => {
+    let result = true;
+    const dfs = (node1: TreeNode, node2: TreeNode) => {
+        if (!node1 && !node2) return;
+
+        if (!node1 || !node2 || node1.val !== node2.val) {
+            result = false;
+            return;
+        }
+
+        dfs(node1.left, node2.left);
+        dfs(node1.right, node2.right);
+    };
+    dfs(p, q);
+    return result;
+}
+```
+
 - https://leetcode.com/problems/balanced-binary-tree/
 - https://leetcode.com/problems/invert-binary-tree/
 - https://leetcode.com/problems/search-in-a-binary-search-tree/
