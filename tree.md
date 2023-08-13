@@ -356,6 +356,20 @@ const isSameTree = (p: TreeNode | null, q: TreeNode | null): boolean => {
 }
 ```
 - https://leetcode.com/problems/balanced-binary-tree/
+```ts
+const isBalanced = (root: TreeNode | null): boolean => {
+  if (root === null) return true;
+
+  const getHeight = (node: TreeNode | null): number => {
+    if (node === null) return 0;
+  
+    const leftHeight = getHeight(node.left);
+    const rightHeight = getHeight(node.right);
+    return Math.max(leftHeight, rightHeight) + 1;
+  };
+
+};
+```
 - https://leetcode.com/problems/invert-binary-tree/
 ```ts
 const invertTree = (root: TreeNode | null): TreeNode | null => {
