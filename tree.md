@@ -355,11 +355,47 @@ const isSameTree = (p: TreeNode | null, q: TreeNode | null): boolean => {
     return result;
 }
 ```
-
 - https://leetcode.com/problems/balanced-binary-tree/
 - https://leetcode.com/problems/invert-binary-tree/
+```ts
+const invertTree = (root: TreeNode | null): TreeNode | null => {
+  if (root === null) {
+    return null;
+  }
+  let queue = new MyQueue();
+  queue.enqueue(root);
+  while(queue.size()) {
+    const currentNode = queue.dequeue()
+    // swap
+    const temp = currentNode.left;
+    currentNode.left = currentNode.right;
+    currentNode.right = temp;
+
+    if (currentNode.left) {
+      queue.enqueue(currentNode.left)
+    }
+    if (currentNode.right) {
+      queue.enqueue(currentNode.right)
+    }
+  }
+  return root
+};
+```
+
 - https://leetcode.com/problems/search-in-a-binary-search-tree/
     - Try to solve it with `O(h)`: `h` is the height of the tree
-
+```ts
+const searchBST = (root: TreeNode | null, val: number): TreeNode | null => {
+  if (!root) {
+    return null
+  } else if (val < root.val) {
+    return searchBST(root.left, val)
+  } else if (val > root.val) {
+    return searchBST(root.right, val)
+  } else {
+    return root
+  }
+};
+```
 ## Advanced🔥
 - https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/
