@@ -359,15 +359,21 @@ const isSameTree = (p: TreeNode | null, q: TreeNode | null): boolean => {
 ```ts
 const isBalanced = (root: TreeNode | null): boolean => {
   if (root === null) return true;
-
+  let res = true
   const getHeight = (node: TreeNode | null): number => {
     if (node === null) return 0;
-  
+    if(!res) return;
+
     const leftHeight = getHeight(node.left);
     const rightHeight = getHeight(node.right);
+
+    if (Math.abs(leftHeight - rightHeight) > 1) {
+      res = false
+    }
     return Math.max(leftHeight, rightHeight) + 1;
   };
-
+  getHeight(root)
+  return res
 };
 ```
 - https://leetcode.com/problems/invert-binary-tree/
