@@ -33,3 +33,7 @@ https://github.com/cookie777/altgorithm-data-structure-crash-course
 ## Deque
 
 [Deque](/deque.md)
+
+## Tree
+
+[Tree](/tree.md)
