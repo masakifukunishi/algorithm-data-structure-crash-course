@@ -311,28 +311,29 @@ const averageOfLevels = (root: TreeNode | null): number[] => {
 ### BFS
 ```ts
 const isSameTree = (p: TreeNode | null, q: TreeNode | null): boolean => {
+  let queueP = new MyQueue();
+  let queueQ = new MyQueue();
+  queueP.enqueue(p);
+  queueQ.enqueue(q);
 
-  const bfs = (node: TreeNode): TreeNode[] => {
-    let queue = new MyQueue();
-    queue.enqueue(node);
-    const res = []
-    while(queue.size()) {
-      const currentNode = queue.dequeue()
-      res.push(currentNode)
-      if (currentNode.left) {
-        queue.enqueue(currentNode.left)
-      }
-      if (currentNode.right) {
-        queue.enqueue(currentNode.right)
-      }
+  while (queueP.size() && queueQ.size()) {
+    const currentNodeP = queueP.dequeue();
+    const currentNodeQ = queueQ.dequeue();
+
+    if (currentNodeP === null && currentNodeQ === null) {
+      continue;
     }
-    return res
+
+    if (currentNodeP === null || currentNodeQ === null || currentNodeP.val !== currentNodeQ.val) 
+    {
+      return false;
+    }
+    queueP.enqueue(currentNodeP.left);
+    queueP.enqueue(currentNodeP.right);
+    queueQ.enqueue(currentNodeQ.left);
+    queueQ.enqueue(currentNodeQ.right);
   }
-  
-  const traversedP = bfs(p)
-  const traversedQ = bfs(q)
-  
-  return JSON.stringify(traversedP) === JSON.stringify(traversedQ)
+  return true
 };
 ```
 
