@@ -418,5 +418,3 @@ const searchBST = (root: TreeNode | null, val: number): TreeNode | null => {
   }
 };
 ```
-## Advanced🔥
-- https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/
