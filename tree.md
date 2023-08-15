@@ -343,7 +343,7 @@ const isSameTree = (p: TreeNode | null, q: TreeNode | null): boolean => {
     const dfs = (node1: TreeNode, node2: TreeNode) => {
         if (!node1 && !node2) return;
 
-        if (!node1 || !node2 || node1.val !== node2.val) {
+        if (node1.val !== node2.val) {
             result = false;
             return;
         }
