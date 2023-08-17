@@ -65,8 +65,38 @@ const sortArray = (nums: number[]): number[] => {
 - Space complexity: O(1)
 
 ### Merge
+```ts
+```
 ### Quick
-
+```ts
+const sortArray = (nums: number[]): number[] => {
+    const len = nums.length;
+    const quickSort = (nums: number[], left: number, right: number) => {
+        if (left >= right) return;
+        const pivot = partition(nums, left, right);
+        quickSort(nums, left, pivot - 1);
+        quickSort(nums, pivot + 1, right);
+    };
+    const partition = (nums: number[], left: number, right: number) => {
+        const pivot = right;
+        let i = left;
+        for (let j = left; j < right; j++) {
+        if (nums[j] < nums[pivot]) {
+            const temp = nums[i];
+            nums[i] = nums[j];
+            nums[j] = temp;
+            i++;
+        }
+        }
+        const temp = nums[i];
+        nums[i] = nums[pivot];
+        nums[pivot] = temp;
+        return i;
+    };
+    quickSort(nums, 0, len - 1);
+    return nums;
+    };
+```
 The fastest way to understand is get hands on it!
 Try to implement and analyze its time and space complexity.
 You can assess the algorithm at this questions. 
