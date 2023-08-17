@@ -1,13 +1,13 @@
 
 # Tree
-## What
+## What is Tree?
 A tree is **Graph with no cycles**
 
-    - Nodes : V
+    - Nodes :V
 
     - edges : V - 1
 
-## Why
+## Why Tree?
 ### Tree usages
     - Hierarchical relationships
   
