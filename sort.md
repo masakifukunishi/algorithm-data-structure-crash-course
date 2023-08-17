@@ -4,11 +4,48 @@
 There so many sort algorithm so far. More than 100!
 These are one of the common algorithm. 
 
-- Bubble
-- Insertion
-- Selection
-- Merge
-- Quick
+### Bubble
+```ts
+const sortArray = (nums: number[]): number[] => {
+  const len = nums.length;
+  for (let i = 0; i < len; i++) {
+    for (let j = 0; j < len - 1 - i; j++) {
+      if (nums[j] > nums[j + 1]) {
+        const temp = nums[j + 1];
+        nums[j + 1] = nums[j];
+        nums[j] = temp;
+      }
+    }
+  }
+  return nums;
+};
+```
+- Time complexity: O(n^2)
+- Space complexity: O(1)
+
+### Insertion
+```ts
+const sortArray = (nums: number[]): number[] => {
+  const len = nums.length;
+  for (let i = 1; i < len; i++) {
+    const temp = nums[i];
+    let j = i - 1;
+    while (j >= 0 && nums[j] > temp) {
+      nums[j + 1] = nums[j];
+      j--;
+    }
+    nums[j + 1] = temp;
+  }
+  return nums;
+};
+```
+
+- Time complexity: O(n^2)
+- Space complexity: O(1)
+
+### Selection
+### Merge
+### Quick
 
 The fastest way to understand is get hands on it!
 Try to implement and analyze its time and space complexity.
