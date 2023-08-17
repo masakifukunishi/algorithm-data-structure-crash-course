@@ -44,6 +44,24 @@ const sortArray = (nums: number[]): number[] => {
 - Space complexity: O(1)
 
 ### Selection
+```ts
+const sortArray = (nums: number[]): number[] => {
+  const len = nums.length;
+  for (let i = 0; i < len - 1; i++) {
+    let minIndex = i;
+    for (let j = i + 1; j < len; j++) {
+      if (nums[j] < nums[minIndex]) {
+        minIndex = j;
+      }
+    }
+    const temp = nums[i];
+    nums[i] = nums[minIndex];
+    nums[minIndex] = temp;
+  }
+  return nums;
+};
+```
+
 ### Merge
 ### Quick
 
