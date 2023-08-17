@@ -47,7 +47,7 @@ const sortArray = (nums: number[]): number[] => {
 ```ts
 const sortArray = (nums: number[]): number[] => {
   const len = nums.length;
-  for (let i = 0; i < len - 1; i++) {
+  for (let i = 0; i < len; i++) {
     let minIndex = i;
     for (let j = i + 1; j < len; j++) {
       if (nums[j] < nums[minIndex]) {
@@ -61,6 +61,8 @@ const sortArray = (nums: number[]): number[] => {
   return nums;
 };
 ```
+- Time complexity: O(n^2)
+- Space complexity: O(1)
 
 ### Merge
 ### Quick
