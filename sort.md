@@ -80,7 +80,6 @@ const sortArray = (nums: number[]): number[] => {
   let j = 0;
   let k = 0;
 
-
   while (i < left.length && j < right.length) {
     if (left[i] <= right[j]) {
       nums[k] = left[i];
@@ -106,6 +105,10 @@ const sortArray = (nums: number[]): number[] => {
   return nums
 };
 ```
+- Time complexity: O(log n)
+- Space complexity: O(n)
+
+
 ### Quick
 ```ts
 const sortArray = (nums: number[]): number[] => {
