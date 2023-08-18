@@ -68,10 +68,43 @@ const sortArray = (nums: number[]): number[] => {
 ```ts
 const sortArray = (nums: number[]): number[] => {
   if (nums.length <= 1) return nums;
-    const len = nums.length;
-    const mid = Math.floor(len / 2);
+
+  const center = Math.floor(nums.length / 2);
+  const left = nums.slice(0, center);
+  const right = nums.slice(center);
+
+  sortArray(left);
+  sortArray(right);
+
+  let i = 0;
+  let j = 0;
+  let k = 0;
+
+
+  while (i < left.length && j < right.length) {
+    if (left[i] <= right[j]) {
+      nums[k] = left[i];
+      i++;
+    } else {
+      nums[k] = right[j];
+      j++;
+    }
+    k++;
+  }
+
+  while (i < left.length) {
+    nums[k] = left[i];
+    i++;
+    k++;
+  }
+
+  while (j < right.length) {
+    nums[k] = right[j];
+    j++;
+    k++;
+  }
+  return nums
 };
-```
 ```
 ### Quick
 ```ts
