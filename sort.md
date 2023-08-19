@@ -166,13 +166,35 @@ https://leetcode.com/problems/sort-an-array/
 ## Exercise 02
 ### What do you think is the best algorithm and why?
 I think the best algorithm is merge sort.
-this si becaunse merge sort is stable and fast.
+this is becaunse merge sort is stable and fast.
 the time complexity is always O(log n).
 
-- Compare Merge sort VS Quick Sort. Pros and Cons?
+### Compare Merge sort VS Quick Sort. Pros and Cons?
+#### Merge sort
+- Pros
+    - Predictable Performance
+        Merge Sort guarantees a worst-case time complexity of O(log n) regardless of the initial order of elements.
+
+- Cons
+    - Space Complexity
+        Merge Sort requires additional memory space of 0(n) for the temporary array.
+
+#### Quick sort
+- Pros
+    - Average Case Efficiency
+        Quick Sort has an average-case time complexity of O(log n), making it one of the fastest sorting algorithms for general purposes.
+
+    - Space Complexity
+        Space Complexity: Quick Sort has a favorable space complexity of O(log n) for the function call stack in most cases.
+
+- Cons
+    - Worst Case Efficiency
+        Quick Sort has a worst-case time complexity of O(n^2) when the pivot is either the smallest or the largest element in the list.
 
 ## Exercise 03
-What is the internal sort algorithm that the language you're familiar is using?
+### What is the internal sort algorithm that the language you're familiar is using?
+
+In JavaScript, the internal sorting algorithm used by the Array.prototype.sort() method is implementation-dependent and not explicitly specified in the ECMAScript language specification. Different JavaScript engines use different sorting algorithms for their respective Array sort() implementations.
 
 ## Exercise 04
 
