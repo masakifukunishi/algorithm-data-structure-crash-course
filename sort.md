@@ -108,38 +108,55 @@ const sortArray = (nums: number[]): number[] => {
 - Time complexity: O(log n)
 - Space complexity: O(n)
 
-
 ### Quick
 ```ts
+// Procedure
+// const pivot = right end
+// i = -1
+// j = 0
+
+// if (nums[j] < pivot) {
+//   i++
+//   swam(nums[i], nums[j])
+// }
+// j++
+
+
 const sortArray = (nums: number[]): number[] => {
-  const len = nums.length;
-  const quickSort = (nums: number[], left: number, right: number) => {
-    if (left >= right) return;
-    const pivot = partition(nums, left, right);
-    quickSort(nums, left, pivot - 1);
-    quickSort(nums, pivot + 1, right);
+  const swap = (nums: number[], i: number, j: number): void => {
+    const temp = nums[i];
+    nums[i] = nums[j];
+    nums[j] = temp;
   };
-  const partition = (nums: number[], left: number, right: number) => {
-    const pivot = right;
-    let i = left;
-    for (let j = left; j < right; j++) {
-      if (nums[j] < nums[pivot]) {
-        const temp = nums[i];
-        nums[i] = nums[j];
-        nums[j] = temp;
+
+  const partition = (nums: number[], low: number, high: number): number => {
+    let i = low - 1;
+    const pivot = nums[high];
+    for (let j = low; j < high; j++) {
+      if (nums[j] <= pivot) {
         i++;
+        swap(nums, i, j);
       }
     }
-    const temp = nums[i];
-    nums[i] = nums[pivot];
-    nums[pivot] = temp;
-    return i;
+    swap(nums, i + 1, high);
+    return i + 1;
   };
-  quickSort(nums, 0, len - 1);
+
+  const quickSort = (nums: number[], low: number, high: number): void => {
+    if (low < high) {
+      const partitionIndex = partition(nums, low, high);
+      quickSort(nums, low, partitionIndex - 1);
+      quickSort(nums, partitionIndex + 1, high);
+    }
+  };
+  quickSort(nums, 0, nums.length - 1);
+
   return nums;
 };
-
 ```
+- Time complexity: O(log n)? or O(n^2)?
+- Space complexity: O(n)
+
 The fastest way to understand is get hands on it!
 Try to implement and analyze its time and space complexity.
 You can assess the algorithm at this questions. 
