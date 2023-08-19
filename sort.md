@@ -196,7 +196,12 @@ the time complexity is always O(log n).
 
 In JavaScript, the internal sorting algorithm used by the Array.prototype.sort() method is implementation-dependent and not explicitly specified in the ECMAScript language specification. Different JavaScript engines use different sorting algorithms for their respective Array sort() implementations.
 
+In V8 the sorting algorithm is a Quicksort with an Insertion Sort fall-back for shorter arrays (length < 10)
+
 ## Exercise 04
 
 - Pick up any favorite sort algorithm you like. (Excluding the list in above.)
 - Any sort algorithm is ok! Even a stupid one!
+
+### Odd-Even Sort 
+Odd-Even Sort is slow but suitable for parallel processing because odd and even elements can be processed independently!
