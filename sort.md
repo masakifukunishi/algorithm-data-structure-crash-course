@@ -155,7 +155,7 @@ const sortArray = (nums: number[]): number[] => {
 };
 ```
 - Time complexity: O(log n)? or O(n^2)?
-- Space complexity: O(n)
+- Space complexity: O(log n)? or O(n)?
 
 The fastest way to understand is get hands on it!
 Try to implement and analyze its time and space complexity.
@@ -164,7 +164,11 @@ https://leetcode.com/problems/sort-an-array/
 
 
 ## Exercise 02
-- What do you think is the best algorithm and why?
+### What do you think is the best algorithm and why?
+I think the best algorithm is merge sort.
+this si becaunse merge sort is stable and fast.
+the time complexity is always O(log n).
+
 - Compare Merge sort VS Quick Sort. Pros and Cons?
 
 ## Exercise 03
