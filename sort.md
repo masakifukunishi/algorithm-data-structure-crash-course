@@ -105,7 +105,7 @@ const sortArray = (nums: number[]): number[] => {
   return nums
 };
 ```
-- Time complexity: O(log n)
+- Time complexity: O(n log n)
 - Space complexity: O(n)
 
 ### Quick
@@ -154,8 +154,8 @@ const sortArray = (nums: number[]): number[] => {
   return nums;
 };
 ```
-- Time complexity: O(log n)? or O(n^2)?
-- Space complexity: O(log n)? or O(n)?
+- Time complexity: O(n log n)
+- Space complexity: O(log n)
 
 The fastest way to understand is get hands on it!
 Try to implement and analyze its time and space complexity.
@@ -196,7 +196,8 @@ the time complexity is always O(log n).
 
 In JavaScript, the internal sorting algorithm used by the Array.prototype.sort() method is implementation-dependent and not explicitly specified in the ECMAScript language specification. Different JavaScript engines use different sorting algorithms for their respective Array sort() implementations.
 
-In V8 the sorting algorithm is a Quicksort with an Insertion Sort fall-back for shorter arrays (length < 10)
+In V8 the sorting algorithm is a Timsort.
+Timsort is a hybrid of Merge sort and Insertion sort. 
 
 ## Exercise 04
 
