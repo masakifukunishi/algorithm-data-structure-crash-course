@@ -37,3 +37,6 @@ https://github.com/cookie777/altgorithm-data-structure-crash-course
 ## Tree
 
 [Tree](/tree.md)
+
+## Sort
+[Sort](/sort.md)
