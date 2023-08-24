@@ -2,11 +2,19 @@
 # Bit
 
 ## Summary
- A "bit" is the smallest unit of data and information storage in computing. The term "bit" is a contraction of "binary digit." It can have one of two possible values: 0 or 1, representing the two states of a binary system, which is the foundation of digital computing
+A "bit" is the smallest unit of data and information storage in computing. The term "bit" is a contraction of "binary digit." It can have one of two possible values: 0 or 1, representing the two states of a binary system, which is the foundation of digital computing
 
 ### Q0: Terms
-- What is a `Byte`?
-- What is `LSb` and `MSb`?
+#### What is a `Byte`?
+A byte is a unit of digital information that consists of 8 bits. It's the fundamental building block of computer storage and communication, representing a single character, such as a letter, number, or symbol. 
+
+#### What is `LSb` and `MSb`?
+
+##### LSb (Least Significant Bit)
+This refers to the rightmost or lowest-value bit in a binary number. It holds the least weight in terms of value. For example, in the binary number 1101, the rightmost bit (1) is the least significant bit.
+
+##### MSb (Most Significant Bit)
+This refers to the leftmost or highest-value bit in a binary number. It holds the most weight in terms of value. In the binary number 1101, the leftmost bit (1) is the most significant bit.
 
 ## Conversion
 
