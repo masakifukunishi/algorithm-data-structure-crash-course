@@ -4,34 +4,32 @@
 ## Summary
 A "bit" is the smallest unit of data and information storage in computing. The term "bit" is a contraction of "binary digit." It can have one of two possible values: 0 or 1, representing the two states of a binary system, which is the foundation of digital computing
 
-### Q0: Terms
-#### What is a `Byte`?
+## Q0: Terms
+### What is a `Byte`?
 A byte is a unit of digital information that consists of 8 bits. It's the fundamental building block of computer storage and communication, representing a single character, such as a letter, number, or symbol. 
 
-#### What is `LSb` and `MSb`?
+### What is `LSb` and `MSb`?
 
-##### LSb (Least Significant Bit)
+#### LSb (Least Significant Bit)
 This refers to the rightmost or lowest-value bit in a binary number. It holds the least weight in terms of value. For example, in the binary number 1101, the rightmost bit (1) is the least significant bit.
 
-##### MSb (Most Significant Bit)
+#### MSb (Most Significant Bit)
 This refers to the leftmost or highest-value bit in a binary number. It holds the most weight in terms of value. In the binary number 1101, the leftmost bit (1) is the most significant bit.
 
 ## Conversion
 
 A machine only treats a number by binary number Where is human to understand a number by base 10.
 
-### Q0: Terms
+## Q0: Terms
 
 If the base is 2, 8, 10, and 16, there is a specific name for each base. The base 2 is binary. What are rest of them?
 
 - Base 2: binary
-- Base 8: ?
-- Base 10: ?
-- Base 16: ?
+- Base 8: Octal
+- Base 10: Decimal
+- Base 16: Hexadecimal
 
-
-
-### Q1
+## Q1
 How do you convert base 10 number to base 2 (binary) number? Write an algorithm for it. 
 ```ts
 
@@ -40,7 +38,7 @@ function convertToBase2(numBase10: number): [number] {
 }
 
 ```
-### Q2
+## Q2
 How do you convert base 2 number to base 10 number? Write an algorithm for it. 
 
 ```ts
@@ -50,7 +48,7 @@ function convertToBase10(numBase2: [number]): number {
 }
 
 ```
-### Q3
+## Q3
 How do you convert base 10 number to base 3 number? Write an algorithm for it. 
 
 ```ts
