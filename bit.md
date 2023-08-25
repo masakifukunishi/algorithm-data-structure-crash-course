@@ -143,12 +143,24 @@ Thus, the answer is 0 to 4,294,967,295
 We also want to represent a negative number by using bits.
 When a integer can treat both negative and positive number, we call this type `singed integer`. There are several ways to make a negative integer. One of the common way is "Two's complement"
 
-
 ### Q1
 Calculate the binary representation of the `8-bit signed integer -7` using the "Two's complement" method. Outline the steps and processes you followed.
 
+### Answer
+Step 1. Convert 7 to binary number `00000111`
+Step 2. Flip all the bits `11111000`
+Step 3. Add 1 to the result `11111001`
+Thus, the answer is `11111001`
+
 ### Q2
-Calculate the binary representation of the `32-bit signed integer -7` using the "Two's complement" method. 
+Calculate the binary representation of the `32-bit signed integer -7` using the "Two's complement" method.
+
+### Answer
+Step 1. Convert 7 to binary number `00000000 00000000 00000000 00000111`
+Step 2. Flip all the bits `11111111 11111111 11111111 11111000`
+Step 3. Add 1 to the result `11111111 11111111 11111111 11111001`
+Thus, the answer is `11111111 11111111 11111111 11111001`
+
 ### Q3
 Calculate the binary representation of the `32-bit signed integer -239,472,903` using the "Two's complement" method.
 
