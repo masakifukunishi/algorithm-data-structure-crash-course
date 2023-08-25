@@ -124,12 +124,19 @@ You don't have to consider a negative number. We call this data type especially 
 An `unsigned integer` starts from zero.
 
 ### Answer
-Step 1. 8 bits integer means 8 bits binary number it's represented using 8 binary bits. 
-Step 2. 0 to 255
+Step 1. 8-bit integer can represent values using 8 binary digits.
+Step 2. The maximum value of 8-bit integer is 11111111 (binary) = 255 (decimal)
+Step 3. The minimum value of 8-bit integer is 00000000 (binary) = 0 (decimal)
 Thus, the answer is 0 to 255
 
 ### Q2
 What is the range of 32 bits unsigned integer?
+
+### Answer
+Step 1. 32-bit integer can represent values using 32 binary digits.
+Step 2. With 32 bits, you can have 2^32 unique combinations.
+Step 3. The range of values for a 32-bit unsigned integer is from 0 to 2^32 - 1.
+Thus, the answer is 0 to 4,294,967,295
 
 ## Singed integer
 
