@@ -85,10 +85,20 @@ const convertToBase3 = (numBase10: number): number[] => {
 How do you convert base 10 number to base 16 number? Write an algorithm for it. 
 
 ```ts
+const convertToBase16 = (numBase10: number): string => {
+  if (numBase10 === 0) return "0";
 
-function convertToBase16(numBase10: number): string {
-    // e.g, If the `num` is 2894, it should return "B4E". 
-}
+  const hexDigits = "0123456789ABCDEF";
+  let result = "";
+
+  while (numBase10 > 0) {
+    const remainder = numBase10 % 16;
+    result = hexDigits[remainder] + result;
+    numBase10 = Math.floor(numBase10 / 16);
+  }
+
+  return result;
+};
 ```
 
 ## Unsigned integer
