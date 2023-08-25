@@ -32,44 +32,54 @@ If the base is 2, 8, 10, and 16, there is a specific name for each base. The bas
 ## Q1
 How do you convert base 10 number to base 2 (binary) number? Write an algorithm for it. 
 ```ts
-
-function convertToBase2(numBase10: number): [number] {
-
-    
-}
-
 const convertToBase2 = (numBase10: number): number[] => {
-    if (numBase10 === 0) return [0]
-    const binaryArray = [];
+  if (numBase10 === 0) return [0];
+  const binaryArray = [];
 
-    while (numBase10 > 0) {
-        const remainder = numBase10 % 2;
-        binaryArray.unshift(remainder);
-        numBase10 = Math.floor(numBase10 / 2);
-    }
+  while (numBase10 > 0) {
+    const remainder = numBase10 % 2;
+    binaryArray.unshift(remainder);
+    numBase10 = Math.floor(numBase10 / 2);
+  }
 
-    return binaryArray;
-}
+  return binaryArray;
+};
 ```
 ## Q2
 How do you convert base 2 number to base 10 number? Write an algorithm for it. 
 
 ```ts
+const convertToBase10 = (binaryArray: number[]): number => {
+  let weight = 1;
+  let decimalValue = 0;
 
-function convertToBase10(numBase2: [number]): number {
-    // e.g, If the `numBase2` is [1,0,1,1], it should return 11
-}
+  while (binaryArray.length > 0) {
+    const binaryDigit = binaryArray.pop()!;
+    decimalValue += binaryDigit * weight;
+    weight *= 2;
+  }
 
+  return decimalValue;
+};
 ```
+
 ## Q3
 How do you convert base 10 number to base 3 number? Write an algorithm for it. 
 
 ```ts
+const convertToBase3 = (numBase10: number): number[] => {
+  if (numBase10 === 0) return [0];
+  const base3Array = [];
 
-function convertToBase3(numBase10: number): [number] {
-    // e.g, If the `num` is 11, it should return [1,0,2]
-}
-``````
+  while (numBase10 > 0) {
+    const remainder = numBase10 % 3;
+    base3Array.unshift(remainder);
+    numBase10 = Math.floor(numBase10 / 3);
+  }
+
+  return base3Array;
+};
+```
 
 ### Q4
 How do you convert base 10 number to base 16 number? Write an algorithm for it. 
@@ -79,7 +89,7 @@ How do you convert base 10 number to base 16 number? Write an algorithm for it.
 function convertToBase16(numBase10: number): string {
     // e.g, If the `num` is 2894, it should return "B4E". 
 }
-``````
+```
 
 ## Unsigned integer
 
