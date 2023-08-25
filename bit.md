@@ -50,13 +50,16 @@ How do you convert base 2 number to base 10 number? Write an algorithm for it.
 
 ```ts
 const convertToBase10 = (binaryArray: number[]): number => {
-  let weight = 1;
+  let i = 0;
   let decimalValue = 0;
 
   while (binaryArray.length > 0) {
     const binaryDigit = binaryArray.pop()!;
-    decimalValue += binaryDigit * weight;
-    weight *= 2;
+    if (binaryDigit !== 0 && binaryDigit !== 1) {
+      throw new Error("Invalid binary number");
+    }
+    decimalValue += binaryDigit * Math.pow(2, i);
+    i++;
   }
 
   return decimalValue;
@@ -115,10 +118,15 @@ Thus, the answer is ****
 
 ### Q1
 Bits can represent an integer. An `integer` is one of the privative data type of programming language.
-What is the range of 8 bits integer.?
+What is the range of 8 bits integer?
 
 You don't have to consider a negative number. We call this data type especially an `unsigned integer`.
 An `unsigned integer` starts from zero.
+
+### Answer
+Step 1. 8 bits integer means 8 bits binary number it's represented using 8 binary bits. 
+Step 2. 0 to 255
+Thus, the answer is 0 to 255
 
 ### Q2
 What is the range of 32 bits unsigned integer?
