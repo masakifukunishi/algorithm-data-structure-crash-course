@@ -182,8 +182,13 @@ Thus, the answer is `00101011`
 
 Masaki likes to play retro tv games👾. One day he was playing one of the RPG games🗡️. He finally faced the last boss 😈 and the boss's HP (hit point) was a maximum of HP 32,000. Masaki was excited but he'd wrongly casted a spell of healing the HP (increasing the HP) ❤️‍🩹 to the Boss instead of a fire attack🧙‍♂️. The boss got healed by + HP 1,000. 
 
-However, as soon as the boss got healed, it got died and defeated😇. Can you assume and explain what happened? 😁
+However, as soon as the boss got healed, it got died and was defeated😇. Can you assume and explain what happened? 😁
 
+## Answer
+The boss's HP was 32,000. I assume the boss's HP was set by 16-bit signed integer.
+So the boss can have a max HP of 32,767.
+When the boss got healed by + HP 1,000, the boss's HP became 33,000.
+However, 33,000 is out of the range of 16-bit signed integer so the boss's HP became negative number. 
 
 <!-- [Integer overflow](https://en.wikipedia.org/wiki/Integer_overflow) 
 
