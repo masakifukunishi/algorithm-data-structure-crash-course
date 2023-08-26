@@ -8,35 +8,35 @@ https://github.com/cookie777/altgorithm-data-structure-crash-course
 
 ## Algorithms Analysis
 
-[Algorithms Analysis](/algorithm-analysis.md)
+[Algorithms Analysis](/articles/algorithm-analysis.md)
 
 ## Array
 
-[Array](/array.md)
+[Array](/articles/array.md)
 
 ## Hash Table
 
-[Hash Table](/hash-table.md)
+[Hash Table](/articles/hash-table.md)
 
 ## Linked List
 
-[Linked List](/linked-list.md)
+[Linked List](/articles/linked-list.md)
 
 ## Stack
 
-[Stack](/stack.md)
+[Stack](/articles/stack.md)
 
 ## Queue
 
-[Queue](/queue.md)
+[Queue](/articles/queue.md)
 
 ## Deque
 
-[Deque](/deque.md)
+[Deque](/articles/deque.md)
 
 ## Tree
 
-[Tree](/tree.md)
+[Tree](/articles/tree.md)
 
 ## Sort
-[Sort](/sort.md)
+[Sort](/articles/sort.md)

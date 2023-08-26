@@ -173,6 +173,10 @@ Thus, the answer is `11110001 10111001 11101110 11111001`
 ### Q4
 Convert the binary value `11010101` into an `8-bit signed integer` representation using the "Two's complement" method.
 
+### Answer
+Step 1. Flip all the bits `00101010`
+Step 2. Add 1 to the result `00101011`
+Thus, the answer is `00101011`
 
 ## Ice Break Question
 
