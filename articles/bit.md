@@ -124,59 +124,62 @@ You don't have to consider a negative number. We call this data type especially 
 An `unsigned integer` starts from zero.
 
 ### Answer
-Step 1. 8-bit integer can represent values using 8 binary digits.
-Step 2. The maximum value of 8-bit integer is 11111111 (binary) = 255 (decimal)
-Step 3. The minimum value of 8-bit integer is 00000000 (binary) = 0 (decimal)
-Thus, the answer is 0 to 255
+- Step 1. 8-bit integer can represent values using 8 binary digits.
+- Step 2. The maximum value of 8-bit integer is 11111111 (binary) = 255 (decimal)
+- Step 3. The minimum value of 8-bit integer is 00000000 (binary) = 0 (decimal)
+- Thus, the answer is 0 to 255
 
 ### Q2
 What is the range of 32 bits unsigned integer?
 
 ### Answer
-Step 1. 32-bit integer can represent values using 32 binary digits.
-Step 2. With 32 bits, you can have 2^32 unique combinations.
-Step 3. The range of values for a 32-bit unsigned integer is from 0 to 2^32 - 1.
-Thus, the answer is 0 to 4,294,967,295
+- Step 1. 32-bit integer can represent values using 32 binary digits.
+- Step 2. With 32 bits, you can have 2^32 unique combinations.
+- Step 3. The range of values for a 32-bit unsigned integer is from 0 to 2^32 - 1.
+- Thus, the answer is 0 to 4,294,967,295
 
 ## Singed integer
 
 We also want to represent a negative number by using bits.
-When a integer can treat both negative and positive number, we call this type `singed integer`. There are several ways to make a negative integer. One of the common way is "Two's complement"
+
+When a integer can treat both negative and positive number, we call this type `singed integer`. There 
+
+are several ways to make a negative integer. One of the common way is "Two's complement"
 
 ### Q1
 Calculate the binary representation of the `8-bit signed integer -7` using the "Two's complement" method. Outline the steps and processes you followed.
 
 ### Answer
-Step 1. Convert 7 to binary number `00000111`
-Step 2. Flip all the bits `11111000`
-Step 3. Add 1 to the result `11111001`
-Thus, the answer is `11111001`
+- Step 1. Convert 7 to binary number `00000111`
+- Step 2. Flip all the bits `11111000`
+- Step 3. Add 1 to the result `11111001`
+- Thus, the answer is `11111001`
 
 ### Q2
 Calculate the binary representation of the `32-bit signed integer -7` using the "Two's complement" method.
 
 ### Answer
-Step 1. Convert 7 to binary number `00000000 00000000 00000000 00000111`
-Step 2. Flip all the bits `11111111 11111111 11111111 11111000`
-Step 3. Add 1 to the result `11111111 11111111 11111111 11111001`
-Thus, the answer is `11111111 11111111 11111111 11111001`
+- Step 1. Convert 7 to binary number `00000000 00000000 00000000 00000111`
+- Step 2. Flip all the bits `11111111 11111111 11111111 11111000`
+- Step 3. Add 1 to the result `11111111 11111111 11111111 11111001`
+- Thus, the answer is `11111111 11111111 11111111 11111001`
 
 ### Q3
 Calculate the binary representation of the `32-bit signed integer -239,472,903` using the "Two's complement" method.
 
 ### Answer
-Step 1. Convert 239,472,903 to binary number `00001110 01000110 00010001 00000111`
-Step 2. Flip all the bits `11110001 10111001 11101110 11111000`
-Step 3. Add 1 to the result `11110001 10111001 11101110 11111001`
-Thus, the answer is `11110001 10111001 11101110 11111001`
+- Step 1. Convert 239,472,903 to binary number `00001110 01000110 00010001 00000111`
+- Step 2. Flip all the bits `11110001 10111001 11101110 11111000`
+- Step 3. Add 1 to the result `11110001 10111001 11101110 11111001`
+- Thus, the answer is `11110001 10111001 11101110 11111001`
 
 ### Q4
 Convert the binary value `11010101` into an `8-bit signed integer` representation using the "Two's complement" method.
 
 ### Answer
-Step 1. Flip all the bits `00101010`
-Step 2. Add 1 to the result `00101011`
-Thus, the answer is `00101011`
+- Step 1. Flip all the bits `00101010`
+- Step 2. Add 1 to the result `00101011`
+- Thus, the answer is `00101011`
 
 ## Ice Break Question
 
