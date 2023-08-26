@@ -164,6 +164,12 @@ Thus, the answer is `11111111 11111111 11111111 11111001`
 ### Q3
 Calculate the binary representation of the `32-bit signed integer -239,472,903` using the "Two's complement" method.
 
+### Answer
+Step 1. Convert 239,472,903 to binary number `00001110 01000110 00010001 00000111`
+Step 2. Flip all the bits `11110001 10111001 11101110 11111000`
+Step 3. Add 1 to the result `11110001 10111001 11101110 11111001`
+Thus, the answer is `11110001 10111001 11101110 11111001`
+
 ### Q4
 Convert the binary value `11010101` into an `8-bit signed integer` representation using the "Two's complement" method.
 
