@@ -38,11 +38,11 @@ const convertToBase2 = (numBase10: number): number[] => {
 
   while (numBase10 > 0) {
     const remainder = numBase10 % 2;
-    binaryArray.unshift(remainder);
+    binaryArray.push(remainder);
     numBase10 = Math.floor(numBase10 / 2);
   }
 
-  return binaryArray;
+  return binaryArray.reverse();
 };
 ```
 ## Q2
@@ -76,11 +76,11 @@ const convertToBase3 = (numBase10: number): number[] => {
 
   while (numBase10 > 0) {
     const remainder = numBase10 % 3;
-    base3Array.unshift(remainder);
+    base3Array.push(remainder);
     numBase10 = Math.floor(numBase10 / 3);
   }
 
-  return base3Array;
+  return base3Array.reverse();
 };
 ```
 
@@ -92,16 +92,17 @@ const convertToBase16 = (numBase10: number): string => {
   if (numBase10 === 0) return "0";
 
   const hexDigits = "0123456789ABCDEF";
-  let result = "";
+  let result = [];
 
   while (numBase10 > 0) {
     const remainder = numBase10 % 16;
-    result = hexDigits[remainder] + result;
+    result.push(hexDigits[remainder]);
     numBase10 = Math.floor(numBase10 / 16);
   }
 
-  return result;
+  return result.reverse().join("");
 };
+
 ```
 
 ## Unsigned integer
