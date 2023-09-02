@@ -213,29 +213,72 @@ When the boss got healed by + HP 1,000, the boss's HP became 33,000.
 
 However, 33,000 is out of the range of 16-bit signed integer so the boss's HP became negative number. 
 
-# Bitwise operation
+## Bitwise operation
 
 Bitwise operations are fundamental operations performed on individual bits (binary digits) within a binary representation of data. 
 
-## Basics
-### Exercise01
+### Basics
+#### Exercise01
 There are mainly six common bitwise operations. List up all of them with example.
 
-- 
--
--
--
--
--
+- AND `&`
+```
+A = 0101 (decimal 5)
+B = 0011 (decimal 3)
+A & B is 0001 (decimal 1)
+```
 
-### Exercise02
+- OR `|`
+```
+A = 0101 (decimal 5)
+B = 0011 (decimal 3)
+A | B is 0111 (decimal 7)
+```
+
+- XOR `^`
+```
+A = 0101 (decimal 5)
+B = 0011 (decimal 3)
+A ^ B is 0110 (decimal 6)
+```
+
+- NOT `~`
+```
+A = 0101 (decimal 5)
+~A is 1010 (decimal 10)
+```
+
+- Left shift `<<`
+```
+A = 0101 (decimal 5)
+A << 3 is 0101000 (decimal 40)
+```
+
+- Right shift `>>`
+```
+A = 0101 (decimal 5)
+A >> 2 is 0001 (decimal 1)
+```
+
+#### Exercise02
 and what are time complexity of all bitwise operations?
 
-### Exercise03
+O(1) because computer can do bitwise operations in one step?
+
+#### Exercise03
 What are the benefits of using bit operations?
 
-## Tips and tricks
-### Exercise01
+- Efficiency
+Bitwise operations are faster than arithmetic operations.
+This is because bitwise operations are performed at the bit level.
+
+- Memory Optimization
+Bitwise operations can save memory space.
+This is because 
+
+
+### Tips and tricks
+#### Exercise01
 How do you write a code that determines that if the input number is odd or even?
 Can you write a code without using any math operators `+, -, *, /`? 😁
 
@@ -244,12 +287,13 @@ Can you write a code without using any math operators `+, -, *, /`? 😁
 - input: 32 bit signed integer
 
 ```ts
-function isOdd(input: number): bool {
-
+const = isOdd(input: number) : bool => {
+  // Check if LSB is 1
+  return (input & 1) === 1; 
 }
 ```
 
-### Exercise02
+#### Exercise02
 Can you write a code which multiplies the input number by 2 and 4 without using `*`? 😁
 
 **Constraints:**
@@ -257,18 +301,20 @@ Can you write a code which multiplies the input number by 2 and 4 without using 
 - You don't have to care about integer overflow
 
 ```ts
-function multiplyByTwo(input: number): number {
-
+const = multiplyByTwo(input: number): number => {
+  // move all bits to left by 1
+  return input << 1;
 }
 ```
 
 ```ts
 function multiplyByFour(input: number): number {
-
+  // move all bits to left by 2
+  return input << 2;
 }
 ```
 
-### Exercise03
+#### Exercise03
 Can you write a code which divides the input number by 2 or 4 without using `/`? 😁
 
 **Constraints:**
@@ -287,7 +333,7 @@ function divideByFour(input: number): number {
 }
 ```
 
-### Exercise04
+#### Exercise04
 Write a code which inverts the sign of number. 
 
 e.g, `invertSign(3) -> -3`, `invertSign(-6) -> 6`
@@ -306,7 +352,7 @@ function invertSign(input: number): number {
 ```
 
 
-## LeadCode Practice
+### LeadCode Practice
 **Do not use a build in library such as count bits**
 
 - https://leetcode.com/problems/number-of-1-bits/
@@ -314,13 +360,13 @@ function invertSign(input: number): number {
 - https://leetcode.com/problems/single-number/
 - https://leetcode.com/problems/power-of-two/
 
-## Ice Break Question 02
+### Ice Break Question 02
 
 🚧
 
 
-## Tips and tricks: Advanced (Optional)
-### Exercise05: Set a Bit 
+### Tips and tricks: Advanced (Optional)
+#### Exercise05: Set a Bit 
 Write a code which set the specific `n` th digit to `1`. 
 e.g,
 ``` 
@@ -340,7 +386,7 @@ function setBit(input: number, digit: number): number {
 
 ```
 
-### Exercise06: Clear a Bit 
+#### Exercise06: Clear a Bit 
 Write a code which clear the specific `n` th digit to `1`. 
 e.g,
 ``` 
