@@ -308,7 +308,7 @@ const = multiplyByTwo(input: number): number => {
 ```
 
 ```ts
-function multiplyByFour(input: number): number {
+const = multiplyByFour(input: number): number => {
   // move all bits to left by 2
   return input << 2;
 }
@@ -323,13 +323,14 @@ Can you write a code which divides the input number by 2 or 4 without using `/`?
 - You don't have to care about integer overflow
 
 ```ts
-function divideByTwo(input: number): number {
+const = divideByTwo(input: number): number => {
   // move all bits to right by 1
   return input >> 1;
 }
 ```
+
 ```ts
-function divideByFour(input: number): number {
+const = divideByFour(input: number): number => {
   // move all bits to right by 2
   return input >> 2;
 }
@@ -348,7 +349,8 @@ Can you write the code without using `-` nor `*`? 😁
 
 ```ts
 function invertSign(input: number): number {
-
+  // flip all bits and add 1
+  return ~input + 1;
 }
 
 ```
