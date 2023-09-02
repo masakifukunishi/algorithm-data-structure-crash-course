@@ -352,9 +352,7 @@ function invertSign(input: number): number {
   // flip all bits and add 1
   return ~input + 1;
 }
-
 ```
-
 
 ### LeadCode Practice
 **Do not use a build in library such as count bits**
@@ -368,7 +366,6 @@ const hammingWeight = (n: number): number => {
     count += n & 1;
     n = n >>> 1;
   }
-  
   return count;
 }
 
@@ -384,12 +381,33 @@ const hammingDistance = (x: number, y: number): number => {
     count += xor & 1;
     xor = xor >>> 1;
   }
-  
   return count;
 };
 ```
 - https://leetcode.com/problems/single-number/
+```ts
+const singleNumber = (nums: number[]): number => {
+  let result = 0;
+  for (let i = 0; i < nums.length; i++) {
+    result ^= nums[i];
+  }
+  return result;
+};
+```
 - https://leetcode.com/problems/power-of-two/
+```ts
+const isPowerOfTwo = (n: number): boolean => {
+  if (n <= 0) {
+    return false;
+  }
+  // if n is 16 (Ob10000)
+  // 16 - 1 is 15 (Ob01111)
+  // 16 & 15 is 0 (Ob00000)
+  return (n & (n - 1)) === 0;
+};
+
+isPowerOfTwo(16)
+```
 
 ### Ice Break Question 02
 
