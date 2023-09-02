@@ -373,9 +373,21 @@ const hammingWeight = (n: number): number => {
 }
 
 console.log(hammingWeight(0b00000000000000000000000000001011))
-
 ```
+
 - https://leetcode.com/problems/hamming-distance/submissions/
+```ts
+const hammingDistance = (x: number, y: number): number => {
+  let xor = x ^ y;
+  let count = 0;
+  while (xor > 0) {
+    count += xor & 1;
+    xor = xor >>> 1;
+  }
+  
+  return count;
+};
+```
 - https://leetcode.com/problems/single-number/
 - https://leetcode.com/problems/power-of-two/
 
