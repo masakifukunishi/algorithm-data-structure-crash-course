@@ -429,17 +429,26 @@ e.g,
 
 
 ```ts
-function setBit(input: number, digit: number): number {
+const setBit = (input: number, digit: number): number => {
+  // when input = 89, digit = 5
+  // mask = 1 << 5 is 0b00100000
+  // input = 0b01011001
+  // input | mask is 0b01111001
 
+  const mask = 1 << digit;
+  return input | mask;
 }
+
+console.log(setBit(0, 2));
+console.log(setBit(89, 5));
 
 ```
 
 #### Exercise06: Clear a Bit 
-Write a code which clear the specific `n` th digit to `1`. 
+Write a code which clear the specific `n` th digit to `0`. 
 e.g,
 ``` 
-- input: -1 (Ob11111111), digit: 3 -> return: 9 (Ob11110111)
+- input: -1 (Ob11111111), digit: 3 -> return: -9 (Ob11110111)
 - input: 89 (Ob01011001), digit: 6 -> return: 25 (Ob00011001)
 ```
 
@@ -448,8 +457,19 @@ e.g,
 - 0 < digit < 32 
 
 ```ts
-function clearBit(input: number, digit: number): number {
-
+const clearBit = (input: number, digit: number): number => {
+  // when input = 89, digit = 6
+  // mask = 1 << 6 is 0b01000000
+  // invertedMask = ~mask is 0b10111111
+  // input = 0b01011001
+  // input & invertedMask is 0b00011001
+  
+  const mask = 1 << digit;
+  const invertedMask = ~mask;
+  return input & invertedMask;
 }
+
+console.log(clearBit(-1, 3));
+console.log(clearBit(89, 6));
 
 ```
