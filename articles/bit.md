@@ -269,11 +269,15 @@ O(1) because computer can do bitwise operations in one step?
 What are the benefits of using bit operations?
 
 - Efficiency
+
 Bitwise operations are faster than arithmetic operations.
+
 This is because bitwise operations are performed at the bit level.
 
 - Memory Optimization
+
 Bitwise operations can save memory space.
+
 This is because 
 
 
@@ -288,7 +292,7 @@ Can you write a code without using any math operators `+, -, *, /`? 😁
 
 ```ts
 const = isOdd(input: number) : bool => {
-  // Check if LSB is 1
+  // When input is 3, input & 1 is 0b00000011 & 0b00000001 is 0b00000001
   return (input & 1) === 1; 
 }
 ```
@@ -372,7 +376,7 @@ const hammingWeight = (n: number): number => {
 console.log(hammingWeight(0b00000000000000000000000000001011))
 ```
 
-- https://leetcode.com/problems/hamming-distance/submissions/
+- https://leetcode.com/problems/hamming-distance/
 ```ts
 const hammingDistance = (x: number, y: number): number => {
   let xor = x ^ y;
@@ -463,7 +467,7 @@ const clearBit = (input: number, digit: number): number => {
   // invertedMask = ~mask is 0b10111111
   // input = 0b01011001
   // input & invertedMask is 0b00011001
-  
+
   const mask = 1 << digit;
   const invertedMask = ~mask;
   return input & invertedMask;
