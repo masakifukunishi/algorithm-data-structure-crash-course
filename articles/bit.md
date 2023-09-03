@@ -270,15 +270,15 @@ What are the benefits of using bit operations?
 
 - Efficiency
 
-Bitwise operations are faster than arithmetic operations.
+    Bitwise operations are faster than arithmetic operations.
 
-This is because bitwise operations are performed at the bit level.
+    This is because bitwise operations are performed at the bit level.
 
 - Memory Optimization
 
-Bitwise operations can save memory space.
+    Bitwise operations can save memory space.
 
-This is because 
+    This is because using individual bits instead of bytes or larger data types can save a significant amount of memory.
 
 
 ### Tips and tricks
