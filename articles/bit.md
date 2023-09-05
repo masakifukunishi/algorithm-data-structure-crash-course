@@ -291,7 +291,7 @@ Can you write a code without using any math operators `+, -, *, /`? 😁
 - input: 32 bit signed integer
 
 ```ts
-const = isOdd(input: number) : bool => {
+const isOdd = (input: number) : boolean => {
   // When input is 3, input & 1 is 0b00000011 & 0b00000001 is 0b00000001
   return (input & 1) === 1; 
 }
