@@ -491,16 +491,17 @@ class FlagManager {
   private flags: Uint8Array; // this type is a typed array of 8-bit unsigned integers
 
   constructor(numFlags: number) {
-    const numBytes = Math.ceil(numFlags / 8); // calculate the number of bytes needed to store the flags
+    const numBytes = Math.ceil(numFlags / 8); 
     if (numBytes > MEMORY_SIZE_IN_BYTES) {
       throw new Error("Too many flags for memory allocation");
     }
     this.flags = new Uint8Array(numBytes);
   }
 
+  // Comments are written assuming the index is 13
   setFlag(index: number, value: boolean) {
-    const byteIndex = Math.floor(index / 8); // if index == 13, 13 / 8 = 1.625, Math.floor(1.625) == 1
-    const bitOffset = index % 8; // if index == 13, 13 % 8 == 5.
+    const byteIndex = Math.floor(index / 8); // 13 / 8 = 1.625, Math.floor(1.625) == 1
+    const bitOffset = index % 8; // 13 % 8 == 5.
 
     const mask = 1 << bitOffset; // 1 << 5 == 32
     if (value) {
@@ -511,14 +512,15 @@ class FlagManager {
     }
   }
 
+// Comments are written assuming the index is 13
   getFlag(index: number): boolean {
-    const byteIndex = Math.floor(index / 8); // if index == 13, 13 / 8 = 1.625, Math.floor(1.625) == 1
-    const bitOffset = index % 8; // if index == 13, 12 % 8 == 5.
+    const byteIndex = Math.floor(index / 8); // 13 / 8 = 1.625, Math.floor(1.625) == 1
+    const bitOffset = index % 8; // 13 % 8 == 5.
 
     const mask = 1 << bitOffset; // 1 << 5 == 32
     const byteValue = this.flags[byteIndex]; // get the byte at the byteIndex
 
-    return (byteValue & mask) !== 0;
+    return (byteValue & mask) !== 0; 
   }
 }
 
