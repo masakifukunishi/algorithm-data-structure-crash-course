@@ -413,11 +413,6 @@ const isPowerOfTwo = (n: number): boolean => {
 isPowerOfTwo(16)
 ```
 
-### Ice Break Question 02
-
-🚧
-
-
 ### Tips and tricks: Advanced (Optional)
 #### Exercise05: Set a Bit 
 Write a code which set the specific `n` th digit to `1`. 
@@ -475,5 +470,61 @@ const clearBit = (input: number, digit: number): number => {
 
 console.log(clearBit(-1, 3));
 console.log(clearBit(89, 6));
+
+```
+
+## Ice Break Question 02
+
+Masaki joined a game project in the company👾. The game is a retro RPG and has a very massive content. Thus, there are many flags to manage⛳. However, the game is very old and the company wants to minimize the game size as much as possible. 
+
+There are about 1,000 flags you have to manage in the game. Each flag is a boolean type which takes 1 byte to allocate. If it is required to use only 150 bytes for flag management, how do you design it? How do you check and update a flag?🤔
+
+## Answer
+The memory size is only 150 bytes. So I need to use 1 bit to represent a flag.
+
+I implemented FragManager class using Uint8Array.
+
+```ts
+const MEMORY_SIZE_IN_BYTES = 150;
+
+class FlagManager {
+  private flags: Uint8Array; // this type is a typed array of 8-bit unsigned integers
+
+  constructor(numFlags: number) {
+    const numBytes = Math.ceil(numFlags / 8); // calculate the number of bytes needed to store the flags
+    if (numBytes > MEMORY_SIZE_IN_BYTES) {
+      throw new Error("Too many flags for memory allocation");
+    }
+    this.flags = new Uint8Array(numBytes);
+  }
+
+  setFlag(index: number, value: boolean) {
+    const byteIndex = Math.floor(index / 8); // if index == 13, 13 / 8 = 1.625, Math.floor(1.625) == 1
+    const bitOffset = index % 8; // if index == 13, 13 % 8 == 5.
+
+    const mask = 1 << bitOffset; // 1 << 5 == 32
+    if (value) {
+      this.flags[byteIndex] = this.flags[byteIndex] | mask; // set the bit at the bitOffset to 1
+    } else {
+      const invertedMask = ~mask;
+      this.flags[byteIndex] = this.flags[byteIndex] & invertedMask; // set the bit at the bitOffset to 0
+    }
+  }
+
+  getFlag(index: number): boolean {
+    const byteIndex = Math.floor(index / 8); // if index == 13, 13 / 8 = 1.625, Math.floor(1.625) == 1
+    const bitOffset = index % 8; // if index == 13, 12 % 8 == 5.
+
+    const mask = 1 << bitOffset; // 1 << 5 == 32
+    const byteValue = this.flags[byteIndex]; // get the byte at the byteIndex
+
+    return (byteValue & mask) !== 0;
+  }
+}
+
+const flagManager = new FlagManager(1000);
+flagManager.setFlag(13, true);
+flagManager.setFlag(13, false);
+const flag5 = flagManager.getFlag(13);
 
 ```
