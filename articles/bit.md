@@ -512,7 +512,7 @@ class FlagManager {
     }
   }
 
-// Comments are written assuming the index is 13
+  // Comments are written assuming the index is 13
   getFlag(index: number): boolean {
     const byteIndex = Math.floor(index / 8); // 13 / 8 = 1.625, Math.floor(1.625) == 1
     const bitOffset = index % 8; // 13 % 8 == 5.
