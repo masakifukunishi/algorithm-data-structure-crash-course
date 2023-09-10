@@ -500,10 +500,10 @@ class FlagManager {
 
   // Comments are written assuming the index is 13
   setFlag(index: number, value: boolean) {
-    const byteIndex = Math.floor(index / 8); // 13 / 8 = 1.625, Math.floor(1.625) == 1
+    const byteIndex = Math.floor(index / 8); // 13 / 8 == 1.625, Math.floor(1.625) == 1
     const bitOffset = index % 8; // 13 % 8 == 5.
 
-    const mask = 1 << bitOffset; // 1 << 5 == 32 = 0b00100000
+    const mask = 1 << bitOffset; // 1 << 5 == 32 == 0b00100000
     if (value) {
       this.flags[byteIndex] = this.flags[byteIndex] | mask; // set the bit at the bitOffset to 1
     } else {
@@ -514,10 +514,10 @@ class FlagManager {
 
   // Comments are written assuming the index is 13
   getFlag(index: number): boolean {
-    const byteIndex = Math.floor(index / 8); // 13 / 8 = 1.625, Math.floor(1.625) == 1
+    const byteIndex = Math.floor(index / 8); // 13 / 8 == 1.625, Math.floor(1.625) == 1
     const bitOffset = index % 8; // 13 % 8 == 5.
 
-    const mask = 1 << bitOffset; // 1 << 5 == 32 = 0b00100000
+    const mask = 1 << bitOffset; // 1 << 5 == 32 == 0b00100000
     const byteValue = this.flags[byteIndex]; // get the byte at the byteIndex
 
     return (byteValue & mask) !== 0; 
