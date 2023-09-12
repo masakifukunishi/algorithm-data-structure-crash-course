@@ -40,3 +40,6 @@ https://github.com/cookie777/altgorithm-data-structure-crash-course
 
 ## Sort
 [Sort](/articles/sort.md)
+
+## Bit
+[Bit](/articles/bit.md)
